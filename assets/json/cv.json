@@ -44,7 +44,7 @@
                         "nodejs",
                         "mongodb"
                     ],
-                    "visible": true
+                    "visible": false
                 },
                 {
                     "id": "pedalboard",
@@ -61,7 +61,7 @@
                         "json",
                         "nodejs"
                     ],
-                    "visible": true
+                    "visible": false
                 },
                 {
                     "id": "mailissimo",
@@ -78,29 +78,13 @@
                         "json",
                         "coldfusion"
                     ],
-                    "visible": true
+                    "visible": false
                 }
             ]
         },
         {
             "type": "personnal",
             "projects": [
-                {
-                    "id": "enigma",
-                    "title": "enigma",
-                    "src": "./assets/portfolio/game/enigma/assets/images/image.png",
-                    "video": "./assets/portfolio/game/enigma/assets/videos/video.mp4",
-                    "link": "./assets/portfolio/game/enigma",
-                    "description": "Enigma is website with a lot of enigma.",
-                    "description_fr": "Enigma est une site web composé de nombreux énigmes.",
-                    "skills": [
-                        "html",
-                        "javascript",
-                        "css",
-                        "json"
-                    ],
-                    "visible": true
-                },
                 {
                     "id": "vipborntoday",
                     "title": "vip born today",
@@ -109,52 +93,6 @@
                     "link": "./assets/portfolio/services/vipborntoday",
                     "description": "Who are these VIPs celebrating their birthday today?",
                     "description_fr": "Qui sont ces VIP qui fêtent leur anniversaire aujourd'hui?",
-                    "skills": [
-                        "html",
-                        "javascript",
-                        "css",
-                        "json"
-                    ],
-                    "visible": true
-                },
-                {
-                    "id": "animalsound",
-                    "title": "animalsound",
-                    "src": "https://cdn.pixabay.com/photo/2017/11/06/09/53/tiger-2923186_1280.jpg",
-                    "video": "./assets/portfolio/services/animalsound/assets/videos/video.mp4",
-                    "link": "./assets/portfolio/services/animalsound",
-                    "description": "Animal sound",
-                    "skills": [
-                        "html",
-                        "javascript",
-                        "css",
-                        "json"
-                    ],
-                    "visible": true
-                },
-                {
-                    "id": "sharelink",
-                    "title": "sharelink",
-                    "src": "./assets/portfolio/services/sharelink/assets/images/image.webp",
-                    "video": "./assets/portfolio/services/sharelink/assets/videos/video.mp4",
-                    "link": "./assets/portfolio/services/sharelink",
-                    "description": "Créez des liens de partage pour les réseaux sociaux!",
-                    "description_en": "Share your link on social networks!",
-                    "skills": [
-                        "html",
-                        "javascript",
-                        "css",
-                        "json"
-                    ],
-                    "visible": true
-                },
-                {
-                    "id": "zitacions",
-                    "title": "zitacions",
-                    "src": "https://img.lemde.fr/2016/10/12/358/0/2654/1766/664/0/75/0/292b88c_10440-wasx3b.lskh85mi.jpg",
-                    "video": "./assets/portfolio/services/zitacions/assets/videos/video.mp4",
-                    "link": "./assets/portfolio/services/zitacions",
-                    "description": "Connaissez-vous ces citations ?",
                     "skills": [
                         "html",
                         "javascript",
@@ -184,6 +122,67 @@
                         "yoann moise"
                     ],
                     "visible": true
+                },
+                {
+                    "id": "enigma",
+                    "title": "enigma",
+                    "src": "https://lejournalduneoroliste.files.wordpress.com/2017/08/dc3a9tective-privc3a9.jpg",
+                    "video": "./assets/portfolio/game/enigma/assets/videos/video.mp4",
+                    "link": "./assets/portfolio/game/enigma",
+                    "description": "Will you be able to solve these enigmas ? 🧐",
+                    "description_fr": "Enigma est une site web composé de nombreux énigmes.",
+                    "skills": [
+                        "html",
+                        "javascript",
+                        "css",
+                        "json"
+                    ],
+                    "visible": true
+                },
+                {
+                    "id": "animalsound",
+                    "title": "animalsound",
+                    "src": "https://cdn.pixabay.com/photo/2017/11/06/09/53/tiger-2923186_1280.jpg",
+                    "video": "./assets/portfolio/services/animalsound/assets/videos/video.mp4",
+                    "link": "./assets/portfolio/services/animalsound",
+                    "description": "Animal sound",
+                    "skills": [
+                        "html",
+                        "javascript",
+                        "css",
+                        "json"
+                    ],
+                    "visible": true
+                },
+                {
+                    "id": "sharelink",
+                    "title": "sharelink",
+                    "src": "./assets/portfolio/services/sharelink/assets/images/image.webp",
+                    "video": "./assets/portfolio/services/sharelink/assets/videos/video.mp4",
+                    "link": "./assets/portfolio/services/sharelink",
+                    "description": "Share your link on social networks!",
+                    "skills": [
+                        "html",
+                        "javascript",
+                        "css",
+                        "json"
+                    ],
+                    "visible": true
+                },
+                {
+                    "id": "zitacions",
+                    "title": "zitacions",
+                    "src": "https://img.lemde.fr/2016/10/12/358/0/2654/1766/664/0/75/0/292b88c_10440-wasx3b.lskh85mi.jpg",
+                    "video": "./assets/portfolio/services/zitacions/assets/videos/video.mp4",
+                    "link": "./assets/portfolio/services/zitacions",
+                    "description": "Do you know these quotes?",
+                    "skills": [
+                        "html",
+                        "javascript",
+                        "css",
+                        "json"
+                    ],
+                    "visible": true
                 }
             ]
         },
@@ -191,36 +190,19 @@
             "type": "game",
             "projects": [
                 {
-                    "id": "breakout",
-                    "title": "breakout",
-                    "src": "./assets/portfolio/game/breakout/assets/images/image.png",
-                    "video": "./assets/portfolio/game/breakout/assets/videos/video.mp4",
-                    "link": "./assets/portfolio/game/breakout",
-                    "description": "Breakout ! break all the bricks !",
-                    "description_fr": "Jeu du célèbre casse-brique ! détruisez toutes les briques !",
-                    "skills": [
-                        "html",
-                        "javascript",
-                        "css"
-                    ],
-                    "date": "novembre 2021",
-                    "visible": true
-                },
-                {
-                    "id": "db2048",
-                    "title": "DB 2048",
-                    "src": "./assets/portfolio/game/db2048/assets/images/image.jpg",
-                    "video": "./assets/portfolio/game/db2048/assets/videos/video.mp4",
-                    "link": "./assets/portfolio/game/db2048",
-                    "description": "Dragon Ball version of the game 2048. The goal is to merge all similar cards.",
-                    "description_fr": "Jeu 2048 version \"Dragon Ball\". Le but est de fusionner toutes les cartes similaires.",
+                    "id": "memory",
+                    "title": "Memory",
+                    "src": "./assets/portfolio/game/memory/assets/images/image.webp",
+                    "video": "./assets/portfolio/game/memory/assets/videos/video.mp4",
+                    "link": "./assets/portfolio/game/memory",
+                    "description": "Practice your memory by finding the pairs!",
+                    "description_fr": "Exercez votre mémoire en retrouvant les paires d'images!",
                     "skills": [
                         "html",
                         "javascript",
                         "css",
                         "json"
                     ],
-                    "date": "juillet 2015",
                     "visible": true
                 },
                 {
@@ -258,19 +240,36 @@
                     "visible": true
                 },
                 {
-                    "id": "memory",
-                    "title": "Memory",
-                    "src": "./assets/portfolio/game/memory/assets/images/image.webp",
-                    "video": "./assets/portfolio/game/memory/assets/videos/video.mp4",
-                    "link": "./assets/portfolio/game/memory",
-                    "description": "Practice your memory by finding the pairs!",
-                    "description_fr": "Exercez votre mémoire en retrouvant les paires d'images!",
+                    "id": "db2048",
+                    "title": "DB 2048",
+                    "src": "./assets/portfolio/game/db2048/assets/images/image.jpg",
+                    "video": "./assets/portfolio/game/db2048/assets/videos/video.mp4",
+                    "link": "./assets/portfolio/game/db2048",
+                    "description": "Dragon Ball version of the game 2048. The goal is to merge all similar cards.",
+                    "description_fr": "Jeu 2048 version \"Dragon Ball\". Le but est de fusionner toutes les cartes similaires.",
                     "skills": [
                         "html",
                         "javascript",
                         "css",
                         "json"
                     ],
+                    "date": "juillet 2015",
+                    "visible": true
+                },
+                {
+                    "id": "breakout",
+                    "title": "breakout",
+                    "src": "./assets/portfolio/game/breakout/assets/images/image.png",
+                    "video": "./assets/portfolio/game/breakout/assets/videos/video.mp4",
+                    "link": "./assets/portfolio/game/breakout",
+                    "description": "Breakout ! break all the bricks !",
+                    "description_fr": "Jeu du célèbre casse-brique ! détruisez toutes les briques !",
+                    "skills": [
+                        "html",
+                        "javascript",
+                        "css"
+                    ],
+                    "date": "novembre 2021",
                     "visible": true
                 }
             ]

@@ -276,6 +276,9 @@ section article{
         height: 30vh; */
         display: none;
     }
+    section{
+        width:100vw;
+    }
     aside img, aside div {
         display: none;
     }

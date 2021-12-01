@@ -75,9 +75,9 @@ let _loadData = _ => {
                 const _portfolioGame = _json.portfolio[2].projects.filter(project => project.visible);
 
                 _data = [
+                    ..._portfolioGame,
                     ..._portfolioEntreprise,
-                    ..._portfolioPersonnal,
-                    ..._portfolioGame
+                    ..._portfolioPersonnal
                 ];
                 resolve({
                     about: _json.about,
