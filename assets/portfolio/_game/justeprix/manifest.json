@@ -1,0 +1,52 @@
+{
+  "short_name": "EK",
+  "name": "EK",
+  "description": "EK, Ingénieur d'études et développement, France",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#fff",
+  "icons": [
+    {
+      "src": "./assets/images/logo/icon_196.png",
+      "sizes": "196x196",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/images/logo/icon_16.ico",
+      "type": "image/png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "./assets/images/logo/icon_128.ico",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "./assets/images/logo/icon_144.ico",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "./assets/images/logo/icon_192.ico",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./assets/images/logo/icon_192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./assets/images/logo/icon_512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "./assets/images/logo/icon_1024.png",
+      "type": "image/png",
+      "sizes": "1024x1024"
+    }
+  ]
+}

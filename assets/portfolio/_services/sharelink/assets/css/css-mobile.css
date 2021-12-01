@@ -1,0 +1,35 @@
+@media screen and (max-width: 800px) {
+    :root {
+        --colorWHITE: #fff;
+        --colorBLACK: #222;
+        --colorBLUE: #3f51b5;
+    }
+    header img {
+        width: 100px;
+        height: 100px;
+    }
+    header span {
+        font-size: 20px;
+        padding: 0px;
+    }
+    #ul_sn {
+        padding: 0px;
+    }
+    #ul_sn li {
+        border-bottom: 1px solid var(--colorBLACK);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        padding: 20px;
+    }
+    #ul_sn li img {
+        margin-bottom: 10px;
+        align-self: center;
+    }
+    #ul_sn li input, #ul_sn li button {
+        margin: 0px;
+    }
+    #ul_sn li button {
+        margin-top: 5px;
+    }
+}

@@ -1,0 +1,128 @@
+:root {
+    --colorBLACK: #000;
+    --colorMAIN: #fafafa;
+    --colorGRAY: #000;
+}
+
+/* -- dark mode -- */
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --colorBLACK: #cecdcd;
+        --colorMAIN: #1b1c23;
+        --colorGRAY: #9fb9ce;
+    }
+}
+
+/* -- all -- */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    border-collapse: collapse;
+    vertical-align: top;
+    /* box-sizing: border-box; */
+    /* user-select: none; */
+    /* -webkit-appearance: none; */
+    color: var(--colorBLACK);
+    font-weight: 300;
+    font-family: "Quicksand", Arial, Helvetica, sans-serif;
+    text-align: justify; 
+}
+
+*:focus {
+    outline: none;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--colorMAIN);
+}
+
+a {
+    text-decoration: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* -- header -- */
+
+header {
+    /* background-color: #fff; */
+    border-bottom: 1px solid var(--colorGRAY);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(10vh - 1px);
+}
+header span{
+    color:var(--colorBLACK);
+    font-size: 46px;
+    text-transform: capitalize;
+}
+header,main{
+
+}
+main{
+    height: 90vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+main ul#ul_citations{
+    height: 90vh;
+    overflow-y: scroll;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:100%;
+}
+main ul#ul_citations li{
+    box-shadow: 0px 2px 4px #ccc;
+    width: calc(100% - 8%);
+    height: calc(30vh);
+    padding: 0% 4%;
+    margin:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+main p{
+    font-size: 22px;
+    text-align: center;
+}
+main p span{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+main p,
+main p span{
+    color: var(--colorBLACK);
+}
+
+/* -- mobile --*/
+
+@media screen and (max-width: 800px) {
+    header span{
+        font-size: 30px;
+    }
+    main img{
+        width:calc(100% - 20px);
+    }
+}

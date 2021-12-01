@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="module">
+        import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+        const el = document.createElement('pwa-update');
+        document.body.appendChild(el);
+    </script>
+
+    <!-- meta tags: HTML -->
+    <meta charset="UTF-8">
+    <title>Juste Prix!</title>
+    <meta name="author" content="EK" />
+    <meta name="title" content="EK">
+    <meta name="description" content="EK, Ingénieur d'études et développement, France" />
+    <meta name="keywords" content="EK, Developer, Web, France" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="full-screen" content="yes">
+    <meta name="theme-color" content="#fff">
+
+    <!-- meta tags: OPEN GRAPH -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="EK" />
+    <meta property="og:title" content="EK" />
+    <meta property="og:image" content="./assets/images/ek.jpg" />
+    <meta property="og:description" content="Learn more about EK, a passionate developer!" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- link -->
+    <link rel="manifest" href="./manifest.json">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/logo/icon_16.ico" />
+    <link rel="apple-touch-icon" href="./assets/images/logo/icon_192.png">
+    <link rel="apple-touch-startup-image" href="./assets/images/logo/icon_192.png">
+
+
+    <style>
+        :root {
+            --colorWHITE: #fff;
+            --colorBLACK: #000;
+        }
+
+        /* -- dark mode -- */
+        @media (prefers-color-scheme: dark) {
+            body {
+                --colorWHITE: #000;
+                --colorBLACK: #fff;
+            }
+        }
+
+        /* -- all -- */
+        * {
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+            border-collapse: collapse;
+            vertical-align: top;
+            /* box-sizing: border-box; */
+            /* user-select: none; */
+            /* -webkit-appearance: none; */
+            color: var(--colorBLACK) !important;
+            font-weight: 300;
+            font-family: Helvetica, sans-serif;
+            text-align: justify;
+        }
+
+        *:focus {
+            outline: none;
+        }
+
+        html,
+        body {
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            background-color: var(--colorWHITE);
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* -- header -- */
+        header {
+            border-bottom: 1px dashed var(--colorBLACK);
+            height: calc(10vh - 2px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        header p {
+            font-size: 60px;
+        }
+
+        /* -- main -- */
+        main {
+            height: 90vh;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        main div {
+            width: calc(70% - 40px);
+            padding: 20px;
+            margin: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main div label {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main div p#p_rule {
+            margin-bottom: 20px;
+        }
+
+        main div p#p_coups {
+            margin-top: 20px;
+        }
+
+        main div input,
+        main div button {
+            background-color: transparent;
+            border: 1px dashed var(--colorBLACK);
+            padding: 10px;
+            margin: 10px 0px;
+        }
+
+        main div button {
+            text-transform: uppercase;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        main div p#p_coups,
+        main div p#p_msg {
+            text-align: center;
+        }
+
+        /* -- mobile --*/
+        @media screen and (max-width: 800px) {
+            header p {
+                font-size: 30px;
+            }
+
+            main div {
+                width: calc(100% - 20px);
+                padding: 30px;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <p id="p_title">Juste Prix!</p>
+    </header>
+
+    <main>
+        <div>
+            <p id="p_rule">Règle: devinez le juste prix compris entre 0 et 100 en utilisant le moins de coups possible.
+                Bonne chance!</p>
+            <label>
+                Insérer une valeur entre 0 et 100 ici:
+                <input id="in_num" type="number" min="0" max="100" value="0">
+            </label>
+            <button id="bt_valid">valider</button>
+            <p id="p_coups"><span id="sp_coups">0</span> coup(s)</p>
+            <p id="p_msg"></p>
+            <button id="bt_reload" class="hidden">recommencer</button>
+        </div>
+    </main>
+
+    <script>
+        /**
+         * @author EK
+         * */
+
+        //--- for JS selection
+        const $ = document.querySelector.bind(document);
+        const $$ = document.querySelectorAll.bind(document);
+
+        let _prix, _prix_suppose, _nbCoups;
+        _prix = _prix_suppose = _nbCoups = 0
+        let _msg = ``;
+
+        window.onload = _ => {
+            console.log(`page loaded`);
+
+            _prix = getRandom(0, 100);
+
+            $(`#bt_valid`).onclick = () => validForm();
+            $(`#bt_reload`).onclick = _ => resetGAME();
+        }
+
+        const validForm = _ => {
+            _prix_suppose = parseInt($(`#in_num`).value);
+
+            _nbCoups++;
+            $(`#sp_coups`).innerText = _nbCoups;
+
+            if (_prix_suppose < _prix) _msg = `c'est plus 👍`;
+            else if (_prix_suppose > _prix) _msg = `c'est moins 👎`;
+            else {
+                _msg = `c'est parfait! 👌`;
+                $(`#in_num`).disabled = true;
+                $(`#bt_valid`).classList.add(`hidden`);
+                $(`#bt_reload`).classList.remove(`hidden`);
+            }
+            $(`#p_msg`).innerText = _msg;
+        }
+
+        const resetGAME = _ => {
+            _prix = getRandom(0, 100);
+
+            _nbCoups = 0;
+            $(`#sp_coups`).innerText = _nbCoups;
+
+            $(`#in_num`).value = 0;
+            $(`#in_num`).disabled = false;
+            $(`#p_msg`).innerText = ``;
+
+            $(`#bt_valid`).classList.remove(`hidden`);
+            $(`#bt_reload`).classList.add(`hidden`);
+        }
+
+        /**
+         * Return a number between _min & _max (included)
+         * @param {number} _min 
+         * @param {number} _max 
+         */
+        const getRandom = (_min, _max) => Math.floor(Math.random() * (_max - _min + 1) + _min);
+    </script>
+</body>
+
+</html>

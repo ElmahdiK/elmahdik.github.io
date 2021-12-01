@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Puzzle</title>
+</head>
+
+<body>
+    <style>
+        :root {
+            --colorWHITE: #eee;
+            --colorBLACK: #000;
+        }
+
+        /* ----- HTML - BODY ----- */
+
+        * {
+            padding: 0px;
+            border: 0px;
+            margin: 0px;
+            border-collapse: collapse;
+            box-sizing: border-box;
+            font-family: Helvetica, sans-serif;
+        }
+
+        *:focus {
+            outline: none;
+        }
+
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            background: var(--colorWHITE);
+        }
+
+        header {
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 100px;
+        }
+
+        header span {
+            font-size: 30px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        #div_plato {
+            background-color: #ffb103;
+            background-image: url("https://www.transparenttextures.com/patterns/dark-wood.png");
+            box-shadow: inset 1px 0px 4px var(--colorBLACK);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: stretch;
+            align-content: center;
+            flex-wrap: wrap;
+            width: 500px;
+            height: 500px;
+            margin: auto;
+        }
+
+        #div_plato div {
+            background-image: url('./images/toucan.jpg');
+            /* box-shadow: 0px 1px 3px var(--colorBLACK); */
+            color: var(--colorWHITE);
+            font-size: 14px;
+            line-height: 125px;
+            margin: 5px;
+            width: calc(125px - 10px);
+            height: calc(125px - 10px);
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .transparency {
+            opacity: 0;
+        }
+    </style>
+    <header><span>Puzzle Windows 7 gadget game!</span></header>
+    <div id='div_plato'></div>
+    <script>
+        /**
+        * @author Elmahdi KORFED <elmahdi.korfed@gmail.com>
+        */
+
+        //--- for JS selection
+        const $ = document.querySelector.bind(document);
+        const $$ = document.querySelectorAll.bind(document);
+
+        const _nbDim = 4;
+        const _tabPos = [
+            [0, 0], [-125, 0], [-250, 0], [-375, 0],
+            [0, -125], [-125, -125], [-250, -125], [-375, -125],
+            [0, -250], [-125, -250], [-250, -250], [-375, -250],
+            [0, -375], [-125, -375], [-250, -375], [-375, -375]
+        ];
+
+        var _idCaseEmpty = ``;
+        var _div_plato = $('#div_plato');
+
+        window.onload = () => {
+            // créer un tableau de 16 éléments: de 0 à 15
+            let array16 = [...Array(_nbDim ** 2).keys()];
+            // modifier l'ordre aléatoirement des éléments du tableau
+            let _tab = setShuffle(array16);
+            // générer une matrice de dimension 4 (4 lignes, 4 colonnes) à partir du tableau
+            let _matrice = _tab.reduce((rows, key, index) => (index % 4 == 0 ? rows.push([key]) : rows[rows.length - 1].push(key)) && rows, []);
+            // ajout des cases dans le plateau
+            let _row = 0;
+            let _col = 0;
+            _matrice.forEach(_rows => {
+                _rows.forEach(e => {
+                    addNewCase(_tab.indexOf(e), _row, _col, e);
+                    _col++;
+                })
+                _row++;
+                _col = 0;
+            })
+            // listeners
+            listeners();
+        }
+
+        let addNewCase = (_index, _row, _col, _e) => {
+            let _opacity = ``;
+            if (_e == 0) {
+                _idCaseEmpty = `div_${_index}`;
+                _opacity = `transparency`;
+            }
+            _div_plato.insertAdjacentHTML(`beforeEnd`, `<div id='div_${_index}' data-row='${_row}' data-col='${_col}' class='${_opacity}' style='background-position: ${_tabPos[_e][0]}px ${_tabPos[_e][1]}px;'>${_e}</div>`);
+        }
+
+        let listeners = () => {
+            _div_plato.querySelectorAll('div').forEach(d => {
+                d.onclick = function () { clickedCase(this) };
+            })
+        }
+
+        let clickedCase = _case => {
+            let _id = _case.id;
+            let _elem = parseInt(_case.innerText);
+            let _rowClicked = parseInt(_case.dataset.row);
+            let _colClicked = parseInt(_case.dataset.col);
+
+            let _rowEmpty = parseInt($(`#${_idCaseEmpty}`).dataset.row);
+            let _colEmpty = parseInt($(`#${_idCaseEmpty}`).dataset.col);
+
+
+            // un déplacement se fait lorsque la "case vide" est dans la même ligne/colonne que la "case cliquée"
+            let _isSameRowORCol = isSameRowORCol(_id, _idCaseEmpty);
+            let _row = _isSameRowORCol[0];
+            let _col = _isSameRowORCol[1];
+
+            if (_row || _col) {
+                let _tampA = 0, _tampB = 0;
+                let _tampAStyle = '', _tampBStyle = '';
+
+                $(`#${_idCaseEmpty}`).classList.remove(`transparency`);
+                _idCaseEmpty = _id;
+                $(`#${_idCaseEmpty}`).classList.add(`transparency`);
+
+                // element + style : clicked
+                _tampA = _elem;
+                _tampAStyle = $(`#${_id}`).style.backgroundPosition;
+
+                if (_row) {
+                    $(`#${_id}`).innerText = parseInt($(`#div_plato div[data-row="${_rowClicked}"][data-col="${_colEmpty}"]`).innerText);
+
+                    // droite vers gauche
+                    if (_colEmpty > _colClicked) {
+                        for (let i = _colClicked; i < _colEmpty; i++) {
+                            _tampB = parseInt($(`#div_plato div[data-row="${_rowClicked}"][data-col="${i + 1}"]`).innerText);
+                            _tampBStyle = ($(`#div_plato div[data-row="${_rowClicked}"][data-col="${i + 1}"]`).style.backgroundPosition);
+                            $(`#div_plato div[data-row="${_rowClicked}"][data-col="${i + 1}"]`).innerText = _tampA;
+                            $(`#div_plato div[data-row="${_rowClicked}"][data-col="${i + 1}"]`).style.backgroundPosition = _tampAStyle;
+                            _tampA = _tampB;
+                            _tampAStyle = _tampBStyle;
+                        }
+                        // gauche vers droite
+                    } else {
+                        for (let i = _colClicked; i > _colEmpty; i--) {
+                            _tampB = parseInt($(`#div_plato div[data-row="${_rowClicked}"][data-col="${i - 1}"]`).innerText);
+                            _tampBStyle = parseInt($(`#div_plato div[data-row="${_rowClicked}"][data-col="${i - 1}"]`).style.backgroundPosition);
+                            $(`#div_plato div[data-row="${_rowClicked}"][data-col="${i - 1}"]`).innerText = _tampA;
+                            $(`#div_plato div[data-row="${_rowClicked}"][data-col="${i - 1}"]`).style.backgroundPosition = _tampAStyle;
+                            _tampA = _tampB;
+                            _tampAStyle = _tampBStyle;
+                        }
+                    }
+                }
+
+                if (_col) {
+                    $(`#${_id}`).innerText = parseInt($(`#div_plato div[data-row="${_rowEmpty}"][data-col="${_colClicked}"]`).innerText);
+
+                    // haut vers bas
+                    if (_rowEmpty > _rowClicked) {
+                        for (let i = _rowClicked; i < _rowEmpty; i++) {
+                            _tampB = parseInt($(`#div_plato div[data-row="${i + 1}"][data-col="${_colClicked}"]`).innerText);
+                            _tampBStyle = ($(`#div_plato div[data-row="${i + 1}"][data-col="${_colClicked}"]`).style.backgroundPosition);
+                            $(`#div_plato div[data-row="${i + 1}"][data-col="${_colClicked}"]`).innerText = _tampA;
+                            $(`#div_plato div[data-row="${i + 1}"][data-col="${_colClicked}"]`).style.backgroundPosition = _tampAStyle;
+                            _tampA = _tampB;
+                            _tampAStyle = _tampBStyle;
+                        }
+                        // bas vers haut
+                    } else {
+                        for (let i = _rowClicked; i > _rowEmpty; i--) {
+                            _tampB = parseInt($(`#div_plato div[data-row="${i - 1}"][data-col="${_colClicked}"]`).innerText);
+                            _tampBStyle = ($(`#div_plato div[data-row="${i - 1}"][data-col="${_colClicked}"]`).style.backgroundPosition);
+                            $(`#div_plato div[data-row="${i - 1}"][data-col="${_colClicked}"]`).innerText = _tampA;
+                            $(`#div_plato div[data-row="${i - 1}"][data-col="${_colClicked}"]`).style.backgroundPosition = _tampAStyle;
+                            _tampA = _tampB;
+                            _tampAStyle = _tampBStyle;
+                        }
+                    }
+                }
+            }
+        }
+
+        let setShuffle = (array) => {
+            var currentIndex = array.length, temporaryValue, randomIndex;
+            while (0 !== currentIndex) {
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue
+            }
+            return array;
+        }
+
+        let isSameRowORCol = (_id_a, _id_b) => {
+            return [($(`#${_id_a}`).getAttribute(`data-row`) == $(`#${_id_b}`).getAttribute(`data-row`)), ($(`#${_id_a}`).getAttribute(`data-col`) == $(`#${_id_b}`).getAttribute(`data-col`))];
+        }
+    </script>
+</body>
+
+</html>

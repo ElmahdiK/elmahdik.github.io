@@ -1,0 +1,126 @@
+:root {
+	--colorWHITE: #fff;
+	--colorBLACK: #000;
+	--colorMAIN: #fcfcfc;
+	--colorLIGHTGRAY: #eee;
+	--colorGRAY: #ccc;
+	--colorRED: #ef9a9a;
+}
+
+/* -- dark mode -- */
+
+@media (prefers-color-scheme: dark) {
+	body {
+		/*--colorWHITE: #111;
+		--colorBLACK: #aaa;
+		--colorMAIN: #222;*/
+	}
+}
+
+/* -- all -- */
+
+* {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	border-collapse: collapse;
+	vertical-align: top;
+	box-sizing: border-box;
+	/* user-select: none; */
+	/* -webkit-appearance: none; */
+	font-family: "Heebo", Arial, Helvetica, sans-serif;
+}
+
+*:focus {
+	outline: none;
+}
+
+.hidden{
+    display: none;
+}
+html, body {
+	height: 100%;
+	overflow-x: hidden;
+}
+
+body {
+    background-color: #eee;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+header span{
+    color:#000;
+    font-size:22px;
+    padding: 40px;
+    font-weight:bold;
+    text-align: center;
+}
+
+button{
+    padding: 5px;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+aside{
+    padding: 20px;
+}
+section{
+    flex:1;
+    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section ul{
+    /* box-shadow: 0px 1px 10px #ccc; */
+    list-style:none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    cursor: crosshair;
+}
+section ul li{
+    background-color: #fff;
+    box-shadow: inset 0px 1px 2px #ccc;
+    /* border:1px solid #eee; */
+    /* border-left:1px solid #111;
+    border-top:1px solid #111; */
+}
+section ul li:nth-child(4n){
+    /* background-color:orange; */
+    /* border-right:1px solid #111; */
+}
+section ul li:nth-child(n+13){
+    /* background-color:green; */
+    /* border-bottom:1px solid #111; */
+}
+label[for="input_pickup"].active{
+    background:dodgerblue;
+}
+label[for="input_pickup"]{
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+}
+
+#div_tools{
+    background:#eee;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-self: start;
+    align-items: center;
+}
+[data-color='bg_0']{ background-color:orange; }
+[data-color='bg_1']{ background-color:tomato; }
+[data-color='bg_2']{ background-color:dodgerblue;}

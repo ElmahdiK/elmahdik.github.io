@@ -1,0 +1,146 @@
+:root {
+    --colorWHITE: #fff;
+    --colorBLACK: #000;
+    --colorMAIN: #fafafa;
+    --colorGRAY: #ddd;
+}
+
+/* -- dark mode -- */
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --colorWHITE: #16212b;
+        --colorBLACK: #cecdcd;
+        --colorMAIN: #1b1c23;
+        --colorGRAY: #9fb9ce;
+    }
+}
+
+/* -- all -- */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    border-collapse: collapse;
+    vertical-align: top;
+    color: var(--colorBLACK);
+    font-weight: 300;
+    font-family: "Heebo", Arial, Helvetica, sans-serif;
+}
+
+*:focus {
+    outline: none;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* -- header -- */
+
+header {
+    height:10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header span{
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+/* -- main -- */
+
+main{    
+    width:100vw;
+    height: 90vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: row;
+    transition: 0.4s;
+}
+main article{
+    width: 100vw;
+}
+.mainTranslate{
+    
+}
+main ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+main ul li{
+    border: 1px solid var(--colorBLACK);
+    width:calc(20% - 6px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    margin: 2px;
+    cursor: pointer;
+}
+main ul li img{
+    width:100%;
+    height: 30vh;
+    object-fit: cover;
+    object-position: 50% 50%;
+    transition: 0.6s;
+}
+.imgMove{
+    object-position: 20% 50%;
+}
+main ul li p{
+    background: linear-gradient(0deg, rgba(0,0,0,0.7),rgba(0,0,0,0.0));
+    color:#fff;
+
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 10px;
+
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+main ul li audio{
+    display: none;
+}
+/* -- mobile --*/
+
+@media screen and (max-width: 800px) {
+    header {
+        
+    }
+    header span{
+        font-size: 20px;
+    }
+    main {
+        
+    }
+
+    main ul{
+        flex-direction: row;
+    }
+    main ul li{
+        width:calc(50% - 10px);
+    }
+}

@@ -1,0 +1,1 @@
+Ce projet à pour but de résoudre n'importe quel jeu sudoku.

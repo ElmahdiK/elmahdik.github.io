@@ -1,0 +1,90 @@
+[
+    {
+        "img": "./assets/images/bg/2.webp",
+        "song": "./assets/audio/song/2.mp3",
+        "time": "",
+        "avatar": "./assets/images/avatar/2.webp",
+        "voice": "",
+        "secouss": ""
+    },
+    {
+        "img": "",
+        "song": "",
+        "time": "",
+        "avatar": "./assets/images/avatar/4.webp",
+        "voice": "",
+        "secouss": ""
+    },
+    {
+        "img": "",
+        "song": "",
+        "time": "",
+        "avatar": "./assets/images/avatar/8.webp",
+        "voice": "",
+        "secouss": ""
+    },
+    {
+        "img": "",
+        "song": "",
+        "time": "",
+        "avatar": "./assets/images/avatar/16.webp",
+        "voice": "./assets/audio/voice/16.mp3",
+        "secouss": true
+    },
+    {
+        "img": "",
+        "song": "",
+        "time": "",
+        "avatar": "./assets/images/avatar/32.webp",
+        "voice": "./assets/audio/voice/32.mp3",
+        "secouss": true
+    },
+    {
+        "img": "",
+        "song": "",
+        "time": "",
+        "avatar": "./assets/images/avatar/64.webp",
+        "voice": "./assets/audio/voice/64.mp3",
+        "secouss": true
+    },
+    {
+        "img": "./assets/images/bg/128.png",
+        "song": "./assets/audio/song/128.mp3",
+        "time": "",
+        "avatar": "./assets/images/avatar/128.png",
+        "voice": "./assets/audio/voice/128.mp3",
+        "secouss": true
+    },
+    {
+        "img": "./assets/images/bg/256.webp",
+        "song": "./assets/audio/song/256.mp3",
+        "time": "",
+        "avatar": "./assets/images/avatar/256.png",
+        "voice": "./assets/audio/voice/256.mp3",
+        "secouss": true
+    },
+    {
+        "img": "./assets/images/bg/512.jpg",
+        "song": "./assets/audio/song/512.mp3",
+        "time": "",
+        "avatar": "./assets/images/avatar/512.png",
+        "voice": "",
+        "secouss": true
+    },
+    {
+        "img": "",
+        "song": "",
+        "time": "",
+        "avatar": "./assets/images/avatar/1024.png",
+        "voice": "./assets/audio/voice/1024.mp3",
+        "secouss": true
+    },
+    {
+        "img": "./assets/images/bg/2048.webp",
+        "song": "./assets/audio/song/2048.mp3",
+        "time": "",
+        "avatar": "./assets/images/avatar/2048.webp",
+        "voice": "./assets/audio/voice/2048.mp3",
+        "secouss": true
+    }
+]

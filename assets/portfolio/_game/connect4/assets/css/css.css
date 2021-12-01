@@ -1,0 +1,156 @@
+:root {
+	--colorWHITE: #fff;
+	--colorBLACK: #000;
+	--colorMAIN: #274394;
+	--colorYELLOW: #ffca28;
+	--colorRED: #b71c1c;
+}
+
+/* -- dark mode -- */
+
+@media (prefers-color-scheme: dark) {
+	body {
+		--colorWHITE: #111;
+		--colorBLACK: #aaa;
+		--colorMAIN: #222;
+	}
+}
+
+/* -- all -- */
+
+* {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	border-collapse: collapse;
+	vertical-align: top;
+	box-sizing: border-box;
+	/* user-select: none; */
+	/* -webkit-appearance: none; */
+}
+
+*:focus {
+	outline: none;
+}
+
+html, body {
+	height: 100%;
+	overflow-x: hidden;
+}
+
+body {
+	background-color: var(--colorWHITE);
+}
+
+p, a {
+	color: var(--colorBLACK);
+	font-weight: 300;
+	font-family: "Heebo", Arial, Helvetica, sans-serif;
+	/* text-align: justify; */
+}
+
+a {
+	text-decoration: none;
+}
+
+.hidden {
+	display: none !important;
+}
+
+/* -- bt_play -- */
+
+#bt_play:hover {
+	background-color: var(--colorBLACK);
+	color: var(--colorWHITE);
+}
+
+#bt_play {
+	color: var(--colorBLACK);
+	border: 1px solid var(--colorBLACK);
+	box-shadow: 0px 10px 50px var(--colorWHITE);
+	border-radius: 4px;
+	font-size: 16px;
+	padding: 15px 0px;
+	transition: 0.2s;
+	width: 180px;
+	position: absolute;
+	top: 48vh;
+	left: 0%;
+	right: 0%;
+	margin: 0 auto;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+
+.filter {
+	filter: blur(2px);
+	pointer-events: none;
+}
+
+/* -- header -- */
+
+header #p_title {
+	font-size: 22px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+/* -- footer -- */
+
+footer p {
+	font-size: 12px;
+}
+
+/* -- header / footer -- */
+
+header, footer {
+	height: 10vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* -- main -- */
+
+main {
+	background-color: var(--colorMAIN);
+	height: 80vh;
+	display: flex;
+}
+
+/* -- plateau -- */
+
+#plateau {
+	width: 50vw;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#plateau div:hover {
+	box-shadow: inset 0px 0px 50px var(--colorBLACK);
+}
+
+#plateau div {
+	box-shadow: inset 0px 0px 8px var(--colorBLACK);
+	width: calc(14.28% - 2%);
+	height: 10vh;
+	margin: 1%;
+	cursor: pointer;
+}
+
+#plateau div[data-color="yellow"] {
+	background-color: var(--colorYELLOW);
+}
+
+#plateau div[data-color="red"] {
+	background-color: var(--colorRED);
+}
+
+/* -- mobile -- */
+
+@media screen and (max-width: 800px) {
+	#plateau {
+		width: 80vw;
+	}
+}

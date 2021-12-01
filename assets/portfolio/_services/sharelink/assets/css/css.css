@@ -1,0 +1,139 @@
+/** 
+ CSS
+**/
+
+:root {
+    --colorWHITE: #fff;
+    --colorBLACK: #222;
+    --colorBLUE: #3f51b5;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    border-collapse: collapse;
+    font-family: helvetica, sans-serif;
+    font-weight: 300;
+    vertical-align: top;
+    text-rendering: optimizeLegibility;
+    user-select: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+html, body {
+    height: 100%;
+}
+
+.hidden {
+    display: none !important;
+}
+
+header {
+    /* background: var(--colorBLUE);
+    background-image: url("../images/bg.png"); */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 20px;
+}
+
+header span {
+    font-size: 30px;
+    padding: 10px;
+    flex: 1;
+    align-self: center;
+}
+
+header img {
+    width: 220px;
+    /* height: 160px; */
+    align-self: center;
+    object-fit: cover;
+}
+
+header #input-link {
+    border: 1px solid var(--colorBLACK);
+    padding: 10px;
+    margin: 10px;
+    font-size: 18px;
+    flex: 1;
+}
+
+/** MAIN */
+
+main {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+#ul_sn {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+    padding: 50px;
+}
+
+#ul_sn li {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#ul_sn li img {
+    width: 30px;
+    height: 30px;
+}
+
+#ul_sn li input, #ul_sn li button {
+    border: 1px solid var(--colorBLACK);
+    margin-left: 20px;
+}
+
+#ul_sn li input {
+    font-size: 18px;
+    padding: 10px;
+    flex: 1;
+}
+
+#ul_sn li button:hover {
+    background: var(--colorBLACK);
+    color: var(--colorWHITE);
+}
+
+#ul_sn li button {
+    background: var(--colorWHITE);
+    font-size: 12px;
+    padding: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/*-- footer --*/
+
+footer {
+	height: 10vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+footer span {
+    font-size: 12px;
+}
