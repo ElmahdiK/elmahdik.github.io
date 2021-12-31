@@ -9,6 +9,10 @@
 
 @media (prefers-color-scheme: dark) {
     body {
+        /* --colorWHITE: #111;
+        --colorBLACK: #aaa;
+        --colorMAIN: #222;
+        --colorGRAY: #000; */
         --colorWHITE: #16212b;
         --colorBLACK: #cecdcd;
         --colorMAIN: #1b1c23;
@@ -24,6 +28,9 @@
     border: 0px;
     border-collapse: collapse;
     vertical-align: top;
+    /* box-sizing: border-box; */
+    /* user-select: none; */
+    /* -webkit-appearance: none; */
     color: var(--colorBLACK);
     font-weight: 300;
     font-family: "Heebo", Arial, Helvetica, sans-serif;
@@ -39,7 +46,7 @@ html, body {
 }
 
 body {
-    
+    background-color:var(--colorWHITE);
 }
 
 a {
@@ -74,84 +81,68 @@ footer {
     justify-content: center;
     align-items: center;
 }
-/* -- main -- */
 
-main{    
-    background-color: #eee;
-    width:100vw;
+/* -- main -- */
+main{
+    background: linear-gradient(45deg, #3f51b5, #03a9f4);
     height: 80vh;
     overflow-y: scroll;
-    display: flex;
-    flex-direction: row;
-    transition: 0.4s;
 }
 
 main ul{
-    width: 100%;
     list-style: none;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-start;
-    align-content: flex-start;
 }
-main ul li{
-    width:calc(25% - 20px);
-    margin: 10px;
+
+main ul li:hover,
+main ul li.active{
+    border: 2px solid yellow;
+}
+main ul li{ 
+    background-color: #fafafa59;
+    box-shadow: inset 0px 1px 2px #222;
+    border: 2px solid #03a9f4;
+    width:calc(25% - 124px);
+    height: calc(20vh - 124px);
+    padding: 40px;
+    margin:20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
+    align-items: center;
     cursor: pointer;
-}
-
-.square{
-    border: 1px solid var(--colorBLACK);
-    width: calc(100% - 2px);
     position: relative;
+    transition: 0.2s;
 }
-.square:after{
-    content: "";
-    display: block;
-    padding-bottom: 100%;
-}
-
 main ul li img{
-    object-position: 50% 50%;
-    transition: 0.6s;
-    width: 100%;
+    width:100%;
     height: 100%;
-    position: absolute;
-    object-fit: cover;
+    margin-bottom:10px;
+    object-fit: contain;
 }
-.imgMove{
-    object-position: 20% 50%;
-}
-main ul li p{
-    background: linear-gradient(0deg, rgba(0,0,0,1),rgba(0,0,0,0.0));
-    color:#fff;
-
-    text-align: center;
-    text-transform: uppercase;
+main ul li a{
+    color:#1565c0;
     font-size: 14px;
     padding: 10px;
-
+    text-align: center;
     position: absolute;
     bottom: 0px;
-    left: 0px;
     right: 0px;
-    height:25%;
-}
-main ul li audio{
-    display: none;
+    left: 0px;
 }
 /* -- mobile --*/
 
 @media screen and (max-width: 800px) {
-    header p{
-        font-size: 20px;
+    header {
+        height: 100vh;
+    }
+    main {
+        height: auto;
     }
     main ul li{
-        width:calc(50% - 20px);
+        border-right: 0px;
+        width:calc(100% - 41px);
     }
 }

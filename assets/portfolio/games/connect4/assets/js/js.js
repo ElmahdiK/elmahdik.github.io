@@ -19,7 +19,9 @@ window.onload = () => {
 
 	player = 1;
 	initGame();
+	resizePlateau();
 }
+window.onresize = _ => resizePlateau();
 
 /**
  * Init the game
@@ -35,6 +37,11 @@ const initGame = _ => {
 	// listener
 	$$(`#plateau div`).forEach(_div => _div.onclick = () => putJeton(parseInt(_div.dataset.col)));
 }
+
+/**
+ * Autoresize Plateau game
+ */
+const resizePlateau = _ => _plateau.style.height = `${_plateau.getBoundingClientRect().width * (6 / 7)}px`;
 
 /**
  * Put jeton in the right column
@@ -140,17 +147,13 @@ const checkDR = (_row, _col) => {
  * Return true if yes or false if not
  * @param {string} _elements - concat elements from array checked (column, row, diagonal left, diagonal right)
  */
-const checkIfWin = _elements => {
-	return (_elements.includes(`1111`) || _elements.includes(`2222`));
-}
+const checkIfWin = _elements => (_elements.includes(`1111`) || _elements.includes(`2222`));
 
 /**
  * Return color of the player (yellow or red)
  * @param {number} _player - 1 or -1 (2)
  */
-const getColor = _player => {
-	return (_player == 1) ? `yellow` : `red`;
-}
+const getColor = _player => (_player == 1) ? `yellow` : `red`;
 
 /**
  * Clear plateau
@@ -170,11 +173,8 @@ const clearPlateau = _ => {
 const playAgain = _ => {
 	// hide button
 	viewButton();
-	// clear plateau
-	clearPlateau().then(_ => {
-		// init game
-		initGame();
-	})
+	// clear plateau & initGame
+	clearPlateau().then(_ => initGame());
 }
 
 /**

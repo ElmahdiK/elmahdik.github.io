@@ -1,7 +1,7 @@
 :root {
 	--colorWHITE: #fff;
 	--colorBLACK: #000;
-	--colorMAIN: #274394;
+	--colorMAIN: #eee;
 	--colorYELLOW: #ffca28;
 	--colorRED: #b71c1c;
 }
@@ -121,7 +121,11 @@ main {
 /* -- plateau -- */
 
 #plateau {
+	background-color: #274394;    
+	background: linear-gradient(18deg,#1a237e,#274394);
 	width: 50vw;
+	padding: 20px;
+    border-radius: 20px;
 	margin: auto;
 	display: flex;
 	flex-wrap: wrap;
@@ -132,11 +136,13 @@ main {
 }
 
 #plateau div {
+	background-color: #eee;
+    border: 2px solid transparent;
 	box-shadow: inset 0px 0px 8px var(--colorBLACK);
 	width: calc(14.28% - 2%);
-	height: 10vh;
 	margin: 1%;
 	cursor: pointer;
+	border-radius: 100%;
 }
 
 #plateau div[data-color="yellow"] {

@@ -6,14 +6,12 @@
 }
 
 /* -- dark mode -- */
-
-@media (prefers-color-scheme: dark) {
-    body {
-        --colorWHITE: #222;
-        --colorBLACK: #bbb;
-        --colorMAIN: #1b1b1b;
-        --colorGRAY: #000;
-    }
+/* @media (prefers-color-scheme: dark) */
+[data-theme="dark"]{
+    --colorWHITE: #222;
+    --colorBLACK: #bbb;
+    --colorMAIN: #1b1b1b;
+    --colorGRAY: #000;
 }
 
 /* -- all -- */
@@ -94,6 +92,18 @@ header p{
 }
 #p_job {
     font-size: 14px;
+}
+
+#lb_darkmode{
+    color: var(--colorBLACK);
+    width: 8vw;
+    height: 10vh;
+    line-height: 10vh;
+    position: absolute;
+    right: 0px;
+    font-size: 26px;
+    cursor: pointer;
+    text-align: center;
 }
 
 /*--- footer ---*/
@@ -191,8 +201,8 @@ section article{
 }
 #ul_portfolio li {
     background-color: var(--colorWHITE);
-    width: calc(20% - 20px);
-    margin: 10px;
+    width: calc(20% - 40px);
+    margin: 20px;
 }
 #ul_portfolio li a{
     width: calc(100% + 20px);
@@ -210,9 +220,9 @@ section article{
 }
 
 .div_portfolio {
-    width: calc(100% - 60px);
-    height: calc(100% - 60px);
-    padding: 30px;
+    width: calc(100% - 100px);
+    height: calc(100% - 100px);
+    padding: 50px;
     display: flex;
     flex-direction: column;
 }
@@ -246,17 +256,24 @@ section article{
 
 @keyframes animateUp {
     0% {
+        background-color: var(--colorGRAY);
         transform: translateY(0px) translateX(100px);
         opacity: 0;
+        border-radius: 0% 0% 100% 100% / 100% 0% 100% 0%;
     }
     100% {
+        background-color: var(--colorWHITE);
         transform: translateY(0px) translateX(0px);
         opacity: 1;
+        border-radius: 0% 100% 0% 100% / 100% 0% 100% 0%;
     }
 }
 
 /* -- mobile --*/
 @media screen and (max-width: 800px) {
+    #lb_darkmode{
+        display: none;
+    }
     header {
         border: 0px;
         height: 100vh;
@@ -274,13 +291,15 @@ section article{
     aside {
         /* width: calc(100% - 40px);
         height: 30vh; */
-        display: none;
+        /* display: none; */
+        width: calc(100vw - 62px);
+        height: calc(100vh - 62px);
     }
     section{
         width:100vw;
     }
     aside img, aside div {
-        display: none;
+        /* display: none; */
     }
     #ul_portfolio {
         width: 100%;
@@ -291,8 +310,8 @@ section article{
         margin: 10px;
     }
     .div_portfolio {
-        width: calc(100% - 40px);
-        height: calc(100% - 40px);
-        padding: 20px;
+        width: calc(100% - 100px);
+        height: calc(100% - 100px);
+        padding: 50px;
     }
 }
