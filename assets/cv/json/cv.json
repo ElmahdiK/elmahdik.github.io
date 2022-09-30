@@ -18,7 +18,8 @@
             "facebook": "https://www.facebook.com/elmahdikorfed1991",
             "linkedin": "https://www.linkedin.com/in/elmahdikorfed1991/",
             "github": "https://github.com/elmahdik",
-            "resume": "./assets/cv/Elmahdi-KORFED_CV.pdf"
+            "resume": "./assets/cv/Elmahdi-KORFED_CV.pdf",
+            "codepen":"https://codepen.io/elmahdik"
         },
         "job_position": "Full stack web developer",
         "footer": "© 2022 EK"
@@ -62,7 +63,7 @@
                 {
                     "id": "db2048",
                     "title": "DB 2048",
-                    "src": "./assets/portfolio/games/db2048/assets/images/image.jpg",
+                    "src": "./assets/portfolio/games/db2048/assets/images/main.jpeg",
                     "video": "./assets/portfolio/games/db2048/assets/videos/video.mp4",
                     "link": "./assets/portfolio/games/db2048",
                     "description": "Dragon Ball version of the game 2048. The goal is to merge all similar cards.",
@@ -79,7 +80,7 @@
                 {
                     "id": "enigma",
                     "title": "enigma",
-                    "src": "https://lejournalduneoroliste.files.wordpress.com/2017/08/dc3a9tective-privc3a9.jpg",
+                    "src": "./assets/portfolio/games/enigma/assets/images/main.jpeg",
                     "video": "./assets/portfolio/games/enigma/assets/videos/video.mp4",
                     "link": "./assets/portfolio/games/enigma",
                     "description": "Will you be able to solve these enigmas ? 🧐",

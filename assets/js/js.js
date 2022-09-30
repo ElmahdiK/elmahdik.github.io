@@ -30,7 +30,9 @@ window.onload = _ => {
         $(`#p_resume`).innerHTML = d.about.bio_web;
         // - links
         $(`#email_link`).href = `mailto:${d.about.contact.email}`;
-        $(`#facebook_link`).href = d.about.contact.facebook;
+        //$(`#facebook_link`).href = d.about.contact.facebook;
+        // $(`#codepen_link`).href = d.about.contact.codepen;
+        $(`#github_link`).href = d.about.contact.github;
         $(`#linkedin_link`).href = d.about.contact.linkedin;
         // - download CV
         $(`#a_download_cv`).href = d.about.contact.resume;

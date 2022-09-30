@@ -7,7 +7,7 @@
 
 /* -- dark mode -- */
 /* @media (prefers-color-scheme: dark) */
-[data-theme="dark"]{
+[data-theme="dark"] {
     --colorWHITE: #222;
     --colorBLACK: #bbb;
     --colorMAIN: #1b1b1b;
@@ -32,7 +32,8 @@
     outline: none;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     overflow-x: hidden;
 }
@@ -43,7 +44,8 @@ body {
 }
 
 
-p, a {
+p,
+a {
     color: var(--colorBLACK);
     font-weight: 300;
     /* font-family: "Heebo", Arial, Helvetica, sans-serif; */
@@ -58,11 +60,12 @@ a {
     display: none !important;
 }
 
-.box:hover{
+.box:hover {
     box-shadow: 0px 20px 20px var(--colorGRAY);
     top: -10px;
 }
-.box{
+
+.box {
     box-shadow: 0px 1px 2px var(--colorGRAY);
     position: relative;
     top: 0px;
@@ -73,28 +76,32 @@ a {
 header {
     background-color: var(--colorWHITE);
     box-shadow: 0px 1px 2px var(--colorGRAY);
-    height:10vh;
+    height: 10vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-content: center;
     align-items: center;
-    padding:0px 50px;
+    padding: 0px 50px;
 }
-header p{
+
+header p {
     text-align: center;
 }
+
 #p_name:first-letter {
     text-transform: capitalize;
 }
+
 #p_name {
     font-size: 30px;
 }
+
 #p_job {
     font-size: 14px;
 }
 
-#lb_darkmode{
+#lb_darkmode {
     color: var(--colorBLACK);
     width: 8vw;
     height: 10vh;
@@ -126,7 +133,7 @@ aside {
     width: calc(20vw - 62px);
     height: calc(90vh - 62px);
     padding: 30px;
-    margin:1px;
+    margin: 1px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -138,9 +145,10 @@ aside img {
     position: absolute;
     object-fit: cover;
 }
-aside .square{
-    width:calc(100% - 50px);
-    margin:0px 25px;
+
+aside .square {
+    width: calc(100% - 50px);
+    margin: 0px 25px;
 }
 
 aside #div_resume {
@@ -178,12 +186,13 @@ aside #a_download_cv {
 }
 
 /* -- section -- */
-section{
-    width:80vw;
+section {
+    width: 80vw;
     overflow-x: scroll;
     scroll-behavior: smooth;
 }
-section article{
+
+section article {
     min-height: 90vh;
     display: flex;
 }
@@ -199,21 +208,24 @@ section article{
     align-items: stretch;
     align-content: flex-start;
 }
+
 #ul_portfolio li {
     background-color: var(--colorWHITE);
     width: calc(20% - 40px);
     margin: 20px;
 }
-#ul_portfolio li a{
+
+#ul_portfolio li a {
     width: calc(100% + 20px);
 }
 
 /* -- div_portfolio -- */
-.square{
+.square {
     position: relative;
     width: 100%;
 }
-.square:after{
+
+.square:after {
     content: "";
     display: block;
     padding-bottom: 100%;
@@ -226,6 +238,7 @@ section article{
     display: flex;
     flex-direction: column;
 }
+
 .div_portfolio img {
     background-color: #fff;
     width: 100%;
@@ -233,11 +246,13 @@ section article{
     position: absolute;
     object-fit: cover;
 }
+
 .div_portfolio .p_title {
     font-size: 16px;
     padding: 10px 0px;
     text-transform: uppercase;
 }
+
 .div_portfolio .p_des {
     font-size: 14px;
 }
@@ -261,6 +276,7 @@ section article{
         opacity: 0;
         border-radius: 0% 0% 100% 100% / 100% 0% 100% 0%;
     }
+
     100% {
         background-color: var(--colorWHITE);
         transform: translateY(0px) translateX(0px);
@@ -269,25 +285,54 @@ section article{
     }
 }
 
+@media screen and (max-width: 1500px) {
+    #ul_portfolio li {
+        width: calc(25% - 30px);
+        margin: 15px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    #ul_portfolio li {
+        width: calc(33.33% - 20px);
+        margin: 10px;
+    }
+
+    #p_resume {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #ul_portfolio li {
+        width: calc(50% - 10px);
+        margin: 5px;
+    }
+}
+
 /* -- mobile --*/
 @media screen and (max-width: 800px) {
-    #lb_darkmode{
+    #lb_darkmode {
         display: none;
     }
+
     header {
         border: 0px;
         height: 100vh;
         flex-direction: column;
         justify-content: center;
     }
+
     header div {
         margin-bottom: 50px;
     }
+
     main {
         height: auto;
         flex-direction: column;
         align-items: center;
     }
+
     aside {
         /* width: calc(100% - 40px);
         height: 30vh; */
@@ -295,20 +340,26 @@ section article{
         width: calc(100vw - 62px);
         height: calc(100vh - 62px);
     }
-    section{
-        width:100vw;
+
+    section {
+        width: 100vw;
     }
-    aside img, aside div {
+
+    aside img,
+    aside div {
         /* display: none; */
     }
+
     #ul_portfolio {
         width: 100%;
         padding: 0px;
     }
+
     #ul_portfolio li {
         width: calc(100% - 20px);
         margin: 10px;
     }
+
     .div_portfolio {
         width: calc(100% - 100px);
         height: calc(100% - 100px);
