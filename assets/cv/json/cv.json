@@ -6,7 +6,7 @@
         "birthday": "1991/09/12",
         "nationality": "français",
         "permis": "B",
-        "bio_web_title": "🏡 Welcome 😊",
+        "bio_web_title": "Welcome",
         "bio_web": "Passionate about the web for more than 10 years, I had the opportunity to work in various fields as a web/mobile developer - back and front: private company, public research laboratory, startup as co-founder and for customers. I created this website in order to share with you some of my personal web projects. Do not hesitate to contact me if necessary.<br>Have a great visit!",
         "location": {
             "country": "france",
@@ -26,6 +26,164 @@
     },
     "portfolio": [
         {
+        "type": "enterprise",
+        "projects": [
+        {
+            "id": "wasabi",
+            "title": "WASABI",
+            "src": "./assets/portfolio/entreprises/wasabi/assets/image.webp",
+            "link": "https://wasabi.i3s.unice.fr/#/search/artist/Michael%20Jackson/album/Bad/song/Smooth%20Criminal",
+            "description": "Site web du projet WASABI contenant plus de 2 millions de musiques.",
+            "description_en": "Website of the WASABI project realized in polymer. It contains over 2 million songs.",
+            "skills": [
+                "html",
+                "javascript",
+                "css",
+                "json",
+                "python",
+                "nodejs",
+                "mongodb"
+            ],
+            "visible": true
+        },
+        {
+            "id": "pedalboard",
+            "title": "Pedalboard",
+            "src": "./assets/portfolio/entreprises/pedalboard/assets/image.webp",
+            "link": "https://wasabi.i3s.unice.fr/dynamicPedalboard/?bank=Michel&preset=Vampires",
+            "description": "Développement web d'un des premiers Pedalboard au monde!",
+            "description_en": "I developed the Pedalboard main GUI and some plugins in web components",
+            "skills": [
+                "html",
+                "javascript",
+                "css",
+                "json",
+                "nodejs"
+            ],
+            "visible": true
+        },
+        {
+            "id": "mailissimo",
+            "title": "mailissimo",
+            "src": "./assets/portfolio/entreprises/mailissimo/assets/image.jpg",
+            "link": "https://www.mailissimo.com/index.cfm?fuseaction=c.dspHome&subaction=email",
+            "description": "Éditez vos emails en quelques clics.",
+            "description_en": "J'ai travaillé sur l'outils de gestion de modèle d'email de l'entreprise",
+            "skills": [
+                "html",
+                "javascript",
+                "css",
+                "json",
+                "coldfusion"
+            ],
+            "visible": true
+        }
+    ]
+},
+        {
+            "type": "services",
+            "projects": [
+                {
+                    "id": "vipborntoday",
+                    "title": "vip born today",
+                    "src": "./assets/portfolio/services/vipborntoday/assets/images/image.webp",
+                    "video": "./assets/portfolio/services/vipborntoday/assets/videos/video.mp4",
+                    "link": "./assets/portfolio/services/vipborntoday",
+                    "description": "Who are these VIPs celebrating their birthday today?",
+                    "description_fr": "Qui sont ces VIP qui fêtent leur anniversaire aujourd'hui?",
+                    "skills": [
+                        "html",
+                        "javascript",
+                        "css",
+                        "json"
+                    ],
+                    "visible": true
+                },
+                {
+                    "id": "zitacions",
+                    "title": "zitacions",
+                    "src": "https://img.lemde.fr/2016/10/12/358/0/2654/1766/664/0/75/0/292b88c_10440-wasx3b.lskh85mi.jpg",
+                    "video": "./assets/portfolio/services/zitacions/assets/videos/video.mp4",
+                    "link": "./assets/portfolio/services/zitacions",
+                    "description": "Do you know these quotes?",
+                    "skills": [
+                        "html",
+                        "javascript",
+                        "css",
+                        "json"
+                    ],
+                    "visible": true
+                },
+                {
+                    "id": "flags",
+                    "title": "flags",
+                    "src": "https://img.freepik.com/photos-gratuite/mise-plat-du-globe-pate-modeler-personnes_23-2148630365.jpg?size=338&ext=jpg",
+                    "video": "./assets/portfolio/services/flags/assets/videos/video.mp4",
+                    "link": "./assets/portfolio/services/flags",
+                    "description": "Listen national anthems of the world",
+                    "skills": [
+                        "html",
+                        "javascript",
+                        "css",
+                        "json"
+                    ],
+                    "visible": true
+                },
+                {
+                    "id": "animalssounds",
+                    "title": "animalssounds",
+                    "src": "https://cdn.pixabay.com/photo/2017/11/06/09/53/tiger-2923186_1280.jpg",
+                    "video": "./assets/portfolio/services/animalssounds/assets/videos/video.mp4",
+                    "link": "./assets/portfolio/services/animalssounds",
+                    "description": "Animals sounds",
+                    "skills": [
+                        "html",
+                        "javascript",
+                        "css",
+                        "json"
+                    ],
+                    "visible": true
+                },
+                {
+                    "id": "greetingcards",
+                    "title": "Greeting cards",
+                    "src": "./assets/portfolio/services/greetingcards/assets/images/image.jpg",
+                    "video": "./assets/portfolio/services/greetingcards/assets/videos/video.mp4",
+                    "link": "https://yoann-moise.com/projects/greetings/index.php",
+                    "description": "For New Year, Christmas and birthdays, schedule your greeting cards now from our new free collection of virtual cards!",
+                    "description_fr": "Pour la nouvelle année, Noël et les anniversaires, programmez dès maintenant vos cartes de voeux parmi notre nouvelle collection gratuite de cartes virtuelles!",
+                    "skills": [
+                        "html",
+                        "css",
+                        "js",
+                        "php"
+                    ],
+                    "label": "CVP Création de carte de voeux personnalisé",
+                    "date": "décembre 2014 – janvier 2015",
+                    "function": "Créateur/Developpeur web",
+                    "team": [
+                        "yoann moise"
+                    ],
+                    "visible": true
+                },
+                {
+                    "id": "sharelink",
+                    "title": "sharelink",
+                    "src": "./assets/portfolio/services/sharelink/assets/images/image.webp",
+                    "video": "./assets/portfolio/services/sharelink/assets/videos/video.mp4",
+                    "link": "./assets/portfolio/services/sharelink",
+                    "description": "Share your link on social networks!",
+                    "skills": [
+                        "html",
+                        "javascript",
+                        "css",
+                        "json"
+                    ],
+                    "visible": true
+                }
+            ]
+        },
+        {
             "type": "games",
             "projects": [
                 {
@@ -42,7 +200,7 @@
                         "css"
                     ],
                     "date": "novembre 2021",
-                    "visible": true
+                    "visible": false
                 },
                 {
                     "id": "connect4",
@@ -119,109 +277,6 @@
                     "link": "./assets/portfolio/games/memory",
                     "description": "Practice your memory by finding the pairs!",
                     "description_fr": "Exercez votre mémoire en retrouvant les paires d'images!",
-                    "skills": [
-                        "html",
-                        "javascript",
-                        "css",
-                        "json"
-                    ],
-                    "visible": true
-                }
-            ]
-        },
-        {
-            "type": "services",
-            "projects": [
-                {
-                    "id": "flags",
-                    "title": "flags",
-                    "src": "https://img.freepik.com/photos-gratuite/mise-plat-du-globe-pate-modeler-personnes_23-2148630365.jpg?size=338&ext=jpg",
-                    "video": "./assets/portfolio/services/flags/assets/videos/video.mp4",
-                    "link": "./assets/portfolio/services/flags",
-                    "description": "Listen national anthems of the world",
-                    "skills": [
-                        "html",
-                        "javascript",
-                        "css",
-                        "json"
-                    ],
-                    "visible": true
-                },
-                {
-                    "id": "animalssounds",
-                    "title": "animalssounds",
-                    "src": "https://cdn.pixabay.com/photo/2017/11/06/09/53/tiger-2923186_1280.jpg",
-                    "video": "./assets/portfolio/services/animalssounds/assets/videos/video.mp4",
-                    "link": "./assets/portfolio/services/animalssounds",
-                    "description": "Animals sounds",
-                    "skills": [
-                        "html",
-                        "javascript",
-                        "css",
-                        "json"
-                    ],
-                    "visible": true
-                },
-                {
-                    "id": "greetingcards",
-                    "title": "Greeting cards",
-                    "src": "./assets/portfolio/services/greetingcards/assets/images/image.jpg",
-                    "video": "./assets/portfolio/services/greetingcards/assets/videos/video.mp4",
-                    "link": "https://yoann-moise.com/projects/greetings/index.php",
-                    "description": "For New Year, Christmas and birthdays, schedule your greeting cards now from our new free collection of virtual cards!",
-                    "description_fr": "Pour la nouvelle année, Noël et les anniversaires, programmez dès maintenant vos cartes de voeux parmi notre nouvelle collection gratuite de cartes virtuelles!",
-                    "skills": [
-                        "html",
-                        "css",
-                        "js",
-                        "php"
-                    ],
-                    "label": "CVP Création de carte de voeux personnalisé",
-                    "date": "décembre 2014 – janvier 2015",
-                    "function": "Créateur/Developpeur web",
-                    "team": [
-                        "yoann moise"
-                    ],
-                    "visible": true
-                },
-                {
-                    "id": "sharelink",
-                    "title": "sharelink",
-                    "src": "./assets/portfolio/services/sharelink/assets/images/image.webp",
-                    "video": "./assets/portfolio/services/sharelink/assets/videos/video.mp4",
-                    "link": "./assets/portfolio/services/sharelink",
-                    "description": "Share your link on social networks!",
-                    "skills": [
-                        "html",
-                        "javascript",
-                        "css",
-                        "json"
-                    ],
-                    "visible": true
-                },
-                {
-                    "id": "vipborntoday",
-                    "title": "vip born today",
-                    "src": "./assets/portfolio/services/vipborntoday/assets/images/image.webp",
-                    "video": "./assets/portfolio/services/vipborntoday/assets/videos/video.mp4",
-                    "link": "./assets/portfolio/services/vipborntoday",
-                    "description": "Who are these VIPs celebrating their birthday today?",
-                    "description_fr": "Qui sont ces VIP qui fêtent leur anniversaire aujourd'hui?",
-                    "skills": [
-                        "html",
-                        "javascript",
-                        "css",
-                        "json"
-                    ],
-                    "visible": true
-                },
-                {
-                    "id": "zitacions",
-                    "title": "zitacions",
-                    "src": "https://img.lemde.fr/2016/10/12/358/0/2654/1766/664/0/75/0/292b88c_10440-wasx3b.lskh85mi.jpg",
-                    "video": "./assets/portfolio/services/zitacions/assets/videos/video.mp4",
-                    "link": "./assets/portfolio/services/zitacions",
-                    "description": "Do you know these quotes?",
                     "skills": [
                         "html",
                         "javascript",

@@ -39,7 +39,8 @@ window.onload = _ => {
         // portfolio
         const _data = [
             ...d.portfolio[0].projects.filter(project => project.visible), // games
-            ...d.portfolio[1].projects.filter(project => project.visible) // services
+            ...d.portfolio[1].projects.filter(project => project.visible), // games
+            ...d.portfolio[2].projects.filter(project => project.visible) // services
         ];
         let _html = ``;
         for (const key in _data) _html += `
