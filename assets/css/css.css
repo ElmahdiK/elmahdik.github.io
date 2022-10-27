@@ -211,8 +211,8 @@ section article {
 
 #ul_portfolio li {
     background-color: var(--colorWHITE);
-    width: calc(20% - 40px);
-    margin: 20px;
+    width: calc(20% - 10px);
+    margin: 5px;
 }
 
 #ul_portfolio li a {
@@ -287,15 +287,13 @@ section article {
 
 @media screen and (max-width: 1500px) {
     #ul_portfolio li {
-        width: calc(25% - 30px);
-        margin: 15px;
+        width: calc(25% - 10px);
     }
 }
 
 @media screen and (max-width: 1300px) {
     #ul_portfolio li {
-        width: calc(33.33% - 20px);
-        margin: 10px;
+        width: calc(33.33% - 10px);
     }
 
     #p_resume {
@@ -306,7 +304,6 @@ section article {
 @media screen and (max-width: 1000px) {
     #ul_portfolio li {
         width: calc(50% - 10px);
-        margin: 5px;
     }
 }
 
