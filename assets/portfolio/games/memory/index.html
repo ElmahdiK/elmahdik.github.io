@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
 	<!-- meta tags: HTML -->
 	<meta charset="UTF-8">
-	<title>EK • Memory</title>
+	<title>EK • Memory Game</title>
 	<meta name="author" content="Elmahdi KORFED" />
-	<meta name="title" content="EK • Memory">
+	<meta name="title" content="EK • Memory Game">
 	<meta name="description" content="Practice your memory by finding the pairs!" />
 	<meta name="keywords" content="Elmahdi Korfed, Developer, Game, Memory card" />
 	<meta name="viewport" content="width=device-width" />
@@ -22,28 +21,356 @@
 	<meta property="og:locale" content="en_US" />
 
 	<!-- link -->
-	<link rel="icon" type="image/png" sizes="16x16" href="./assets/images/logo/icon_16.ico" />
-	<link rel="apple-touch-startup-image" href="./assets/images/logo/icon_192.png">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Heebo">
-	<link rel="stylesheet" href="./assets/css/css.css" media="none" onload="if(media!=='all')media='all'">
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕹</text></svg>">
+  </head>
 
-	<!-- script -->
-	<script src="./assets/js/js.js" defer></script>
-</head>
+  <body>
+    <!-- CSS -->
+    <style>
+      :root {
+        --colorWHITE: #fff;
+        --colorBLACK: #000;
+        --colorMAIN: #fff;
+      }
 
-<body>
-	<header>
-		<p id="p_title">Memory</p>
-	</header>
+      * {
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+        border-collapse: collapse;
+        vertical-align: top;
+        box-sizing: border-box;
+        /* user-select: none; */
+        /* -webkit-appearance: none; */
+      }
 
-	<main>
-		<div id="plateau"></div>
-		<button id="bt_play" class="hidden">play again</button>
-	</main>
+      *:focus {
+        outline: none;
+      }
 
-	<footer>
-		<p>© 2022 EK</p>
-	</footer>
-</body>
+      html,
+      body {
+        height: 100%;
+        overflow-x: hidden;
+      }
 
+      body {
+        /* background: linear-gradient(45deg, #2196f3, #014a97); */
+      }
+
+      p,
+      a {
+        color: var(--colorBLACK);
+        font-weight: 300;
+        font-family: Helvetica, sans-serif;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .hidden {
+        display: none !important;
+      }
+
+      #bt_play:hover {
+        background-color: var(--colorBLACK);
+        color: var(--colorWHITE);
+      }
+
+      #bt_play {
+        color: var(--colorBLACK);
+        border: 1px solid var(--colorBLACK);
+        box-shadow: 0px 10px 50px var(--colorWHITE);
+        border-radius: 4px;
+        font-size: 16px;
+        padding: 15px 0px;
+        transition: 0.2s;
+        width: 220px;
+        position: absolute;
+        top: 48vh;
+        left: 0%;
+        right: 0%;
+        margin: 0 auto;
+        cursor: pointer;
+        text-transform: uppercase;
+      }
+
+      .filter {
+        filter: blur(2px);
+        pointer-events: none;
+      }
+
+      header,
+      footer {
+        /* background-color: rgba(0, 0, 0, 0.4); */
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      header #p_title {
+        font-size: 26px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      p.score {
+        font-size: 24px;
+        position: relative;
+        bottom: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      p.score span {
+        display: inline-block;
+        padding: 4px;
+      }
+
+      main {
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        max-width: 70%;
+        margin: 0 auto;
+      }
+
+      #board {
+        background-color: #fafafa;
+        /* background: linear-gradient(20deg, #e91e63, #ffc107); */
+        /* box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.2); */
+        border-radius: 4px;
+        width: calc(100% - 60px);
+        margin: 20px;
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        align-self: center;
+        max-width: 600px;
+      }
+
+      .memory-card {
+        background-color: rgba(0, 0, 0, 0.4);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+        /* border: 1px solid #000; */
+        width: calc(25% - 12px);
+        height: calc(25% - 12px);
+        margin: 6px;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        cursor: pointer;
+        position: relative;
+      }
+
+      .memory-card:after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+      }
+
+      .memory-card[data-visible="true"] {
+        transform: rotateY(180deg);
+      }
+
+      .memory-card img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .memory-card-front,
+      .memory-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+      }
+
+      .memory-card-front {
+        background-color: var(--colorWHITE);
+        transform: rotateY(180deg);
+      }
+
+      /* -- mobile -- */
+      @media screen and (max-width: 800px) {
+        #board {
+          /* height: 50vh; */
+          width: calc(100% - 20px) !important;
+          margin: 10px;
+        }
+      }
+    </style>
+
+    <!-- HTML -->
+    <header>
+      <p id="p_title">Memory Game</p>
+    </header>
+    <main>
+      <div id="board"></div>
+      <button id="bt_play" class="hidden">bravo ! play again</button>
+    </main>
+    <footer>
+      <p class="score">Moves: <span id="score">0</span></p>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script>
+      "use strict";
+      /**
+       * @author Elmahdi KORFED <elmahdi.korfed@gmail.com>
+       */
+
+      //--- for JS selection
+      const $ = document.querySelector.bind(document);
+      const $$ = document.querySelectorAll.bind(document);
+
+      const _pathCARDS = `./assets/images`;
+      const _nbCARDS = 8;
+      var _board, _bt_play, _nbCARDSfound, _tabCHOICES, _score;
+
+      window.onload = (_) => {
+        _board = $(`#board`);
+        _bt_play = $(`#bt_play`);
+        _bt_play.onclick = () => playAgain();
+        initGame();
+      };
+
+      /**
+       * Init the game
+       */
+      const initGame = (_) => {
+        _nbCARDSfound = 0;
+        _tabCHOICES = [];
+        _score = 0;
+        $(`#score`).innerText = _score;
+        setBoardElements();
+        // listeners
+        for (const card of $$(`.memory-card`))
+          card.onclick = () => flipCard(card);
+      };
+
+      /**
+       * Flip the card to be visible
+       * @param {string} _card - HTML card
+       */
+      const flipCard = (_card) => {
+        if (_card.dataset.visible == "false" && _tabCHOICES.length <= 1) {
+          _card.dataset.visible = true;
+          _tabCHOICES.push(parseInt(_card.dataset.numcard));
+          if (_tabCHOICES.length == 2)
+            checkIfMatch(_tabCHOICES[0], _tabCHOICES[1]);
+        }
+      };
+
+      /**
+       * Check if _choice1 is similar to _choice2:
+       * if NO - unflip cards after 800ms
+       * if YES - init _tabCHOICES & check if there is one last card to found
+       * @param {number} _choice1 - first num card chosen
+       * @param {number} _choice2 - second num card chosen
+       */
+      const checkIfMatch = (_choice1, _choice2) => {
+        if (_choice1 != _choice2) {
+          setTimeout(() => unflipCards(_choice1, _choice2), 800);
+          _score++;
+          $(`#score`).innerText = _score;
+        } else {
+          _tabCHOICES = [];
+          if (_nbCARDSfound++ === _nbCARDS - 2) {
+            $$(`.memory-card[data-visible=false]`).forEach((c) => flipCard(c));
+            viewButton();
+          }
+        }
+      };
+
+      /**
+       * Unflip cards to hidden them & init _tabCHOICES
+       * @param {number} _choice1 - first num card chosen
+       * @param {number} _choice2 - second num card chosen
+       */
+      const unflipCards = (_choice1, _choice2) => {
+        $(
+          `[data-visible=true][data-numcard="${_choice1}"]`
+        ).dataset.visible = false;
+        $(
+          `[data-visible=true][data-numcard="${_choice2}"]`
+        ).dataset.visible = false;
+        _tabCHOICES = [];
+      };
+
+      /**
+       * Return an shuffle array between 1 to 16
+       */
+      const getShuffleArray = (_) => {
+        let array = [];
+        for (let i = 1, j = _nbCARDS * 2; i <= j; i++) array.push(i);
+        var currentIndex = array.length,
+          temporaryValue,
+          randomIndex;
+        while (0 !== currentIndex) {
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex -= 1;
+          temporaryValue = array[currentIndex];
+          array[currentIndex] = array[randomIndex];
+          array[randomIndex] = temporaryValue;
+        }
+        return array;
+      };
+
+      /**
+       * Set cards elements to the plateau
+       */
+      const setBoardElements = (_) => {
+        let _html = ``;
+        let _tabArray = getShuffleArray();
+        for (let e in _tabArray) _html += _renderCARD(_tabArray[e]);
+        _board.insertAdjacentHTML(`beforeEnd`, _html);
+      };
+
+      /**
+       * Return an HTML back/front card
+       * @param {number} _nb - between 1 to 16
+       */
+      const _renderCARD = (_nb) => {
+        _nb = _nb > _nbCARDS ? _nb - _nbCARDS : _nb;
+        return `
+	<div class="memory-card" data-numcard="${_nb}" data-visible="false">
+		<div class="memory-card-back"><img src="${_pathCARDS}/back.png" alt="back"></div>
+		<div class="memory-card-front"><img src="${_pathCARDS}/${_nb}.png" alt="front"></div>
+	</div>`;
+      };
+
+      /**
+       * Clear plateau
+       */
+      const clearBoard = (_) => {
+        const parent = _board;
+        while (parent.firstChild) parent.firstChild.remove();
+      };
+
+      /**
+       * Hide the button "play again", clear the plateau and relaunch the game
+       */
+      const playAgain = (_) => {
+        viewButton();
+        clearBoard();
+        initGame();
+      };
+
+      /**
+       * View the button "play again" or not
+       */
+      const viewButton = (_) => {
+        _bt_play.classList.toggle(`hidden`);
+        _board.classList.toggle(`filter`);
+      };
+    </script>
+  </body>
 </html>
