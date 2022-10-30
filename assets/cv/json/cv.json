@@ -219,6 +219,22 @@
                     "visible": true
                 },
                 {
+                    "id": "memory",
+                    "title": "Memory",
+                    "src": "./assets/portfolio/games/memory/assets/images/image.webp",
+                    "video": "./assets/portfolio/games/memory/assets/videos/video.mp4",
+                    "link": "./assets/portfolio/games/memory",
+                    "description": "Practice your memory by finding the pairs!",
+                    "description_fr": "Exercez votre mémoire en retrouvant les paires d'images!",
+                    "skills": [
+                        "html",
+                        "javascript",
+                        "css",
+                        "json"
+                    ],
+                    "visible": true
+                },
+                {
                     "id": "db2048",
                     "title": "DB 2048",
                     "src": "./assets/portfolio/games/db2048/assets/images/main.jpeg",
@@ -267,22 +283,6 @@
                     ],
                     "label": "kald - Tester votre mémoire eidétique",
                     "date": "décembre 2014",
-                    "visible": true
-                },
-                {
-                    "id": "memory",
-                    "title": "Memory",
-                    "src": "./assets/portfolio/games/memory/assets/images/image.webp",
-                    "video": "./assets/portfolio/games/memory/assets/videos/video.mp4",
-                    "link": "./assets/portfolio/games/memory",
-                    "description": "Practice your memory by finding the pairs!",
-                    "description_fr": "Exercez votre mémoire en retrouvant les paires d'images!",
-                    "skills": [
-                        "html",
-                        "javascript",
-                        "css",
-                        "json"
-                    ],
                     "visible": true
                 }
             ]
