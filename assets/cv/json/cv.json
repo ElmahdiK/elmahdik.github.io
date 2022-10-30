@@ -132,7 +132,7 @@
                 {
                     "id": "animalssounds",
                     "title": "animalssounds",
-                    "src": "https://cdn.pixabay.com/photo/2017/11/06/09/53/tiger-2923186_1280.jpg",
+                    "src": "./assets/portfolio/services/animalssounds/assets/images/image.webp",
                     "video": "./assets/portfolio/services/animalssounds/assets/videos/video.mp4",
                     "link": "./assets/portfolio/services/animalssounds",
                     "description": "Animals sounds",
