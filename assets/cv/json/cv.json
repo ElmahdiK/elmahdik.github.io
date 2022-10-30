@@ -102,7 +102,7 @@
                 {
                     "id": "zitacions",
                     "title": "zitacions",
-                    "src": "https://img.lemde.fr/2016/10/12/358/0/2654/1766/664/0/75/0/292b88c_10440-wasx3b.lskh85mi.jpg",
+                    "src": "./assets/portfolio/services/zitacions/assets/images/image.webp",
                     "video": "./assets/portfolio/services/zitacions/assets/videos/video.mp4",
                     "link": "./assets/portfolio/services/zitacions",
                     "description": "Do you know these quotes?",
@@ -117,7 +117,7 @@
                 {
                     "id": "flags",
                     "title": "flags",
-                    "src": "https://img.freepik.com/photos-gratuite/mise-plat-du-globe-pate-modeler-personnes_23-2148630365.jpg?size=338&ext=jpg",
+                    "src": "./assets/portfolio/services/flags/assets/images/image.webp",
                     "video": "./assets/portfolio/services/flags/assets/videos/video.mp4",
                     "link": "./assets/portfolio/services/flags",
                     "description": "Listen national anthems of the world",
