@@ -37,10 +37,9 @@
             "description_en": "Website of the WASABI project realized in polymer. It contains over 2 million songs.",
             "skills": [
                 "html",
-                "javascript",
                 "css",
-                "json",
-                "python",
+                "javascript",
+                "polymer",
                 "nodejs",
                 "mongodb"
             ],
@@ -55,10 +54,10 @@
             "description_en": "I developed the Pedalboard main GUI and some plugins in web components",
             "skills": [
                 "html",
-                "javascript",
                 "css",
+                "javascript",
                 "json",
-                "nodejs"
+                "web-audio api"
             ],
             "visible": true
         },
@@ -71,9 +70,9 @@
             "description_en": "J'ai travaillé sur l'outils de gestion de modèle d'email de l'entreprise",
             "skills": [
                 "html",
-                "javascript",
                 "css",
-                "json",
+                "javascript",
+                "jquery",
                 "coldfusion"
             ],
             "visible": true
@@ -93,9 +92,9 @@
                     "description_fr": "Qui sont ces VIP qui fêtent leur anniversaire aujourd'hui?",
                     "skills": [
                         "html",
-                        "javascript",
                         "css",
-                        "json"
+                        "javascript",
+                        "sparql"
                     ],
                     "visible": true
                 },
@@ -108,8 +107,8 @@
                     "description": "Do you know these quotes?",
                     "skills": [
                         "html",
-                        "javascript",
                         "css",
+                        "javascript",
                         "json"
                     ],
                     "visible": true
@@ -123,9 +122,9 @@
                     "description": "Listen national anthems of the world",
                     "skills": [
                         "html",
-                        "javascript",
                         "css",
-                        "json"
+                        "javascript",
+                        "react"
                     ],
                     "visible": true
                 },
@@ -138,8 +137,8 @@
                     "description": "Animals sounds",
                     "skills": [
                         "html",
-                        "javascript",
                         "css",
+                        "javascript",
                         "json"
                     ],
                     "visible": true
@@ -150,12 +149,12 @@
                     "src": "./assets/portfolio/services/greetingcards/assets/images/image.jpg",
                     "video": "./assets/portfolio/services/greetingcards/assets/videos/video.mp4",
                     "link": "https://yoann-moise.com/projects/greetings/index.php",
-                    "description": "For New Year, Christmas and birthdays, schedule your greeting cards now from our new free collection of virtual cards!",
+                    "description": "Send a beautiful greeting cards now!",
                     "description_fr": "Pour la nouvelle année, Noël et les anniversaires, programmez dès maintenant vos cartes de voeux parmi notre nouvelle collection gratuite de cartes virtuelles!",
                     "skills": [
                         "html",
                         "css",
-                        "js",
+                        "javascript",
                         "php"
                     ],
                     "label": "CVP Création de carte de voeux personnalisé",
@@ -175,9 +174,8 @@
                     "description": "Share your link on social networks!",
                     "skills": [
                         "html",
-                        "javascript",
                         "css",
-                        "json"
+                        "javascript"
                     ],
                     "visible": true
                 }
@@ -196,8 +194,8 @@
                     "description_fr": "Jeu du célèbre casse-brique ! détruisez toutes les briques !",
                     "skills": [
                         "html",
-                        "javascript",
-                        "css"
+                        "css",
+                        "javascript"
                     ],
                     "date": "novembre 2021",
                     "visible": false
@@ -212,9 +210,8 @@
                     "description_fr": "Jouez au célèbre jeu du Puissance 4 dès maintenant!",
                     "skills": [
                         "html",
-                        "javascript",
                         "css",
-                        "json"
+                        "javascript"
                     ],
                     "visible": true
                 },
@@ -228,9 +225,8 @@
                     "description_fr": "Exercez votre mémoire en retrouvant les paires d'images!",
                     "skills": [
                         "html",
-                        "javascript",
                         "css",
-                        "json"
+                        "javascript"
                     ],
                     "visible": true
                 },
@@ -244,9 +240,8 @@
                     "description_fr": "Jeu 2048 version \"Dragon Ball\". Le but est de fusionner toutes les cartes similaires.",
                     "skills": [
                         "html",
-                        "javascript",
                         "css",
-                        "json"
+                        "javascript"
                     ],
                     "date": "juillet 2015",
                     "visible": true
@@ -261,9 +256,8 @@
                     "description_fr": "Enigma est une site web composé de nombreux énigmes.",
                     "skills": [
                         "html",
-                        "javascript",
                         "css",
-                        "json"
+                        "javascript"
                     ],
                     "visible": true
                 },
@@ -277,9 +271,8 @@
                     "description_fr": "Avez-vous une meilleure mémoire que ce singe? Bonne chance!",
                     "skills": [
                         "html",
-                        "javascript",
                         "css",
-                        "json"
+                        "javascript"
                     ],
                     "label": "kald - Tester votre mémoire eidétique",
                     "date": "décembre 2014",

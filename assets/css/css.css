@@ -196,6 +196,17 @@ section {
 section article {
     min-height: 90vh;
     display: flex;
+    flex-direction: column;
+}
+
+#in-search{
+    background: var(--colorWHITE);
+    color: var(--colorBLACK);
+    box-shadow: 0px 1px 2px var(--colorGRAY);
+    padding: 20px;
+    margin:2px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 /* -- ul_portfolio -- */
@@ -210,17 +221,40 @@ section article {
     align-content: flex-start;
 }
 
-#ul_portfolio li {
-    background-color: var(--colorWHITE);
-    width: calc(20% - 10px);
-    margin: 5px;
+#ul_portfolio > li {
+    width: calc(20% - 4px);
+    margin: 2px;
 }
 
 #ul_portfolio li a {
     width: calc(100% + 20px);
 }
 
+
+#ul_portfolio ul{
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#ul_portfolio ul li{
+    margin:1px;
+    padding: 8px;
+    font-size: 10px;
+    text-transform: uppercase;
+    border:1px solid var(--colorGRAY);
+    background-color: var(--colorMAIN);
+}
+
 /* -- div_portfolio -- */
+.div_des{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
 .square {
     position: relative;
     width: 100%;
@@ -233,6 +267,7 @@ section article {
 }
 
 .div_portfolio {
+    background-color: var(--colorWHITE);
     width: calc(100% - 100px);
     height: calc(100% - 100px);
     padding: 50px;
@@ -272,14 +307,14 @@ section article {
 
 @keyframes animateUp {
     0% {
-        background-color: var(--colorGRAY);
+        /* background-color: var(--colorGRAY); */
         transform: translateY(0px) translateX(100px);
         opacity: 0;
         border-radius: 0% 0% 100% 100% / 100% 0% 100% 0%;
     }
 
     100% {
-        background-color: var(--colorWHITE);
+        /* background-color: var(--colorWHITE); */
         transform: translateY(0px) translateX(0px);
         opacity: 1;
         border-radius: 0% 100% 0% 100% / 100% 0% 100% 0%;
@@ -287,14 +322,14 @@ section article {
 }
 
 @media screen and (max-width: 1500px) {
-    #ul_portfolio li {
-        width: calc(25% - 10px);
+    #ul_portfolio > li {
+        width: calc(25% - 4px);
     }
 }
 
 @media screen and (max-width: 1300px) {
-    #ul_portfolio li {
-        width: calc(33.33% - 10px);
+    #ul_portfolio > li {
+        width: calc(33.33% - 4px);
     }
 
     #p_resume {
@@ -303,8 +338,8 @@ section article {
 }
 
 @media screen and (max-width: 1000px) {
-    #ul_portfolio li {
-        width: calc(50% - 10px);
+    #ul_portfolio > li {
+        width: calc(50% - 4px);
     }
 }
 
@@ -353,9 +388,9 @@ section article {
         padding: 0px;
     }
 
-    #ul_portfolio li {
-        width: calc(100% - 20px);
-        margin: 10px;
+    #ul_portfolio > li {
+        width: calc(100% - 4px);
+        /* margin: 10px; */
     }
 
     .div_portfolio {
