@@ -2,7 +2,7 @@
     "about": {
         "lastname": "korfed",
         "firstname": "elmahdi",
-        "photo": "./assets/images/ek.jpg",
+        "photo": "./assets/images/ek.webp",
         "birthday": "1991/09/12",
         "nationality": "français",
         "permis": "B",
@@ -18,7 +18,7 @@
             "facebook": "https://www.facebook.com/elmahdikorfed1991",
             "linkedin": "https://www.linkedin.com/in/elmahdikorfed1991/",
             "github": "https://github.com/elmahdik",
-            "resume": "./assets/cv/Elmahdi-KORFED_CV.pdf",
+            "resume": "./assets/cv/CV_ElmahdiKORFED.pdf",
             "codepen":"https://codepen.io/elmahdik"
         },
         "job_position": "Full stack web developer",
@@ -64,7 +64,7 @@
         {
             "id": "mailissimo",
             "title": "mailissimo",
-            "src": "./assets/portfolio/entreprises/mailissimo/assets/image.jpg",
+            "src": "./assets/portfolio/entreprises/mailissimo/assets/image.webp",
             "link": "https://www.mailissimo.com/index.cfm?fuseaction=c.dspHome&subaction=email",
             "description": "Éditez vos emails en quelques clics.",
             "description_en": "J'ai travaillé sur l'outils de gestion de modèle d'email de l'entreprise",
@@ -146,7 +146,7 @@
                 {
                     "id": "greetingcards",
                     "title": "Greeting cards",
-                    "src": "./assets/portfolio/services/greetingcards/assets/images/image.jpg",
+                    "src": "./assets/portfolio/services/greetingcards/assets/images/image.webp",
                     "video": "./assets/portfolio/services/greetingcards/assets/videos/video.mp4",
                     "link": "https://yoann-moise.com/projects/greetings/index.php",
                     "description": "Send a beautiful greeting cards now!",
@@ -233,7 +233,7 @@
                 {
                     "id": "db2048",
                     "title": "DB 2048",
-                    "src": "./assets/portfolio/games/db2048/assets/images/main.jpeg",
+                    "src": "./assets/portfolio/games/db2048/assets/images/image.webp",
                     "video": "./assets/portfolio/games/db2048/assets/videos/video.mp4",
                     "link": "./assets/portfolio/games/db2048",
                     "description": "Dragon Ball version of the game 2048. The goal is to merge all similar cards.",
@@ -249,7 +249,7 @@
                 {
                     "id": "enigma",
                     "title": "enigma",
-                    "src": "./assets/portfolio/games/enigma/assets/images/main.jpeg",
+                    "src": "./assets/portfolio/games/enigma/assets/images/main.webp",
                     "video": "./assets/portfolio/games/enigma/assets/videos/video.mp4",
                     "link": "./assets/portfolio/games/enigma",
                     "description": "Will you be able to solve these enigmas ? 🧐",
@@ -264,7 +264,7 @@
                 {
                     "id": "kald",
                     "title": "kald",
-                    "src": "./assets/portfolio/games/kald/assets/images/image.jpg",
+                    "src": "./assets/portfolio/games/kald/assets/images/image.webp",
                     "video": "./assets/portfolio/games/kald/assets/videos/video.mp4",
                     "link": "./assets/portfolio/games/kald",
                     "description": "Do you have a better memory than this monkey? Good luck!",
