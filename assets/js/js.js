@@ -8,6 +8,7 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 let _data = [];
+let _nbProjects=0;
 
 window.onload = (_) => {
   // load & set json data
@@ -52,7 +53,7 @@ window.onload = (_) => {
       let _html = ``;
       for (const key in _data)
         _html += `
-            <li id="li_${key}" class="animateUp box" style="animation-delay:${key / 6}s" data-title="${_data[key].title}">
+            <li id="li_${key}" class="animateUp box" style="animation-delay:${key / 6 }s" data-title="${_data[key].title}">
                 <a href="${_data[key].link}" target="_blank" rel="noreferrer noopener">
 
                 <div class="div_portfolio">
@@ -71,6 +72,7 @@ window.onload = (_) => {
                 </a>
             </li>`;
       $(`#ul_portfolio`).innerHTML = _html;
+      _nbProjects=$$(`#ul_portfolio > li`).length;
     })
     .catch((error) => {
       throw new Error(`HTTP error ${error}`);
@@ -79,7 +81,6 @@ window.onload = (_) => {
   // search a projet
   $(`#in-search`).oninput = (_event) => {
     let _searchTerm = _event.target.value;
-
     $$(`#ul_portfolio > li`).forEach((item) => {
       if (
         _searchTerm === "" ||
@@ -93,6 +94,10 @@ window.onload = (_) => {
         if (!item.classList.contains(`hidden`)) item.classList.add(`hidden`);
       }
     });
+    
+    if ($$(`#ul_portfolio > li.hidden`).length === _nbProjects) {
+      if ($('#div_results').classList.contains(`hidden`)) $('#div_results').classList.remove(`hidden`);
+    } else if (!$('#div_results').classList.contains(`hidden`)) $('#div_results').classList.add(`hidden`);
   };
 
   // set dark/light mode

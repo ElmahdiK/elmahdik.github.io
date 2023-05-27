@@ -1,7 +1,7 @@
 {
     "about": {
-        "lastname": "korfed",
-        "firstname": "elmahdi",
+        "lastname": "KORFED",
+        "firstname": "Elmahdi",
         "photo": "./assets/images/ek.webp",
         "birthday": "1991/09/12",
         "nationality": "français",
@@ -21,7 +21,8 @@
             "resume": "./assets/cv/CV_ElmahdiKORFED.pdf",
             "codepen":"https://codepen.io/elmahdik"
         },
-        "job_position": "Full stack web developer",
+        "job_position": "Web Developer",
+        "job_position_2": "Full stack web developer",
         "footer": "© 2023 EK"
     },
     "portfolio": [
@@ -33,8 +34,8 @@
             "title": "WASABI",
             "src": "./assets/portfolio/entreprises/wasabi/assets/image.webp",
             "link": "https://wasabi.i3s.unice.fr/#/search/artist/Michael%20Jackson/album/Bad/song/Smooth%20Criminal",
-            "description": "Site web du projet WASABI contenant plus de 2 millions de musiques.",
-            "description_en": "Website of the WASABI project realized in polymer. It contains over 2 million songs.",
+            "description": "Website of the WASABI project realized in polymer. It contains over 2 million songs.",
+            "description_fr": "Site web du projet WASABI contenant plus de 2 millions de musiques.",
             "skills": [
                 "html",
                 "css",
@@ -50,7 +51,8 @@
             "title": "Pedalboard",
             "src": "./assets/portfolio/entreprises/pedalboard/assets/image.webp",
             "link": "https://wasabi.i3s.unice.fr/dynamicPedalboard/?bank=Michel&preset=Vampires",
-            "description": "Développement web d'un des premiers Pedalboard au monde!",
+            "description": "Web development of one of the world's first pedalboards!",
+            "description_fr": "Développement web d'un des premiers Pedalboard au monde!",
             "description_en": "I developed the Pedalboard main GUI and some plugins in web components",
             "skills": [
                 "html",
@@ -66,8 +68,8 @@
             "title": "mailissimo",
             "src": "./assets/portfolio/entreprises/mailissimo/assets/image.webp",
             "link": "https://www.mailissimo.com/index.cfm?fuseaction=c.dspHome&subaction=email",
-            "description": "Éditez vos emails en quelques clics.",
-            "description_en": "J'ai travaillé sur l'outils de gestion de modèle d'email de l'entreprise",
+            "description": "Edit your emails in just a few clicks",
+            "description_fr": "Éditez vos emails en quelques clics",
             "skills": [
                 "html",
                 "css",
@@ -236,8 +238,8 @@
                     "src": "./assets/portfolio/games/db2048/assets/images/image.webp",
                     "video": "./assets/portfolio/games/db2048/assets/videos/video.mp4",
                     "link": "./assets/portfolio/games/db2048",
-                    "description": "Dragon Ball version of the game 2048. The goal is to merge all similar cards.",
-                    "description_fr": "Jeu 2048 version \"Dragon Ball\". Le but est de fusionner toutes les cartes similaires.",
+                    "description": "Dragon Ball version of the game 2048. The goal is to merge all similar cards",
+                    "description_fr": "Jeu 2048 version \"Dragon Ball\". Le but est de fusionner toutes les cartes similaires",
                     "skills": [
                         "html",
                         "css",

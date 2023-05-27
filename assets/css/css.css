@@ -8,7 +8,7 @@
 /* -- dark mode -- */
 /* @media (prefers-color-scheme: dark) */
 [data-theme="dark"] {
-    --colorWHITE: #222;
+    --colorWHITE: #261c39;
     --colorBLACK: #bbb;
     --colorMAIN: #1b1b1b;
     --colorGRAY: #000;
@@ -70,7 +70,7 @@ p {
 }
 
 .box {
-    box-shadow: 0px 1px 2px var(--colorGRAY);
+    /* box-shadow: 0px 1px 2px var(--colorGRAY); */
     position: relative;
     top: 0px;
     transition: 0.3s;
@@ -79,7 +79,8 @@ p {
 /* -- header -- */
 header {
     background-color: var(--colorWHITE);
-    box-shadow: 0px 1px 2px var(--colorGRAY);
+    /* box-shadow: 0px 1px 2px var(--colorGRAY); */
+    /* border-bottom:1px solid var(--colorGRAY); */
     height: 10vh;
     padding: 0px 50px;
     z-index: 1;
@@ -135,7 +136,7 @@ main {
 /* -- aside -- */
 aside {
     background-color: var(--colorWHITE);
-    box-shadow: 0px 1px 2px var(--colorGRAY);
+    /* box-shadow: 0px 1px 2px var(--colorGRAY); */
     width: calc(20vw - 60px);
     height: calc(90vh - 60px);
     padding: 30px;
@@ -206,13 +207,27 @@ section article {
 #in-search{
     background: var(--colorWHITE);
     color: var(--colorBLACK);
-    box-shadow: 0px 1px 2px var(--colorGRAY);
+    /* box-shadow: 0px 1px 2px var(--colorGRAY); */
     padding: 20px;
-    margin:2px;
+    margin:1px;
     font-size: 18px;
-    font-weight: bold;
 }
 
+#div_results{
+    padding: 25px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#div_results p{
+    font-size: 26px;
+    font-weight: bold;
+}
+#div_results img{
+    width: 90px;
+}
 /* -- ul_portfolio -- */
 #ul_portfolio {
     list-style: none;
@@ -226,8 +241,8 @@ section article {
 }
 
 #ul_portfolio > li {
-    width: calc(20% - 4px);
-    margin: 2px;
+    width: calc(20% - 2px);
+    margin: 1px;
 }
 
 #ul_portfolio li a {
@@ -241,6 +256,7 @@ section article {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    display: none;
 }
 #ul_portfolio ul li{
     margin:1px;
@@ -253,7 +269,6 @@ section article {
 
 /* -- div_portfolio -- */
 .div_des{
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -327,13 +342,13 @@ section article {
 
 @media screen and (max-width: 1500px) {
     #ul_portfolio > li {
-        width: calc(25% - 4px);
+        width: calc(25% - 2px);
     }
 }
 
 @media screen and (max-width: 1300px) {
     #ul_portfolio > li {
-        width: calc(33.33% - 4px);
+        width: calc(33.33% - 2px);
     }
 
     #p_resume {
@@ -343,7 +358,7 @@ section article {
 
 @media screen and (max-width: 1000px) {
     #ul_portfolio > li {
-        width: calc(50% - 4px);
+        width: calc(50% - 2px);
     }
 }
 
