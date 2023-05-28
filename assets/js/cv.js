@@ -1,4 +1,4 @@
-{
+export default {
     "about": {
         "lastname": "KORFED",
         "firstname": "Elmahdi",
@@ -19,7 +19,7 @@
             "linkedin": "https://www.linkedin.com/in/elmahdikorfed1991/",
             "github": "https://github.com/elmahdik",
             "resume": "./assets/cv/CV_ElmahdiKORFED.pdf",
-            "codepen":"https://codepen.io/elmahdik"
+            "codepen": "https://codepen.io/elmahdik"
         },
         "job_position": "Web Developer",
         "job_position_2": "Full stack web developer",
@@ -27,60 +27,60 @@
     },
     "portfolio": [
         {
-        "type": "enterprise",
-        "projects": [
-        {
-            "id": "wasabi",
-            "title": "WASABI",
-            "src": "./assets/portfolio/entreprises/wasabi/assets/image.webp",
-            "link": "https://wasabi.i3s.unice.fr/#/search/artist/Michael%20Jackson/album/Bad/song/Smooth%20Criminal",
-            "description": "Website of the WASABI project realized in polymer. It contains over 2 million songs.",
-            "description_fr": "Site web du projet WASABI contenant plus de 2 millions de musiques.",
-            "skills": [
-                "html",
-                "css",
-                "javascript",
-                "polymer",
-                "nodejs",
-                "mongodb"
-            ],
-            "visible": true
+            "type": "enterprise",
+            "projects": [
+                {
+                    "id": "wasabi",
+                    "title": "WASABI",
+                    "src": "./assets/portfolio/entreprises/wasabi/assets/image.webp",
+                    "link": "https://wasabi.i3s.unice.fr/#/search/artist/Michael%20Jackson/album/Bad/song/Smooth%20Criminal",
+                    "description": "Website of the WASABI project realized in polymer. It contains over 2 million songs.",
+                    "description_fr": "Site web du projet WASABI contenant plus de 2 millions de musiques.",
+                    "skills": [
+                        "html",
+                        "css",
+                        "javascript",
+                        "polymer",
+                        "nodejs",
+                        "mongodb"
+                    ],
+                    "visible": true
+                },
+                {
+                    "id": "pedalboard",
+                    "title": "Pedalboard",
+                    "src": "./assets/portfolio/entreprises/pedalboard/assets/image.webp",
+                    "link": "https://wasabi.i3s.unice.fr/dynamicPedalboard/?bank=Michel&preset=Vampires",
+                    "description": "Web development of one of the world's first pedalboards!",
+                    "description_fr": "Développement web d'un des premiers Pedalboard au monde!",
+                    "description_en": "I developed the Pedalboard main GUI and some plugins in web components",
+                    "skills": [
+                        "html",
+                        "css",
+                        "javascript",
+                        "json",
+                        "web-audio api"
+                    ],
+                    "visible": true
+                },
+                {
+                    "id": "mailissimo",
+                    "title": "mailissimo",
+                    "src": "./assets/portfolio/entreprises/mailissimo/assets/image.webp",
+                    "link": "https://www.mailissimo.com/index.cfm?fuseaction=c.dspHome&subaction=email",
+                    "description": "Edit your emails in just a few clicks",
+                    "description_fr": "Éditez vos emails en quelques clics",
+                    "skills": [
+                        "html",
+                        "css",
+                        "javascript",
+                        "jquery",
+                        "coldfusion"
+                    ],
+                    "visible": true
+                }
+            ]
         },
-        {
-            "id": "pedalboard",
-            "title": "Pedalboard",
-            "src": "./assets/portfolio/entreprises/pedalboard/assets/image.webp",
-            "link": "https://wasabi.i3s.unice.fr/dynamicPedalboard/?bank=Michel&preset=Vampires",
-            "description": "Web development of one of the world's first pedalboards!",
-            "description_fr": "Développement web d'un des premiers Pedalboard au monde!",
-            "description_en": "I developed the Pedalboard main GUI and some plugins in web components",
-            "skills": [
-                "html",
-                "css",
-                "javascript",
-                "json",
-                "web-audio api"
-            ],
-            "visible": true
-        },
-        {
-            "id": "mailissimo",
-            "title": "mailissimo",
-            "src": "./assets/portfolio/entreprises/mailissimo/assets/image.webp",
-            "link": "https://www.mailissimo.com/index.cfm?fuseaction=c.dspHome&subaction=email",
-            "description": "Edit your emails in just a few clicks",
-            "description_fr": "Éditez vos emails en quelques clics",
-            "skills": [
-                "html",
-                "css",
-                "javascript",
-                "jquery",
-                "coldfusion"
-            ],
-            "visible": true
-        }
-    ]
-},
         {
             "type": "services",
             "projects": [

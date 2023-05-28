@@ -7,76 +7,32 @@
 //--- for JS selection
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
-let _data = [];
-let _nbProjects=0;
+import d from "./cv.js";
 
 window.onload = (_) => {
-  // load & set json data
-  fetch(
-    new Request(`./assets/cv/json/cv.json`, {
-      method: `GET`,
-      headers: new Headers(),
-      mode: `cors`,
-      cache: `default`,
-    })
-  )
-    .then((response) => {
-      if (!response.ok) throw new Error(`HTTP error ${response.status}`);
-      return response.json();
-    })
-    .then((d) => {
-      // header
-      $(`#p_name`).innerHTML = `${
-        d.about.firstname
-      } ${d.about.lastname.toUpperCase()}`;
-      $(`#p_job`).innerHTML = d.about.job_position;
-      // footer
-      $(`footer p`).innerHTML = d.about.footer;
-      // aside
-      $(`#img_bio`).src = d.about.photo;
-      $(`#p_resume_title`).innerHTML = d.about.bio_web_title;
-      $(`#p_resume`).innerHTML = d.about.bio_web;
-      // - links
-      $(`#email_link`).href = `mailto:${d.about.contact.email}`;
-      //$(`#facebook_link`).href = d.about.contact.facebook;
-      // $(`#codepen_link`).href = d.about.contact.codepen;
-      $(`#github_link`).href = d.about.contact.github;
-      $(`#linkedin_link`).href = d.about.contact.linkedin;
-      // - download CV
-      $(`#a_download_cv`).href = d.about.contact.resume;
-      // portfolio
-      _data = [
-        ...d.portfolio[0].projects.filter((project) => project.visible), // games
-        ...d.portfolio[1].projects.filter((project) => project.visible), // games
-        ...d.portfolio[2].projects.filter((project) => project.visible), // services
-      ];
-      let _html = ``;
-      for (const key in _data)
-        _html += `
-            <li id="li_${key}" class="animateUp box" style="animation-delay:${key / 6 }s" data-title="${_data[key].title}">
-                <a href="${_data[key].link}" target="_blank" rel="noreferrer noopener">
-
-                <div class="div_portfolio">
-                    <div class="square">
-                        <img src="${_data[key].src}" alt="${_data[key].title}" onerror="this.onerror=null; this.src='./assets/images/notfound.jpg'">
-                    </div>
-                    <div class="div_des">
-                        <div>
-                            <p class="p_title">${_data[key].title}</p>
-                            <p class="p_des">${_data[key].description}</p>
-                        </div>
-                        <ul>${_data[key].skills.map((s) => `<li>${s}</li>`).join("")}</ul>
-                    </div>
-                </div>
-
-                </a>
-            </li>`;
-      $(`#ul_portfolio`).innerHTML = _html;
-      _nbProjects=$$(`#ul_portfolio > li`).length;
-    })
-    .catch((error) => {
-      throw new Error(`HTTP error ${error}`);
-    });
+  // header
+  $(`#p_name`).innerHTML = `${d.about.firstname
+    } ${d.about.lastname.toUpperCase()}`;
+  $(`#p_job`).innerHTML = d.about.job_position;
+  // footer
+  $(`footer p`).innerHTML = d.about.footer;
+  // aside
+  $(`#img_bio`).src = d.about.photo;
+  // $(`#p_resume_title`).innerHTML = d.about.bio_web_title;
+  $(`#p_resume`).innerHTML = d.about.bio_web;
+  // links
+  $(`#email_link`).href = `mailto:${d.about.contact.email}`;
+  $(`#github_link`).href = d.about.contact.github;
+  $(`#linkedin_link`).href = d.about.contact.linkedin;
+  // resume
+  $(`#a_download_cv`).href = d.about.contact.resume;
+  // portfolio
+  const dataPortfolio = [
+    ...d.portfolio[0].projects.filter((project) => project.visible), // enterprise
+    ...d.portfolio[1].projects.filter((project) => project.visible), // services
+    ...d.portfolio[2].projects.filter((project) => project.visible), // games
+  ];
+  dataPortfolio.map((d, index) => $(`#ul_portfolio`).insertAdjacentHTML(`beforeEnd`, displayPortfolio(index, d)));
 
   // search a projet
   $(`#in-search`).oninput = (_event) => {
@@ -94,8 +50,8 @@ window.onload = (_) => {
         if (!item.classList.contains(`hidden`)) item.classList.add(`hidden`);
       }
     });
-    
-    if ($$(`#ul_portfolio > li.hidden`).length === _nbProjects) {
+
+    if ($$(`#ul_portfolio > li.hidden`).length === dataPortfolio.length) {
       if ($('#div_results').classList.contains(`hidden`)) $('#div_results').classList.remove(`hidden`);
     } else if (!$('#div_results').classList.contains(`hidden`)) $('#div_results').classList.add(`hidden`);
   };
@@ -108,6 +64,28 @@ window.onload = (_) => {
     _setDarkMode();
   $(`#in_darkmode`).onclick = (_evt) => _setDarkMode(_evt.target.checked);
 };
+
+
+const displayPortfolio = (_num, _element) => {
+  return `
+<li id="li_${_num}" class="animateUp box" style="animation-delay:${_num / 6}s" data-title="${_element.title}">
+  <a href="${_element.link}" target="_blank" rel="noreferrer noopener">
+    <div class="div_portfolio">
+        <div class="square">
+            <img src="${_element.src}" alt="${_element.title}" onerror="this.onerror=null; this.src='./assets/images/notfound.jpg'">
+        </div>
+        <div class="div_des">
+            <div>
+                <p class="p_title">${_element.title}</p>
+                <p class="p_des">${_element.description}</p>
+            </div>
+            <ul>${_element.skills.map((s) => `<li>${s}</li>`).join("")}</ul>
+        </div>
+    </div>
+  </a>
+</li>`
+}
+
 window
   .matchMedia(`(prefers-color-scheme: dark)`)
   .addEventListener(`change`, (e) => _setDarkMode(e.matches));

@@ -241,7 +241,7 @@ section article {
 }
 
 #ul_portfolio > li {
-    width: calc(20% - 2px);
+    width: calc(16.66% - 2px);
     margin: 1px;
 }
 
@@ -287,9 +287,9 @@ section article {
 
 .div_portfolio {
     background-color: var(--colorWHITE);
-    width: calc(100% - 100px);
-    height: calc(100% - 100px);
-    padding: 50px;
+    width: calc(100% - 80px);
+    height: calc(100% - 80px);
+    padding: 40px;
     display: flex;
     flex-direction: column;
 }
@@ -303,13 +303,14 @@ section article {
 }
 
 .div_portfolio .p_title {
-    font-size: 16px;
-    padding: 10px 0px;
+    font-size: 14px;
+    padding: 8px 0px;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .div_portfolio .p_des {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 /* -- animation -- */
