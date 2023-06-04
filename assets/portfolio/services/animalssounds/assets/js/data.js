@@ -1,4 +1,4 @@
-[
+export default [
     {
         "name":"rooster",
         "img":"https://cdn.pixabay.com/photo/2013/12/26/12/16/rooster-233898_1280.jpg"

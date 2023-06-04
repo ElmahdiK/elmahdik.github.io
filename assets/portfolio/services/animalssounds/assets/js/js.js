@@ -5,32 +5,19 @@
 //--- for JS selection
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
+import d from "./data.js";
 
-window.onload = _ => {
-    fetch(new Request(`./assets/json/json.json`, {
-        method: `GET`,
-        headers: new Headers(),
-        mode: `cors`,
-        cache: `default`
-    })).then(response => {
-        if (!response.ok) throw new Error(`HTTP error ${response.status}`);
-        return response.json();
-    }).then(d => {
-        let _html = ``;
-        for (const key in d) _html += `<li id="li_${key}" data-name="${d[key].name}">
-        <div class="square">
-        <img src="${d[key].img}" alt="${d[key].name}" onerror="this.onerror=null; this.src='./assets/images/notfound.jpg'">
-        <p>${d[key].name}</p>
-        </div>
-        </li>`;
+window.onload = _ => d.forEach((e, index) => $('#ul_animals').insertAdjacentHTML('beforeEnd', templateCardAnimal(e, index)));
 
-        $(`#ul_animals`).innerHTML = _html;
-        $$(`#ul_animals li`).forEach(li => li.onclick = _ => playAudio(li));
-    });
-}
-
-const playAudio = _li => {
+window.playAudio = animal => {
     let _audio = $(`audio`);
-    _audio.src = `https://www.google.com/logos/fnbx/animal_sounds/${_li.dataset.name}.mp3`;
+    _audio.src = `https://www.google.com/logos/fnbx/animal_sounds/${animal}.mp3`;
     _audio.play();
 }
+
+const templateCardAnimal = (_element, _num) => `<li id="li_${_num}" data-name="${_element.name}" onclick="playAudio('${_element.name}')">
+<div class="square">
+<img src="${_element.img}" alt="${_element.name}" onerror="this.onerror=null; this.src='./assets/images/notfound.jpg'">
+<p>${_element.name}</p>
+</div>
+</li>`;

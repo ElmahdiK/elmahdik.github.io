@@ -96,8 +96,8 @@ main ul{
     align-content: flex-start;
 }
 main ul li{
-    width:calc(25% - 20px);
-    margin: 10px;
+    width:calc(20% - 40px);
+    margin: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -106,8 +106,8 @@ main ul li{
 }
 
 .square{
-    border: 1px solid var(--colorBLACK);
-    width: calc(100% - 2px);
+    border: 10px solid var(--colorWHITE);
+    width: calc(100% - 20px);
     position: relative;
 }
 .square:after{
@@ -152,6 +152,6 @@ main ul li audio{
         font-size: 20px;
     }
     main ul li{
-        width:calc(50% - 20px);
+        width:calc(50% - 40px);
     }
 }
