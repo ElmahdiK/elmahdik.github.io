@@ -91,8 +91,9 @@ class Vipborntoday {
                         ?star foaf:isPrimaryTopicOf ?url
                         FILTER regex(?birthDate,"-${this.getDateSearch()}")
                         FILTER langMatches(lang(?abstract),"en")
-                    } 
-                    GROUP BY ?star`;
+                    }
+                    ORDER BY DESC(?birthDate)
+                    LIMIT 200`;
             // we ask DBpedia
             fetch(`https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=${encodeURIComponent(_query)}&format=application%2Fsparql-results%2Bjson`)
                 .then(response => {
