@@ -18,7 +18,7 @@ export default {
             "facebook": "https://www.facebook.com/elmahdikorfed1991",
             "linkedin": "https://www.linkedin.com/in/elmahdikorfed1991/",
             "github": "https://github.com/elmahdik",
-            "resume": "./assets/cv/cv-elmahdi_korfed",
+            "resume": "./assets/cv/cv-elmahdi_korfed.pdf",
             "codepen": "https://codepen.io/elmahdik"
         },
         "job_position": "Web Developer",
