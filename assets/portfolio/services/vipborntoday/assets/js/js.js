@@ -5,101 +5,92 @@
 //--- for JS selection
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
-var vip;
+const today = new Date();
+let vip;
 
 window.onload = () => {
-    vip = new Vipborntoday();
+    vip = new Vipborntoday(today.getMonth() + 1, today.getDate());
     loadVIPsCards();
 
-    // select date & month
-    $(`#select_date`).insertAdjacentHTML(`beforeEnd`, getHTMLOptions());
-    $(`#select_month`).insertAdjacentHTML(`beforeEnd`, getHTMLOptions(true));
+    // date & month
+    setMonthOptions($(`#select_month`), today.getMonth());
+    setDayOptions($(`#select_date`), today.getMonth(), today.getDate());
 
-    // bt_search
-    $(`#bt_search`).onclick = () => loadVIPsCards();
+    // listeners
+    $(`#select_month`).onchange = (_evt) => setDayOptions($(`#select_date`), _evt.target.selectedIndex, $(`#select_date`).value);
+    $(`#bt_search`).onclick = () => {
+        vip._month = `${$(`#select_month`).selectedIndex + 1}`;
+        vip._date = $(`#select_date`).value;
+        loadVIPsCards();
+    }
 }
 
+const setMonthOptions = (_selector, _month) => {
+    _selector.innerHTML = "";
+    const nameOfMonths = [`january`, `february`, `march`, `april`, `may`, `june`, `july`, `august`, `september`, `october`, `november`, `december`];
+    for (const [i, month] of nameOfMonths.entries()) _selector.insertAdjacentHTML('beforeEnd', `<option ${i === _month && 'selected'}>${month}</option>`);
+}
+
+const setDayOptions = (_selector, _month, _date) => {
+    _selector.innerHTML = "";
+    Array.from({ length: getDaysFromMonth(_month + 1) }, (_, i) => i + 1).map(d => _selector.insertAdjacentHTML('beforeEnd', `<option ${d == _date && 'selected'}>${d}</option>`))
+}
+
+const getDaysFromMonth = _month => new Date(2000, _month, 0).getDate();
+
 /**
- * Display loading ..., get month & date values and load VIPs card to display them in the renderResults
+ * Display loading ... & load VIPs card to display them
  */
 const loadVIPsCards = () => {
     $(`#p_result`).innerText = `Loading ...`;
+    vip.getVIPs().then(json => {
+        console.log(json);
+        // display number of results found
+        $(`#p_result`).innerText = `${json.length} results found`;
 
-    if ($(`#select_month`).value && $(`#select_date`).value) {
-        vip._month = $(`#select_month`).value;
-        vip._date = $(`#select_date`).value;
-    }
-    vip.getVIPs().then(json => _renderResults(json));
-}
+        // display VIPs cards
+        $(`#plateau`).innerHTML = "";
+        json.map((_vip, index) => $(`#plateau`).insertAdjacentHTML('beforeEnd', templateCardVIP(_vip, index)));
+    });
+};
 
-/**
- * Return a list of HTML options
- * @param {boolean} _month - is a month or a day
- * @return {string}
- */
-const getHTMLOptions = (_month = false) => {
-    let _html = ``;
-    // is a month
-    if (_month) {
-        const _tabMonths = [`january`, `february`, `march`, `april`, `may`, `june`, `july`, `august`, `september`, `october`, `november`, `december`];
-        for (let i = 0; i <= 11; i++) _html += `<option value="${(i + 1)}" ${(i == vip._month - 1) ? `selected` : ``}>${_tabMonths[i]}</option>`;
-    }
-    // is a day
-    else for (let i = 1; i <= 31; i++) _html += `<option value="${i}" ${(i == vip._date) ? `selected` : ``}>${i}</option>`;
-    return _html;
-}
-
-/**
- * Set the number of results found in #p_result and display VIPs cards in #plateau 
- * @param {object} json - contains vip birthday informations in json object
- */
-const _renderResults = (json) => {
-    // display number of results found
-    $(`#p_result`).innerText = `${vip.nbResults} results found`;
-
-    // display VIPs cards
-    let _html = ``;
-    for (const key in json) _html += ` 
-    <div class="animateOne">
-    <a href="${json[key].url.value}" target="_blank" rel="noreferrer">
-    <img src="${json[key].photo.value}" title="${json[key].nameBirth.value}" alt="${json[key].nameBirth.value}" onerror="this.onerror=null; this.src='./assets/images/notfound.jpg'">
-    <p>${json[key].nameBirth.value}</p>
-    </a>
-    </div>`;
-    $(`#plateau`).innerHTML = _html;
-
-    // to animate cards
-    $$(`.animateOne`).forEach((_e, _index) => _e.style.animationDelay = `${_index / 10}s`);
-}
+const templateCardVIP = (_vip, _num) => ` 
+<div style="animation-delay:${_num / 12}s">
+<a href="${_vip.url.value}" target="_blank" rel="noreferrer">
+<img src="${_vip.photo.value}" title="${_vip.nameBirth.value}" alt="${_vip.nameBirth.value}" onerror="this.onerror=null; this.src='./assets/images/notfound.jpg'">
+<p><span>${_vip.nameBirth.value}</span><span>${new Date(_vip.birthDate.value).getFullYear()}</span><br /><small>${_vip.abstract.value.slice(0, 80)} ...</small></p>
+</a>
+</div>`;
 
 class Vipborntoday {
 
     constructor(_month, _date) {
-        const url = new URL(window.location.href);
         const today = new Date();
-        this._month = _month || url.searchParams.get("month") || today.getUTCMonth() + 1;
-        this._date = _date || url.searchParams.get("date") || today.getUTCDate();
-        this.nbResults = 0;
+        const url = new URL(window.location.href);
+        this._month = `${_month || url.searchParams.get("month") || today.getUTCMonth() + 1}`;
+        this._date = `${_date || url.searchParams.get("date") || today.getUTCDate()}`;
     }
 
-    convertToTen(_nb) {
-        return (_nb < 10) ? `0${_nb}` : _nb;
+    getDateSearch() {
+        return `${this._month.padStart(2, '0')}-${this._date.padStart(2, '0')}`;
     }
 
     getVIPs() {
         return new Promise(resolve => {
             // we create an SPARQL query to get some information about VIPs
             let _query = `PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
-                    SELECT DISTINCT ?star ?nameBirth ?dateNaissance ?photo ?url
+                    SELECT DISTINCT ?star ?abstract ?nameBirth ?birthDate ?photo ?url
                     WHERE {
                         ?film a dbpedia-owl:Film ;
                         dbpedia-owl:starring ?star .
-                        ?star dbpedia-owl:birthDate ?dateNaissance .
+                        ?star dbpedia-owl:abstract ?abstract .
+                        ?star dbpedia-owl:birthDate ?birthDate .
                         ?star dbpedia-owl:thumbnail ?photo . 
                         ?star dbpedia-owl:birthName ?nameBirth .
                         ?star foaf:name ?name .
                         ?star foaf:isPrimaryTopicOf ?url
-                        FILTER regex(?dateNaissance,"-${this.convertToTen(this._month)}-${this.convertToTen(this._date)}")
+                        FILTER regex(?birthDate,"-${this.getDateSearch()}")
+                        FILTER langMatches(lang(?abstract),"en")
                     } 
                     GROUP BY ?star`;
             // we ask DBpedia
@@ -108,13 +99,7 @@ class Vipborntoday {
                     if (!response.ok) throw new Error(`HTTP error ${response.status}`);
                     return response.json();
                 })
-                .then(_json => {
-                    // we update the number of results found
-                    this.nbResults = Object.keys(_json.results.bindings).length;
-
-                    // we resolve VIPs informations to use them
-                    resolve(_json.results.bindings);
-                });
+                .then(_json => resolve(_json.results.bindings));
         });
     }
 }

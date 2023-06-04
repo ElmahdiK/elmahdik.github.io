@@ -87,19 +87,9 @@ header #p_result {
     cursor: pointer;
 }
 
-/* -- footer -- */
+/* -- header -- */
 
-footer {
-    height: 10vh;
-}
-
-footer p {
-    font-size: 12px;
-}
-
-/* -- header / footer -- */
-
-header, footer {
+header {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -110,29 +100,38 @@ header, footer {
 
 main {
     background: var(--colorMAIN);
-    height: 70vh;
+    height: 80vh;
     overflow-y: scroll;
 }
 
 /* -- plateau -- */
 
 #plateau {
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
 }
 
 #plateau div {
-    border: 1px solid var(--colorWHITE);
-    width: calc(12.5% - 6px);
-    height: calc(35vh - 6px);
-    margin: 2px;
+    border:3px solid #fff;
+    width: calc(12.5% - 26px);
+    height: calc(35vh - 26px);
+    margin: 10px;
     opacity: 0;
+    overflow-wrap: break-word;
+
+    animation-name: animateOne;
+    animation-timing-function: ease;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
 }
 
 #plateau div a {
     width: 100%;
     height: 100%;
-    display: table;
+    display: flex;
     position: relative;
 }
 
@@ -148,7 +147,8 @@ main {
     object-fit: cover;
 }
 
-#plateau div:hover p {
+#plateau div:hover p,
+#plateau div:hover p small {
     background: transparent;
     color: transparent;
 }
@@ -156,25 +156,26 @@ main {
 #plateau div p {
     background: linear-gradient(45deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6));
     color: var(--colorLIGHTGRAY);
-    padding: 4px;
-    transition: 0.5s;
-    display: table-cell;
-    vertical-align: middle;
-    position: relative;
-    text-align: center;
+    padding: 20px;
+    /* transition: 0.5s; */
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    word-break: break-all;
+}
+
+#plateau div p small {
+    color: #aaa;
+    font-size: 12px;
+    line-height: 1.8em;
 }
 
 /* -- animation -- */
-
-.animateOne {
-    animation-name: animateOne;
-    animation-timing-function: ease;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-}
-
 @keyframes animateOne {
     0% {
         transform: translateY(100px);
@@ -190,6 +191,6 @@ main {
 
 @media screen and (max-width: 800px) {
     #plateau div {
-        width: calc(33.33% - 6px);
+        width: calc(50% - 26px);
     }
 }
