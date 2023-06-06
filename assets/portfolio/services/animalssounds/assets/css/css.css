@@ -3,6 +3,7 @@
     --colorBLACK: #000;
     --colorMAIN: #fafafa;
     --colorGRAY: #ddd;
+    --colorBLUE: #039be5;
 }
 
 /* -- dark mode -- */
@@ -105,10 +106,14 @@ main ul li{
     cursor: pointer;
 }
 
+.square:hover{
+    border: 10px solid var(--colorBLUE);
+}
 .square{
     border: 10px solid var(--colorWHITE);
     width: calc(100% - 20px);
     position: relative;
+    transition: 0.4s;
 }
 .square:after{
     content: "";
