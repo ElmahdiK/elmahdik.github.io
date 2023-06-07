@@ -166,42 +166,12 @@ export default {
                         "yoann moise"
                     ],
                     "visible": true
-                },
-                {
-                    "id": "sharelink",
-                    "title": "sharelink",
-                    "src": "./assets/portfolio/services/sharelink/assets/images/image.webp",
-                    "video": "./assets/portfolio/services/sharelink/assets/videos/video.mp4",
-                    "link": "./assets/portfolio/services/sharelink",
-                    "description": "Share your link on social networks!",
-                    "skills": [
-                        "html",
-                        "css",
-                        "javascript"
-                    ],
-                    "visible": true
                 }
             ]
         },
         {
             "type": "games",
             "projects": [
-                {
-                    "id": "breakout",
-                    "title": "breakout",
-                    "src": "./assets/portfolio/games/breakout/assets/images/image.png",
-                    "video": "./assets/portfolio/games/breakout/assets/videos/video.mp4",
-                    "link": "./assets/portfolio/games/breakout",
-                    "description": "Breakout ! break all the bricks !",
-                    "description_fr": "Jeu du célèbre casse-brique ! détruisez toutes les briques !",
-                    "skills": [
-                        "html",
-                        "css",
-                        "javascript"
-                    ],
-                    "date": "novembre 2021",
-                    "visible": false
-                },
                 {
                     "id": "connect4",
                     "title": "Connect 4",
