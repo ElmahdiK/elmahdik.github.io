@@ -1,4 +1,5 @@
 :root {
+    --colorWHITE: #fff;
     --colorBLACK: #000;
     --colorMAIN: #fafafa;
     --colorGRAY: #000;
@@ -8,6 +9,7 @@
 
 @media (prefers-color-scheme: dark) {
     body {
+        --colorWHITE: #000;
         --colorBLACK: #cecdcd;
         --colorMAIN: #1b1c23;
         --colorGRAY: #9fb9ce;
@@ -90,8 +92,9 @@ main ul#ul_citations{
     width:100%;
 }
 main ul#ul_citations li{
-    box-shadow: 0px 2px 4px #ccc;
-    width: calc(100% - 8%);
+    background-color: var(--colorWHITE);
+    /* box-shadow: 0px 2px 4px #ccc; */
+    width: calc(33.33% - 8% - 20px);
     height: calc(30vh);
     padding: 0% 4%;
     margin:10px;
@@ -124,5 +127,8 @@ main p span{
     }
     main img{
         width:calc(100% - 20px);
+    }
+    main ul#ul_citations li{
+        width: calc(100% - 8% - 20px);
     }
 }

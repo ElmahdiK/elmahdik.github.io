@@ -1,4 +1,4 @@
-[
+export default [
     {
         "author": "Neil Armstrong",
         "quotes": [
@@ -13,6 +13,12 @@
         ]
     },
     {
+        "author": "Walt Disney",
+        "quotes": [
+            "Tous nos rêves peuvent devenir réalité, encore faut-il avoir le courage de les poursuivre."
+        ]
+    },
+    {
         "author": "Indira Gandhi",
         "quotes": [
             "Le bonheur c'est lorsque vos actes sont en accord avec vos paroles."
@@ -21,6 +27,7 @@
     {
         "author": "Albert Einstein",
         "quotes": [
+            "Si vous voulez vivre une vie heureuse, attachez-la à un but, non pas à des personnes ou des choses.",
             "L'Etat est notre serviteur et nous n'avons pas à en être les esclaves.",
             "La valeur d'un homme tient dans sa capacité à donner et non dans sa capacité à recevoir."
         ]
@@ -34,6 +41,7 @@
     {
         "author": "Abbé Pierre",
         "quotes": [
+            "Le plus grand échec est de ne pas avoir le courage d'oser.",
             "Un sourire coûte moins cher que l'électricité, mais donne autant de lumière."
         ]
     },
