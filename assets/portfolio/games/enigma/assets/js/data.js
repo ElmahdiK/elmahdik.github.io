@@ -1,4 +1,14 @@
-[
+export default [
+    {
+        "title": "Famille",
+        "text": "Un bucheron a sept filles, chacune de ces filles a un frère. Combien a-t-il d'enfants ?",
+        "solution": "Il a huit enfants car chacune des filles n'a qu'un frère, il a donc sept filles et un fils."
+    },
+    {
+        "title": "Le prénom",
+        "text": "3 chats sont frères et sœur : Moulu, Souki et Louki. Quelle est le prénom de la mère.",
+        "solution": "Le prénom de la mère est \"Quelle\". Il y a un simple point et non un point d'interrogation à la fin de la phrase, ce n'est donc pas une question."
+    },
     {
         "title": "Anniversaire",
         "text": "Avant-hier, Catherine avait 17 ans ; l'année prochaine, elle aura 20 ans. Comment est-ce possible ?",
