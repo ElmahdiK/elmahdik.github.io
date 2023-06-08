@@ -10,7 +10,8 @@ const $$ = document.querySelectorAll.bind(document);
 
 // https://www.youtube.com/watch?v=ravykEih1rE
 const _nbPARTIE = 9;
-var _plateau, _bt_play, _numClick, _numFINAL;
+const _nbCASES = 24;
+let _plateau, _bt_play, _numClick, _numFINAL;
 
 window.onload = _ => {
 	_plateau = $(`#plateau`);
@@ -41,7 +42,7 @@ const initGame = (_num = 1) => {
  */
 const renderPlateau = _ => {
 	let _html = ``;
-	for (let i = 0; i < 25; i++) _html += `<div id="div_${i}"></div>`;
+	for (let i = 0; i <= _nbCASES; i++) _html += `<div id="div_${i}"></div>`;
 	return _html;
 }
 
@@ -59,7 +60,7 @@ const addNumbers = _ => {
 	let _random;
 	let _tabS = [];
 	while (_tabS.length < _numFINAL) {
-		_random = getRandom(0, 24);
+		_random = getRandom(0, _nbCASES);
 		if (!_tabS.includes(_random)) {
 			_tabS.push(_random);
 			setNumber(_random, _tabS.length);
