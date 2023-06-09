@@ -11,7 +11,9 @@ const $$ = document.querySelectorAll.bind(document);
 // https://www.youtube.com/watch?v=ravykEih1rE
 const _nbPARTIE = 9;
 const _nbCASES = 24;
-let _plateau, _bt_play, _numClick, _numFINAL;
+let _plateau, _bt_play, _numClick;
+let TAB_NB = [];
+let _k = 1;
 
 window.onload = _ => {
 	_plateau = $(`#plateau`);
@@ -25,25 +27,17 @@ window.onload = _ => {
  * Init the game
  * @param {number} _num - max number of case to fill
  */
-const initGame = (_num = 1) => {
+const initGame = _ => {
 	// update score level
-	$(`#p_title span`).innerText = _num;
+	$(`#p_title span`).innerText = _k;
 	// reset _numClick to 1 & update final number
 	_numClick = 1;
-	_numFINAL = _num;
 	// render the plateau
-	_plateau.innerHTML = renderPlateau();
+	_plateau.innerHTML = '';
+	for (let i = 0; i <= _nbCASES; i++) _plateau.insertAdjacentHTML('beforeEnd', `<div id="div_${i}"></div>`)
 
+	TAB_NB = [];
 	addNumbers();
-}
-
-/**
- * Return 25 HTML divs
- */
-const renderPlateau = _ => {
-	let _html = ``;
-	for (let i = 0; i <= _nbCASES; i++) _html += `<div id="div_${i}"></div>`;
-	return _html;
 }
 
 /**
@@ -57,14 +51,13 @@ const getRandom = (_min, _max) => Math.floor(Math.random() * (_max - _min + 1) +
  * Add numbers to the game in randomly position
  */
 const addNumbers = _ => {
-	let _random;
-	let _tabS = [];
-	while (_tabS.length < _numFINAL) {
-		_random = getRandom(0, _nbCASES);
-		if (!_tabS.includes(_random)) {
-			_tabS.push(_random);
-			setNumber(_random, _tabS.length);
+	if (TAB_NB.length < _k) {
+		let _random = getRandom(0, _nbCASES);
+		if (!TAB_NB.includes(_random)) {
+			TAB_NB.push(_random);
+			setNumber(_random, TAB_NB.length);
 		}
+		addNumbers();
 	}
 }
 
@@ -97,11 +90,12 @@ const checkIfWin = _div => {
 	// correct number expected?
 	if (_num == _numClick) {
 		// highest number of the plateau?
-		if (_num == _numFINAL) {
+		if (_num == _k) {
 			// last number of the game = 9? => game: win
 			if (_num == _nbPARTIE) gameOver();
 			// game: continue to next level
-			initGame(_numFINAL += 1);
+			_k++;
+			initGame();
 			return;
 		}
 		// game: continue
@@ -117,6 +111,7 @@ const checkIfWin = _div => {
  * Game over: make all the last elements visible
  */
 const gameOver = _ => {
+	_k = 1;
 	$(`#p_ss_title span`).innerHTML = `🙉`;
 	$$('div[data-visible=false]').forEach(_s => _s.dataset.visible = true);
 	viewButton();
