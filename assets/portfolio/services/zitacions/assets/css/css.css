@@ -105,18 +105,14 @@ main ul#ul_citations li{
     align-items: center;
 }
 
-main p{
+main p q{
     font-size: 22px;
-    text-align: center;
 }
-main p span{
+main p {
+    color: var(--colorBLACK);
     font-size: 16px;
     font-weight: bold;
-}
-
-main p,
-main p span{
-    color: var(--colorBLACK);
+    text-align: center;
 }
 
 /* -- mobile --*/
