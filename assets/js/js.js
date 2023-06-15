@@ -91,7 +91,7 @@ window
   .addEventListener(`change`, (e) => _setDarkMode(e.matches));
 
 const _setDarkMode = (_mode = true) => {
-  $(`#lb_darkmode`).className = `far ${_mode ? `fa-sun` : `fa-moon`}`;
+  $(`#lb_darkmode`).className = `${_mode ? `fa-brands fa-first-order-alt` : `far fa-moon`}`;
   $(`body`).dataset.theme = _mode ? `dark` : ``;
   $(`#in_darkmode`).checked = _mode;
 };
