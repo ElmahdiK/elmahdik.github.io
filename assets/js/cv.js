@@ -16,7 +16,7 @@ export default {
             "email": "elmahdi.korfed@gmail.com",
             "website": "https://elmahdik.github.io",
             "facebook": "https://www.facebook.com/elmahdikorfed1991",
-            "linkedin": "https://www.linkedin.com/in/elmahdikorfed1991/",
+            "linkedin": "https://www.linkedin.com/in/elmahdikorfed/",
             "github": "https://github.com/elmahdik",
             "resume": "./assets/cv/cv-elmahdi_korfed.pdf",
             "codepen": "https://codepen.io/elmahdik"
