@@ -85,6 +85,19 @@ export default {
             "type": "services",
             "projects": [
                 {
+                    "id": "cube3d",
+                    "title": "cube3d",
+                    "src": "./assets/portfolio/services/cube3d/assets/images/image.png",
+                    "video": "./assets/portfolio/services/cube3d/assets/videos/video.mp4",
+                    "link": "./assets/portfolio/services/cube3d",
+                    "description": "Animated 3D cube using CSS3 perspective, rotations and animations features",
+                    "skills": [
+                        "html",
+                        "css",
+                    ],
+                    "visible": true
+                },
+                {
                     "id": "flags",
                     "title": "flags",
                     "src": "./assets/portfolio/services/flags/assets/images/image.webp",
