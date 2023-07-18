@@ -44,7 +44,7 @@ export default {
                         "nodejs",
                         "mongodb"
                     ],
-                    "visible": true
+                    "visible": false
                 },
                 {
                     "id": "pedalboard",
@@ -61,7 +61,7 @@ export default {
                         "json",
                         "web-audio api"
                     ],
-                    "visible": true
+                    "visible": false
                 },
                 {
                     "id": "mailissimo",
@@ -77,13 +77,28 @@ export default {
                         "jquery",
                         "coldfusion"
                     ],
-                    "visible": true
+                    "visible": false
                 }
             ]
         },
         {
             "type": "services",
             "projects": [
+                {
+                    "id": "flags",
+                    "title": "flags",
+                    "src": "./assets/portfolio/services/flags/assets/images/image.webp",
+                    "video": "./assets/portfolio/services/flags/assets/videos/video.mp4",
+                    "link": "./assets/portfolio/services/flags",
+                    "description": "Listen national anthems of the world",
+                    "skills": [
+                        "html",
+                        "css",
+                        "javascript",
+                        "react"
+                    ],
+                    "visible": true
+                },
                 {
                     "id": "vipborntoday",
                     "title": "vip born today",
@@ -112,21 +127,6 @@ export default {
                         "css",
                         "javascript",
                         "json"
-                    ],
-                    "visible": true
-                },
-                {
-                    "id": "flags",
-                    "title": "flags",
-                    "src": "./assets/portfolio/services/flags/assets/images/image.webp",
-                    "video": "./assets/portfolio/services/flags/assets/videos/video.mp4",
-                    "link": "./assets/portfolio/services/flags",
-                    "description": "Listen national anthems of the world",
-                    "skills": [
-                        "html",
-                        "css",
-                        "javascript",
-                        "react"
                     ],
                     "visible": true
                 },
@@ -173,6 +173,22 @@ export default {
             "type": "games",
             "projects": [
                 {
+                    "id": "db2048",
+                    "title": "DB 2048",
+                    "src": "./assets/portfolio/games/db2048/assets/images/image.webp",
+                    "video": "./assets/portfolio/games/db2048/assets/videos/video.mp4",
+                    "link": "./assets/portfolio/games/db2048",
+                    "description": "Dragon Ball version of the game 2048. The goal is to merge all similar cards",
+                    "description_fr": "Jeu 2048 version \"Dragon Ball\". Le but est de fusionner toutes les cartes similaires",
+                    "skills": [
+                        "html",
+                        "css",
+                        "javascript"
+                    ],
+                    "date": "juillet 2015",
+                    "visible": true
+                },
+                {
                     "id": "connect4",
                     "title": "Connect 4",
                     "src": "./assets/portfolio/games/connect4/assets/images/image.webp",
@@ -200,22 +216,6 @@ export default {
                         "css",
                         "javascript"
                     ],
-                    "visible": true
-                },
-                {
-                    "id": "db2048",
-                    "title": "DB 2048",
-                    "src": "./assets/portfolio/games/db2048/assets/images/image.webp",
-                    "video": "./assets/portfolio/games/db2048/assets/videos/video.mp4",
-                    "link": "./assets/portfolio/games/db2048",
-                    "description": "Dragon Ball version of the game 2048. The goal is to merge all similar cards",
-                    "description_fr": "Jeu 2048 version \"Dragon Ball\". Le but est de fusionner toutes les cartes similaires",
-                    "skills": [
-                        "html",
-                        "css",
-                        "javascript"
-                    ],
-                    "date": "juillet 2015",
                     "visible": true
                 },
                 {
