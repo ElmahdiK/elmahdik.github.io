@@ -10,7 +10,7 @@ const $$ = document.querySelectorAll.bind(document);
 
 // https://enigmatik.epikurieu.com/enigmes/Le-gardien-du-pont/3464/enigme.fhtm
 import d from './data.js';
-let _numEnigma = 0;
+let _numEnigma = -1;
 
 window.onload = _ => {
     initGame();
@@ -18,11 +18,10 @@ window.onload = _ => {
 }
 
 const initGame = _ => {
+    const { title, text, solution } = d[++_numEnigma];
     $(`#details_solution`).removeAttribute(`open`);
-
-    $(`#h1_title`).innerHTML = d[_numEnigma].title;
-    $(`#p_text`).innerHTML = d[_numEnigma].text;
-    $(`#p_solution`).innerHTML = d[_numEnigma].solution;
-
-    _numEnigma >= d.length - 1 ? _numEnigma = 0 : _numEnigma++;
+    $(`#h1_title`).innerHTML = `${_numEnigma + 1}/${d.length} : ${title}`;
+    $(`#p_text`).innerHTML = text;
+    $(`#p_solution`).innerHTML = solution;
+    if (_numEnigma >= d.length - 1) _numEnigma = -1;
 }

@@ -97,6 +97,14 @@ header #p_title {
     font-size: 22px;
     font-weight: bold;
     text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header #p_title span {
+    font-size: 42px;
+    margin-left: 10px;
+    display: block;
 }
 
 /* -- footer -- */
