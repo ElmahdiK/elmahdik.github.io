@@ -13,7 +13,7 @@ export default {
             "city": "nice"
         },
         "contact": {
-            "email": "elmahdi.korfed@gmail.com",
+            "email": "elmahdi.korfed+pro@gmail.com",
             "website": "https://elmahdik.github.io",
             "facebook": "https://www.facebook.com/elmahdikorfed1991",
             "linkedin": "https://www.linkedin.com/in/elmahdikorfed/",
