@@ -12,7 +12,6 @@ window.onload = () => {
     vip = new Vipborntoday(today.getMonth() + 1, today.getDate());
     loadVIPsCards();
 
-    // date & month
     setMonthOptions($(`#select_month`), today.getMonth());
     setDayOptions($(`#select_date`), today.getMonth(), today.getDate());
 
@@ -38,27 +37,21 @@ const setDayOptions = (_selector, _month, _date) => {
 
 const getDaysFromMonth = _month => new Date(2000, _month, 0).getDate();
 
-/**
- * Display loading ... & load VIPs card to display them
- */
+// Display loading ... & load VIPs card to display them
 const loadVIPsCards = () => {
     $(`#p_result`).innerText = `Loading ...`;
     vip.getVIPs().then(json => {
-        console.log(json);
-        // display number of results found
         $(`#p_result`).innerText = `${json.length} results found`;
-
-        // display VIPs cards
         $(`#plateau`).innerHTML = "";
         json.map((_vip, index) => $(`#plateau`).insertAdjacentHTML('beforeEnd', templateCardVIP(_vip, index)));
     });
 };
 
-const templateCardVIP = (_vip, _num) => ` 
+const templateCardVIP = ({ url, photo, nameBirth, birthDate, abstract }, _num) => ` 
 <div style="animation-delay:${_num / 12}s">
-<a href="${_vip.url.value}" target="_blank" rel="noreferrer">
-<img src="${_vip.photo.value}" title="${_vip.nameBirth.value}" alt="${_vip.nameBirth.value}" onerror="this.onerror=null; this.src='./assets/images/notfound.jpg'">
-<p><span>${_vip.nameBirth.value}</span><span>${new Date(_vip.birthDate.value).getFullYear()}</span><br /><small>${_vip.abstract.value.slice(0, 80)} ...</small></p>
+<a href="${url.value}" target="_blank" rel="noreferrer">
+<img src="${photo.value}" title="${nameBirth.value}" alt="${nameBirth.value}" onerror="this.onerror=null; this.src='./assets/images/notfound.jpg'">
+<p><span>${nameBirth.value}</span><span>${new Date(birthDate.value).getFullYear()}</span><br /><small>${abstract.value.slice(0, 80)} ...</small></p>
 </a>
 </div>`;
 
