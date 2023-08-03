@@ -116,7 +116,7 @@ const checkDR = (_row, _col) => {
  * Return true if yes or false if not
  * @param {string} _elements - concat elements from array checked (column, row, diagonal left, diagonal right)
  */
-const checkIfWin = _elements => (_elements.includes(`1111`) || _elements.includes(`2222`));
+const checkIfWin = _elements => ['1111', '2222'].some(element => _elements.includes(element));
 
 /**
  * Return color of the player (yellow or red)
