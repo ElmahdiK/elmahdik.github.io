@@ -207,11 +207,9 @@ section article {
 #in-search{
     background-color: rgba(0,0,0,0.08);
     color: var(--colorBLACK);
-    /* box-shadow: 0px 1px 2px var(--colorGRAY); */
     padding: 20px;
     margin:0px 20px;
     font-size: 18px;
-    border-radius: 12px;
 }
 
 #div_results{
@@ -293,7 +291,6 @@ section article {
     height: calc(100% - 82px);
     padding: 30px;
     margin:10px;
-    border-radius: 14px;
     display: flex;
     flex-direction: column;
 }
