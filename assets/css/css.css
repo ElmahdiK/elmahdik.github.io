@@ -1,7 +1,7 @@
 :root {
     --colorWHITE: #fff;
     --colorBLACK: #000;
-    --colorMAIN: #fafafa;
+    --colorMAIN: linear-gradient(10deg, #eee, #fff);
     --colorGRAY: #ddd;
 }
 
@@ -10,7 +10,7 @@
 [data-theme="dark"] {
     --colorWHITE: #111; /* 261c39; */
     --colorBLACK: #bbb;
-    --colorMAIN: #1b1b1b;
+    --colorMAIN: linear-gradient(10deg, #483d2c, #263238);;
     --colorGRAY: #000;
 }
 
@@ -39,7 +39,7 @@ body {
 }
 
 body {
-    background-color: var(--colorMAIN);
+    background: var(--colorMAIN);
     /* background: linear-gradient(10deg, #2196f3, #9c27b0); */
 }
 
@@ -72,7 +72,7 @@ p {
 }
 
 .box {
-    /* box-shadow: 0px 1px 2px var(--colorGRAY); */
+    box-shadow: 0px 1px 2px var(--colorGRAY);
     position: relative;
     top: 0px;
     transition: 0.3s;
@@ -150,6 +150,8 @@ aside img {
     height: 100%;
     position: absolute;
     object-fit: cover;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 aside .square {
@@ -285,10 +287,10 @@ section article {
 }
 
 .div_portfolio {
-    background-color: var(--colorWHITE);
-    border:1px solid #fafafa;
-    width: calc(100% - 82px);
-    height: calc(100% - 82px);
+    /* background-color: rgba(0,0,0,0.2); */
+    /* border:1px solid #fafafa; */
+    width: calc(100% - 80px);
+    height: calc(100% - 80px);
     padding: 30px;
     margin:10px;
     display: flex;
@@ -301,6 +303,8 @@ section article {
     height: 100%;
     position: absolute;
     object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .div_portfolio .p_title {
