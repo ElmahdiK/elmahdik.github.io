@@ -34,19 +34,19 @@ window.onload = (_) => {
   dataPortfolio.map((d, index) => $(`#ul_portfolio`).insertAdjacentHTML(`beforeEnd`, displayPortfolio(index, d)));
 
   // search a projet
-  $(`#in-search`).oninput = ({ target }) => {
-    let _searchTerm = target.value;
-    $$(`#ul_portfolio > li`).forEach((item) => {
-      if (_searchTerm === "" || item.getAttribute("data-title").toLowerCase().includes(_searchTerm.toLowerCase())) {
-        if (item.classList.contains(`hidden`)) item.classList.remove(`hidden`);
-      } else {
-        if (!item.classList.contains(`hidden`)) item.classList.add(`hidden`);
-      }
-    });
-    // if ($$(`#ul_portfolio > li.hidden`).length === dataPortfolio.length) {
-    //   if ($('#div_results').classList.contains(`hidden`)) $('#div_results').classList.remove(`hidden`);
-    // } else if (!$('#div_results').classList.contains(`hidden`)) $('#div_results').classList.add(`hidden`);
-  };
+  // $(`#in-search`).oninput = ({ target }) => {
+  //   let _searchTerm = target.value;
+  //   $$(`#ul_portfolio > li`).forEach((item) => {
+  //     if (_searchTerm === "" || item.getAttribute("data-title").toLowerCase().includes(_searchTerm.toLowerCase())) {
+  //       if (item.classList.contains(`hidden`)) item.classList.remove(`hidden`);
+  //     } else {
+  //       if (!item.classList.contains(`hidden`)) item.classList.add(`hidden`);
+  //     }
+  //   });
+  //   // if ($$(`#ul_portfolio > li.hidden`).length === dataPortfolio.length) {
+  //   //   if ($('#div_results').classList.contains(`hidden`)) $('#div_results').classList.remove(`hidden`);
+  //   // } else if (!$('#div_results').classList.contains(`hidden`)) $('#div_results').classList.add(`hidden`);
+  // };
 
   // set dark/light mode
   if (window.matchMedia && window.matchMedia(`(prefers-color-scheme: dark)`).matches) _setDarkMode();
