@@ -23,7 +23,7 @@ export default {
         },
         "job_position": "Web Developer",
         "job_position_2": "Full stack web developer",
-        "footer": "© 2023 EK"
+        "footer": "© 2024 EK"
     },
     "portfolio": [
         {
