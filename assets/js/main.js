@@ -63,7 +63,4 @@ const displayPortfolio = (_num, { title, link, src, description, skills }) => `
 
 window.matchMedia(`(prefers-color-scheme: dark)`).addEventListener(`change`, ({ matches }) => _setDarkMode(matches));
 
-const _setDarkMode = (_mode = true) => {
-  $(`#lb_darkmode`).className = `${_mode ? `fa-brands fa-first-order-alt` : `far fa-moon`}`;
-  $(`body`).dataset.theme = _mode ? `dark` : ``;
-};
+const _setDarkMode = (_mode = true) => $(`body`).dataset.theme = _mode ? `dark` : ``;
