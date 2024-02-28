@@ -88,7 +88,7 @@
                     {
                         "id": "cube3d",
                         "title": "cube3d",
-                        "src": "./assets/portfolio/services/cube3d/assets/images/image.png",
+                        "src": "./assets/portfolio/services/cube3d/assets/images/image.avif",
                         "video": "./assets/portfolio/services/cube3d/assets/videos/video.mp4",
                         "link": "./assets/portfolio/services/cube3d",
                         "description": "Animated 3D cube using CSS3 perspective, rotations and animations features",

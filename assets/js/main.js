@@ -48,7 +48,7 @@ const displayPortfolio = (_num, { title, link, src, description, skills }) => `
   <a href="${link}" target="_blank" rel="noreferrer noopener">
     <div class="div_portfolio">
         <div class="square">
-            <img src="${src}" alt="${title}" onerror="this.onerror=null; this.src='./assets/images/notfound.jpg'">
+            <img src="${src}" alt="${title}" onerror="this.onerror=null; this.src='./assets/images/notfound.avif'">
         </div>
         <div class="div_des">
             <div>
