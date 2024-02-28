@@ -7,7 +7,7 @@
   <title>EK • Welcome!</title>
   <meta name="author" content="Elmahdi KORFED" />
   <meta name="title" content="Elmahdi KORFED">
-  <meta name="description" content="Door is always open. Welcome ! 😊" />
+  <meta name="description" content="Welcome !" />
   <meta name="keywords" content="Elmahdi Korfed, Developer, Web, France" />
   <meta name="viewport" content="width=device-width" />
   <meta name="theme-color" content="#fff">
@@ -17,23 +17,17 @@
   <meta property="og:site_name" content="Elmahdi KORFED" />
   <meta property="og:title" content="Elmahdi KORFED" />
   <meta property="og:image" content="./assets/images/ek.jpg" />
-  <meta property="og:description" content="Door is always open. Welcome ! 😊" />
+  <meta property="og:description" content="Welcome !" />
   <meta property="og:url" content="https://elmahdik.github.io/" />
   <meta property="og:locale" content="en_US" />
 
   <!-- link -->
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/logo/icon_16.ico" />
   <link rel="apple-touch-startup-image" href="./assets/images/logo/icon_192.png">
-  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Heebo"> -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" /> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./assets/css/css.css" media="none" onload="if(media!=='all')media='all'">
 
   <!-- script -->
-  <script src="./assets/js/main.js" defer type="module"></script>
+  <script src="./assets/js/main.js"></script>
 </head>
 
 <body>
@@ -42,9 +36,10 @@
       <p id="p_name"></p>
       <p id="p_job"></p>
     </div>
-    <label id="lb_darkmode" for="in_darkmode" class="far fa-moon">
-      <input type="checkbox" id="in_darkmode" hidden>
-    </label>
+    <select id="lb_darkmode">
+      <option value="">light</option>
+      <option value="dark">dark</option>
+    </select>
   </header>
 
   <main>
@@ -59,14 +54,14 @@
       </div>
       <a id="a_download_cv" href="#" target="_blank" rel="noreferrer noopener" class="box">resume</a>
       <ul>
-        <li><a id="linkedin_link" href="#" target="_blank" rel="noreferrer noopener" aria-label="linkedin"><i
-              class="fab fa-linkedin-in"></i></a>
+        <li><a id="linkedin_link" href="#" target="_blank" rel="noreferrer noopener" aria-label="linkedin"><img
+              src="./assets/css/icons/linkedin.svg" alt="linkedin-logo" class="logo" /></a>
         </li>
-        <li><a id="github_link" href="#" target="_blank" rel="noreferrer noopener" aria-label="github"><i
-              class="fa-brands fa-github"></i></a>
+        <li><a id="github_link" href="#" target="_blank" rel="noreferrer noopener" aria-label="github"><img
+              src="./assets/css/icons/github.svg" alt="github-logo" class="logo" /></a>
         </li>
-        <li><a id="email_link" href="#" target="_blank" rel="noreferrer noopener" aria-label="email"><i
-              class="fas fa-envelope"></i></a>
+        <li><a id="email_link" href="#" target="_blank" rel="noreferrer noopener" aria-label="email"><img
+              src="./assets/css/icons/email.svg" alt="email-logo" class="logo" /></a>
         </li>
       </ul>
       <footer>
@@ -76,11 +71,6 @@
 
     <section>
       <article id="portfolio">
-        <!-- <input id="in-search" type="search" placeholder="Search" /> -->
-        <!-- <div id="div_results" class="hidden">
-          <p>No project found</p><img
-            src="https://i.pinimg.com/originals/1d/fa/7f/1dfa7f72302302d9571d553ff51ecfd2.gif">
-        </div> -->
         <ul id="ul_portfolio"></ul>
       </article>
     </section>
