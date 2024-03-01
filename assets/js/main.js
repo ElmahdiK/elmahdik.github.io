@@ -40,7 +40,7 @@ window.onload = (_) => {
 
   // set dark/light mode
   if (window.matchMedia && window.matchMedia(`(prefers-color-scheme: dark)`).matches) _setDarkMode();
-  $(`#lb_darkmode`).onchange = ({ target }) => _setDarkMode(target.value);
+  $(`#isDarkMode`).onchange = ({ target }) => _setDarkMode(target.checked);
 };
 
 const displayPortfolio = (_num, { title, link, src, description, skills }) => `
@@ -63,4 +63,7 @@ const displayPortfolio = (_num, { title, link, src, description, skills }) => `
 
 window.matchMedia(`(prefers-color-scheme: dark)`).addEventListener(`change`, ({ matches }) => _setDarkMode(matches));
 
-const _setDarkMode = (_mode = true) => $(`body`).dataset.theme = _mode ? `dark` : ``;
+const _setDarkMode = (_mode = true) => {
+  $(`#img_mode`).src = `./assets/images/${_mode ? 'dark.svg' : 'light.svg'}`;
+  $(`body`).dataset.theme = _mode ? `dark` : ``;
+}

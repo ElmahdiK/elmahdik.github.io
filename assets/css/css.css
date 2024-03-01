@@ -10,7 +10,7 @@
 [data-theme="dark"] {
   --colorWHITE: #111;
   --colorBLACK: #ccc;
-  --colorMAIN: linear-gradient(45deg, #111, #263238);
+  --colorMAIN: linear-gradient(45deg, #222, #263238);
   --colorGRAY: #000;
 }
 
@@ -103,16 +103,24 @@ header p {
   font-size: 14px;
 }
 
-#lb_darkmode {
-  background-color: transparent;
-  border: 1px solid var(--colorGRAY);
+#isDarkMode {
+  display: none;
+}
+
+#lbDarkMode {
+  background-color: rgba(255, 255, 255, 0.05);
   color: var(--colorBLACK);
   position: absolute;
   right: 20px;
-  font-size: 14px;
   padding: 8px;
   cursor: pointer;
   text-align: center;
+  box-shadow: inset 0px 0px 7px var(--colorGRAY);
+  border-radius: 100%;
+}
+#lbDarkMode img {
+  width: 20px;
+  height: 20px;
 }
 
 /*--- footer ---*/
@@ -207,14 +215,6 @@ section article {
   flex-direction: column;
 }
 
-#in-search {
-  background-color: rgba(0, 0, 0, 0.08);
-  color: var(--colorBLACK);
-  padding: 20px;
-  margin: 0px 20px;
-  font-size: 18px;
-}
-
 #div_results {
   padding: 25px;
 
@@ -287,7 +287,7 @@ section article {
 }
 
 .div_portfolio {
-  background-color: rgba(0, 0, 0, 0.07);
+  background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--colorGRAY);
   width: calc(100% - 80px);
   height: calc(100% - 80px);
@@ -376,12 +376,13 @@ section article {
 
 /* -- mobile --*/
 @media screen and (max-width: 700px) {
-  #in-search {
-    display: none;
-  }
-
-  #lb_darkmode {
-    display: none;
+  #lbDarkMode {
+    /* display: none; */
+    bottom: 10px;
+    right: 0px;
+    left: 0px;
+    width: 20px;
+    margin: auto;
   }
 
   header {
