@@ -122,6 +122,15 @@ header p {
   width: 20px;
   height: 20px;
 }
+#lbDarkMode img:hover {
+  animation-name: animateCircle;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  display: flex;
+}
 
 /*--- footer ---*/
 footer p {
@@ -341,6 +350,16 @@ section article {
     transform: translateY(0px) translateX(0px);
     opacity: 1;
     border-radius: 0% 100% 0% 100% / 100% 0% 100% 0%;
+  }
+}
+
+@keyframes animateCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
 
