@@ -1,7 +1,7 @@
 :root {
   --colorWHITE: #fff;
   --colorBLACK: #000;
-  --colorMAIN: linear-gradient(45deg, #eee, #fff);
+  --colorMAIN: #fafafa;
   --colorGRAY: #ddd;
 }
 
@@ -75,9 +75,7 @@ p {
 
 /* -- header -- */
 header {
-  box-shadow: 0px 1px 2px var(--colorGRAY);
-  height: 10vh;
-  padding: 0px 50px;
+  height: 15vh;
   z-index: 1;
   display: flex;
   flex-direction: row;
@@ -140,7 +138,7 @@ footer p {
 /* -- main -- */
 main {
   width: 100vw;
-  height: 90vh;
+  height: 85vh;
   display: flex;
   justify-content: center;
 }
@@ -164,12 +162,10 @@ aside img {
 }
 
 aside .square {
-  width: calc(100% - 50px);
-  margin: 0px 25px;
+  width: calc(70%);
 }
 
 aside #div_resume {
-  flex: 1;
   margin-top: 50px;
 }
 
@@ -182,8 +178,27 @@ aside #div_resume {
 #p_resume {
   font-size: 14px;
 }
+#hello-hand {
+  display: inline-block;
+  animation-name: animateHelloHand;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+#p_resume ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+#p_resume ul a {
+  font-weight: bold;
+  text-decoration: underline;
+  font-style: oblique;
+}
 
-aside ul {
+aside ul#list-contact {
   list-style: none;
   align-self: stretch;
   display: flex;
@@ -192,7 +207,8 @@ aside ul {
   position: relative;
 }
 
-aside a {
+#list-contact a,
+#a_download_cv {
   padding: 20px;
   display: flex;
   justify-content: center;
@@ -206,9 +222,12 @@ aside a {
 }
 
 aside #a_download_cv {
+  background-color: rgba(255, 255, 255, 0.05);
   text-align: center;
   text-transform: uppercase;
   align-self: stretch;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /* -- section -- */
@@ -297,11 +316,9 @@ section article {
 
 .div_portfolio {
   background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--colorGRAY);
-  width: calc(100% - 80px);
-  height: calc(100% - 80px);
+  width: calc(100% - 60px);
+  height: calc(100% - 60px);
   padding: 30px;
-  margin: 10px;
   display: flex;
   flex-direction: column;
 }
@@ -350,6 +367,20 @@ section article {
     transform: translateY(0px) translateX(0px);
     opacity: 1;
     border-radius: 0% 100% 0% 100% / 100% 0% 100% 0%;
+  }
+}
+
+@keyframes animateHelloHand {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(25deg);
+    scale: 1.1;
+  }
+
+  100% {
+    transform: rotate(0deg);
   }
 }
 
