@@ -1,0 +1,136 @@
+[
+    {
+        "about": {
+            "name": {
+                "last": "KORFED",
+                "first": "Elmahdi"
+            },
+            "job": "Web Developer",
+            "bio": {
+                "title": "Welcome",
+                "text": "Passionate about the web for more than 10 years, I had the opportunity to work in various fields as a web/mobile developer - back and front: private company, public research laboratory, startup as co-founder and for customers. I created this website in order to share with you some of my personal web projects. Do not hesitate to contact me if necessary.<br>Have a great visit!"
+            },
+            "url": {
+                "img": "./assets/images/ek.jpeg",
+                "email": "elmahdi.korfed+pro@gmail.com",
+                "linkedin": "https://www.linkedin.com/in/elmahdikorfed/",
+                "github": "https://github.com/elmahdik",
+                "resume": "./assets/cv/cv-elmahdi_korfed.pdf"
+            }
+        },
+        "projects": [
+            {
+                "label": "wasabi",
+                "description": "Website of the WASABI project realized in polymer. It contains over 2 million songs.",
+                "skills": [
+                    "javascript",
+                    "polymer",
+                    "nodejs",
+                    "mongodb"
+                ],
+                "url": "https://wasabi.i3s.unice.fr/#/search/artist/Michael%20Jackson/album/Bad/song/Smooth%20Criminal"
+            },
+            {
+                "label": "pedalboard",
+                "description": "Web development of one of the world's first pedalboards!",
+                "skills": [
+                    "javascript",
+                    "json",
+                    "web-audio api"
+                ],
+                "url": "https://wasabi.i3s.unice.fr/dynamicPedalboard/?bank=Michel&preset=Vampires"
+            },
+            {
+                "label": "mailissimo",
+                "description": "Edit your emails in just a few clicks",
+                "skills": [
+                    "javascript",
+                    "jquery",
+                    "coldfusion"
+                ],
+                "url": "https://www.mailissimo.com/index.cfm?fuseaction=c.dspHome&subaction=email"
+            },
+            {
+                "label": "cube3d",
+                "description": "Animated 3D cube using CSS3 perspective, rotations and animations features",
+                "skills": []
+            },
+            {
+                "label": "flags",
+                "description": "Listen national anthems of the world",
+                "skills": [
+                    "javascript",
+                    "react"
+                ]
+            },
+            {
+                "label": "vip born today",
+                "description": "Who are these VIPs celebrating their birthday today?",
+                "skills": [
+                    "javascript",
+                    "sparql"
+                ]
+            },
+            {
+                "label": "zitacions",
+                "description": "Do you know these quotes?",
+                "skills": [
+                    "javascript",
+                    "json"
+                ]
+            },
+            {
+                "label": "animals sounds",
+                "description": "Animals sounds",
+                "skills": [
+                    "javascript",
+                    "json"
+                ]
+            },
+            {
+                "label": "greeting cards",
+                "description": "Send a beautiful greeting cards now!",
+                "skills": [
+                    "javascript",
+                    "php"
+                ],
+                "url": "https://yoann-moise.com/projects/greetings/index.php"
+            },
+            {
+                "label": "db 2048",
+                "description": "Dragon Ball version of the game 2048. The goal is to merge all similar cards",
+                "skills": [
+                    "javascript"
+                ]
+            },
+            {
+                "label": "connect 4",
+                "description": "Play the famous Connect 4 game now!",
+                "skills": [
+                    "javascript"
+                ]
+            },
+            {
+                "label": "memory",
+                "description": "Practice your memory by finding the pairs!",
+                "skills": [
+                    "javascript"
+                ]
+            },
+            {
+                "label": "enigma",
+                "description": "Will you be able to solve these enigmas ? 🧐",
+                "skills": [
+                    "javascript"
+                ]
+            },
+            {
+                "label": "kald",
+                "description": "Do you have a better memory than this monkey? Good luck!",
+                "skills": [
+                    "javascript"
+                ]
+            }
+        ]
+    }
+]

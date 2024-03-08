@@ -1,0 +1,314 @@
+:root {
+  --colorWHITE: #fff;
+  --colorBLACK: #000;
+  --colorBLUE: #003366;
+  --sizePic: 100px;
+  --sizeFont: 12px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  border-collapse: collapse;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  vertical-align: top;
+  text-rendering: optimizeLegibility;
+  user-select: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.hidden {
+  display: none !important;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+#div-struct {
+  display: flex;
+  flex-direction: row;
+}
+
+#div-struct > article {
+  width: calc(50% - 10px);
+}
+
+.div-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexa {
+  flex: 1;
+  text-align: left;
+  background: #fafafa;
+  justify-content: space-evenly;
+}
+
+.flexb {
+  flex: 3.5;
+}
+
+.flexa .div_row {
+  padding: 8px;
+  text-align: center;
+}
+
+.flexb .div_row {
+  padding: 4px 8px;
+}
+
+.flexb .div_row:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+.big_2 {
+  text-transform: uppercase;
+}
+
+.dispo {
+  font-size: 18px !important;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+#div_infos {
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+img {
+  width: var(--sizePic);
+  object-fit: cover;
+  object-position: 100% 20%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+img.img_qr {
+  width: 100%;
+}
+.votre-conteneur2 {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.votre-conteneur {
+  position: relative;
+  width: var(--sizePic);
+  height: var(--sizePic);
+  overflow: hidden;
+  margin: 0 auto;
+}
+.votre-conteneur2 > img,
+.votre-conteneur > img {
+  position: absolute;
+  left: -10000%;
+  right: -10000%;
+  top: -10000%;
+  bottom: -10000%;
+  margin: auto;
+  min-width: 1000%;
+  min-height: 1000%;
+  transform: scale(0.1);
+}
+
+#div_infos a {
+  color: #003366;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  list-style: none;
+  flex: 1;
+}
+
+ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+ul li span,
+p.sp_resume,
+span.sp_jobtitle {
+  font-size: var(--sizeFont);
+}
+
+span.sp_jobtitle {
+  font-weight: bold;
+}
+
+span.big_1 {
+  font-size: 18px;
+}
+
+span.big_2 {
+  font-size: 16px;
+  padding: 30px 0px;
+}
+
+span.sp_sstitle,
+p.sp_resume {
+  display: block;
+  text-transform: none;
+}
+p.sp_resume {
+  margin-top: 6px;
+  padding: 10px;
+}
+
+span.sp_date {
+  color: #555;
+  font-size: 10px;
+  text-align: right;
+}
+
+.ul_entreprise {
+  width: 300px;
+  flex: 1 !important;
+}
+
+.ul_entreprise span {
+  font-weight: bold;
+}
+
+.blue {
+  background: var(--colorBLUE);
+  color: var(--colorWHITE);
+}
+
+.profile {
+  text-align: center;
+}
+.profile a {
+  color: var(--colorBLUE);
+  font-size: 12px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.white {
+  background: var(--colorWHITE);
+  color: var(--colorBLUE);
+}
+
+#sp_name {
+  color: var(--colorBLUE);
+  font-size: 16px;
+  margin-top: 10px;
+  display: block;
+}
+
+.sp_title {
+  color: var(--colorBLUE);
+  font-size: 11px;
+  padding: 3px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.blue {
+  text-transform: uppercase;
+  color: var(--colorWHITE) !important;
+}
+
+.div_row,
+.li_title {
+  display: flex;
+  flex-direction: row;
+}
+
+.li_title {
+  justify-content: space-between;
+}
+
+.div_column {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+ul.list_school {
+  flex: 2;
+}
+
+.ul_hobbies {
+  text-align: center;
+}
+
+.ul_hobbies .fa-solid {
+  font-size: 14px;
+  margin: 0px 6px;
+  color: #444;
+}
+
+.li_skills {
+  text-align: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.li_skills span {
+  display: inline-block;
+  padding: 1px;
+  margin: 1px;
+  font-size: 8px;
+  border: 1px solid #ccc;
+}
+
+.ul_skills {
+  text-align: left;
+}
+.ul_skills li,
+#div_refs li {
+  margin-bottom: 6px;
+}
+
+#div_skills .div_row {
+  flex-direction: column;
+}
+#div_skills .ul_skills:nth-child(1) {
+  border-bottom: 1px dashed #ccc;
+  margin-bottom: 4px;
+}
+#div_skills li .sp_sep {
+  text-align: center;
+  color: #ccc;
+}
+
+#div_refs li a {
+  font-size: 11px;
+  text-decoration: none;
+  color: #111;
+}
