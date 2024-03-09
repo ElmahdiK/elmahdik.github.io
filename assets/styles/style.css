@@ -472,8 +472,8 @@ section article {
   }
 
   .div_portfolio {
-    width: calc(100% - 122px);
-    height: calc(100% - 122px);
+    width: calc(100% - 100px);
+    height: calc(100% - 100px);
     padding: 50px;
   }
 }
