@@ -1,5 +1,10 @@
 export default [
     {
+        "title": "Joufflue",
+        "text": "Je grossis mais je ne change pas de poids.<br />Qui suis-je ?",
+        "solution": "La loupe"
+    },
+    {
         "title": "Famille",
         "text": "Un bucheron a sept filles, chacune de ces filles a un frère. Combien a-t-il d'enfants ?",
         "solution": "Il a huit enfants car chacune des filles n'a qu'un frère, il a donc sept filles et un fils."
