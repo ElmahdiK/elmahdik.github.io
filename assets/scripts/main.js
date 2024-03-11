@@ -45,7 +45,7 @@ const displayProject = ({ label, url, description, skills }, num) => `
         </div>
         <div class="div_des">
             <div>
-                <p class="p_title">${label}</p>
+                <p class="p_title">< ${label} /></p>
                 <p class="p_des">${description}</p>
             </div>
             <ul><li>html</li><li>css</li>${skills.map((s) => `<li>${s}</li>`).join("")}</ul>
