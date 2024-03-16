@@ -20,9 +20,11 @@
         },
         "projects": [
             {
-                "label": "cube3d",
-                "description": "Animated 3D cube using CSS3 perspective, rotations & animations features | 🎁",
-                "skills": []
+                "label": "db 2048",
+                "description": "Dragon Ball version of the game 2048. The goal is to merge all similar cards | 🐉",
+                "skills": [
+                    "javascript"
+                ]
             },
             {
                 "label": "flags",
@@ -39,6 +41,11 @@
                     "javascript",
                     "sparql"
                 ]
+            },
+            {
+                "label": "cube3d",
+                "description": "Animated 3D cube using CSS3 perspective, rotations & animations features | 🎁",
+                "skills": []
             },
             {
                 "label": "zitacions",
@@ -64,13 +71,6 @@
                     "php"
                 ],
                 "url": "https://yoann-moise.com/projects/greetings/index.php"
-            },
-            {
-                "label": "db 2048",
-                "description": "Dragon Ball version of the game 2048. The goal is to merge all similar cards | 🐉",
-                "skills": [
-                    "javascript"
-                ]
             },
             {
                 "label": "connect 4",
