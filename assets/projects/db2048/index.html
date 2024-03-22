@@ -26,10 +26,11 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="./assets/images/logo/icon_16.ico" />
 	<link rel="apple-touch-startup-image" href="./assets/images/logo/icon_192.png">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Heebo">
-	<link rel="stylesheet" href="./assets/css/css.css" media="none" onload="if(media!=='all')media='all'">
+	<link rel="stylesheet" href="./assets/styles/style.css" media="none" onload="if(media!=='all')media='all'">
 
 	<!-- script -->
-	<script src="./assets/js/main.js" defer></script>
+	<script src="./assets/scripts/lib/joy.min.js"></script>
+	<script src="./assets/scripts/main.js" defer></script>
 </head>
 
 <body>
@@ -39,6 +40,8 @@
 		</header>
 		<div id="plateau"></div>
 		<button id="bt_play" class="hidden">play again</button>
+
+		<div id="joystick1"></div>
 		<audio id="audio-voice" controls class="hidden">
 			<source id="audioVoice" src="" type="audio/mpeg"> Your browser does not support the audio element.
 		</audio>
@@ -46,7 +49,8 @@
 			<source id="audioSong" src="" type="audio/mpeg"> Your browser does not support the audio element.
 		</audio>
 		<footer>
-			<p>© 2024 EK</p>
+			<a href="https://elmahdik.github.io/" target="_blank" rel="noreferrer noopener"
+				aria-label="Elmahdi KORFED website">by Elmahdi KORFED</a>
 		</footer>
 	</main>
 </body>

@@ -31,6 +31,16 @@ window.onload = _ => {
 		}
 	})
 
+	// JOYSTICK options : https://github.com/bobboteck/JoyStick
+	const options = { width: 160, height: 160, internalFillColor: "#333", externalLineWidth: 10, internalStrokeColor: "#111", externalStrokeColor: "#000" }
+
+	let Joy1 = new JoyStick('joystick1', options, function (stickData) {
+		if (stickData.x < -70) moveTo(`L`);
+		if (stickData.y > 70) moveTo(`U`);
+		if (stickData.x > 70) moveTo(`R`);
+		if (stickData.y < -70) moveTo(`D`);
+	});
+
 	// LOAD JSON & CONTENT
 	fetch(_pathJSON)
 		.then(response => {
@@ -40,9 +50,14 @@ window.onload = _ => {
 		.then(_json => {
 			_data = _json;
 			initGame();
+			resizePlateau();
 		})
 }
 
+window.onresize = _ => resizePlateau();
+const resizePlateau = _ => {
+	_plateau.style.height = `${_plateau.getBoundingClientRect().width}px`;
+}
 const initGame = _ => {
 	_currentMaxLevel = 0;
 	nextLevel();
