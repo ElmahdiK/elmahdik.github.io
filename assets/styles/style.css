@@ -437,10 +437,12 @@ section article {
   }
 
   header {
+    scroll-snap-align: start;
     border: 0px;
-    height: 100vh;
     flex-direction: column;
     justify-content: center;
+    height: 100vh;
+    position: relative;
   }
 
   header div {
@@ -454,27 +456,50 @@ section article {
   }
 
   aside {
+    scroll-snap-align: start;
     width: calc(100vw - 62px);
     height: calc(100vh - 60px);
+    justify-content: center;
   }
 
   section {
+    scroll-snap-align: start;
     width: 100vw;
+    height: 100vh;
   }
 
   #ul_portfolio {
     width: 100%;
+    height: 100vh;
     padding: 0px;
   }
 
+  .container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    position: relative;
+  }
+  .container::-webkit-scrollbar {
+    display: none;
+  }
+
   #ul_portfolio > li {
+    scroll-snap-align: start;
+    height: 100vh;
     width: calc(100%);
     margin: 0px;
+    align-items: center;
   }
 
   .div_portfolio {
     width: calc(100% - 100px);
     height: calc(100% - 100px);
     padding: 50px;
+  }
+  .div_portfolio .p_des {
+    text-align: center;
+    font-size: 16px;
+    padding: 20px;
   }
 }
