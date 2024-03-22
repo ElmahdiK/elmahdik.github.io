@@ -1,7 +1,7 @@
 :root {
   --colorWHITE: #fff;
   --colorBLACK: #000;
-  --colorMAIN: #fafafa;
+  --colorMAIN: #fefefe;
   --colorGRAY: #ddd;
 }
 
@@ -276,15 +276,14 @@ section article {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  display: none;
 }
 
 #ul_portfolio ul li {
-  margin: 1px;
-  padding: 8px;
+  border: 1px dotted var(--colorBLACK);
   font-size: 10px;
+  margin: 2px;
+  padding: 4px;
   text-transform: uppercase;
-  border: 1px solid var(--colorGRAY);
 }
 
 #ul_portfolio > li {
