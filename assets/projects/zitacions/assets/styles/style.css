@@ -90,14 +90,13 @@ main {
   box-sizing: border-box;
 }
 main ul#ul_citations {
-  height: 90vh;
   overflow-y: scroll;
   list-style: none;
   width: 100%;
   display: grid;
   grid-template-columns: 33.33% 33.33% 33.33%;
 }
-main ul#ul_citations li {
+main ul#ul_citations li div {
   background-color: var(--colorWHITE);
   box-shadow: 0px 2px 10px #333;
   width: calc(100% - 8% - 80px);
@@ -126,10 +125,27 @@ main p {
 /* -- mobile --*/
 
 @media screen and (max-width: 800px) {
+  header {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+  }
   header span {
     font-size: 30px;
   }
+  main {
+    height: 100vh;
+  }
   main ul#ul_citations {
     grid-template-columns: 100%;
+    scroll-snap-type: y mandatory;
+  }
+  main ul#ul_citations li {
+    scroll-snap-align: start;
+    height: 100vh;
+    align-items: center;
+    display: flex;
+  }
+  main ul#ul_citations li div {
   }
 }

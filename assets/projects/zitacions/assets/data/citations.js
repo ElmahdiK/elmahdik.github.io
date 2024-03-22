@@ -1,5 +1,11 @@
 export default [
     {
+        "author": "Mark Twain",
+        "quotes": [
+            "Ils ne savaient pas que c’était impossible, alors ils l’ont fait."
+        ]
+    },
+    {
         "author": "Neil Armstrong",
         "quotes": [
             "C'est un petit pas pour l'homme mais un bond de géant pour l'humanité."
