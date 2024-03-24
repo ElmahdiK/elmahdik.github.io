@@ -244,7 +244,6 @@ section {
 }
 
 section article {
-  min-height: 90vh;
   display: flex;
   flex-direction: column;
 }
@@ -458,7 +457,7 @@ section article {
     border: 0px;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    height: 100dvh;
     position: relative;
   }
 
@@ -484,7 +483,7 @@ section article {
     scroll-snap-align: start;
     scroll-snap-stop: always;
     width: calc(100vw - 62px);
-    height: calc(100vh - 60px);
+    height: calc(100dvh - 60px);
     justify-content: center;
   }
 
@@ -492,19 +491,19 @@ section article {
     scroll-snap-align: start;
     scroll-snap-stop: always;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
   }
 
   #ul_portfolio {
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     padding: 0px;
   }
 
   .container {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    height: 100vh;
+    height: 100dvh;
     position: relative;
   }
   .container::-webkit-scrollbar {
@@ -514,7 +513,7 @@ section article {
   #ul_portfolio > li {
     scroll-snap-align: start;
     scroll-snap-stop: always;
-    height: 100vh;
+    height: 100dvh;
     width: calc(100%);
     margin: 0px;
     align-items: center;
