@@ -461,9 +461,6 @@ section article {
     position: relative;
   }
 
-  header div {
-    margin-bottom: 50px;
-  }
   .scrollDown {
     display: flex;
     animation-name: animateScrollDown;
