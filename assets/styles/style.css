@@ -133,7 +133,7 @@ header p {
 .scrollDown {
   display: none;
   position: absolute;
-  bottom: 50px;
+  bottom: 100px;
   height: 20px;
 }
 /*--- footer ---*/
@@ -390,14 +390,14 @@ section article {
 
 @keyframes animateScrollDown {
   0% {
-    bottom: 50px;
+    bottom: 100px;
   }
   50% {
-    bottom: 60px;
+    bottom: 110px;
     scale: 1.2;
   }
   100% {
-    bottom: 50px;
+    bottom: 100px;
   }
 }
 @keyframes animateCircle {
@@ -444,7 +444,7 @@ section article {
 @media screen and (max-width: 700px) {
   #lbDarkMode {
     /* display: none; */
-    bottom: 10px;
+    bottom: 40px;
     right: 0px;
     left: 0px;
     width: 20px;
@@ -475,9 +475,12 @@ section article {
   aside {
     scroll-snap-align: start;
     scroll-snap-stop: always;
-    width: calc(100vw - 62px);
-    height: calc(100dvh - 60px);
+    width: calc(100vw - 60px);
+    height: calc(100svh - 60px);
     justify-content: center;
+  }
+  aside .square {
+    width: calc(50%);
   }
 
   section {
@@ -510,12 +513,6 @@ section article {
     width: calc(100%);
     margin: 0px;
     align-items: center;
-  }
-
-  .div_portfolio {
-    width: calc(100% - 100px);
-    height: calc(100% - 100px);
-    padding: 50px;
   }
   .div_portfolio .p_des {
     text-align: center;
