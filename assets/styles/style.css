@@ -130,6 +130,12 @@ header p {
   display: flex;
 }
 
+.scrollDown {
+  display: none;
+  position: absolute;
+  bottom: 50px;
+  height: 20px;
+}
 /*--- footer ---*/
 footer p {
   font-size: 12px;
@@ -378,12 +384,23 @@ section article {
     transform: rotate(25deg);
     scale: 1.1;
   }
-
   100% {
     transform: rotate(0deg);
   }
 }
 
+@keyframes animateScrollDown {
+  0% {
+    bottom: 50px;
+  }
+  50% {
+    bottom: 60px;
+    scale: 1.2;
+  }
+  100% {
+    bottom: 50px;
+  }
+}
 @keyframes animateCircle {
   0% {
     transform: rotate(0deg);
@@ -437,6 +454,7 @@ section article {
 
   header {
     scroll-snap-align: start;
+    scroll-snap-stop: always;
     border: 0px;
     flex-direction: column;
     justify-content: center;
@@ -447,7 +465,15 @@ section article {
   header div {
     margin-bottom: 50px;
   }
-
+  .scrollDown {
+    display: flex;
+    animation-name: animateScrollDown;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+  }
   main {
     height: auto;
     flex-direction: column;
@@ -456,6 +482,7 @@ section article {
 
   aside {
     scroll-snap-align: start;
+    scroll-snap-stop: always;
     width: calc(100vw - 62px);
     height: calc(100vh - 60px);
     justify-content: center;
@@ -463,6 +490,7 @@ section article {
 
   section {
     scroll-snap-align: start;
+    scroll-snap-stop: always;
     width: 100vw;
     height: 100vh;
   }
@@ -485,6 +513,7 @@ section article {
 
   #ul_portfolio > li {
     scroll-snap-align: start;
+    scroll-snap-stop: always;
     height: 100vh;
     width: calc(100%);
     margin: 0px;
