@@ -454,11 +454,7 @@ section article {
   header {
     scroll-snap-align: start;
     scroll-snap-stop: always;
-    border: 0px;
-    flex-direction: column;
-    justify-content: center;
-    height: 100dvh;
-    position: relative;
+    height: 100svh;
   }
 
   .scrollDown {
