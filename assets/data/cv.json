@@ -20,6 +20,13 @@
         },
         "projects": [
             {
+                "label": "poké puzzle",
+                "description": "Move the blocks to form the original image! | 🧩 🐹",
+                "skills": [
+                    "javascript"
+                ]
+            },
+            {
                 "label": "db 2048",
                 "description": "Dragon Ball version of the game 2048. The goal is to merge all similar cards | 🐉",
                 "skills": [
