@@ -20,6 +20,16 @@
         },
         "projects": [
             {
+                "label": "myweight",
+                "description": "Track my weight with billboard + dataTables | 🍔 🍟",
+                "skills": [
+                    "data visualization",
+                    "d3.js",
+                    "dataTables",
+                    "javascript"
+                ]
+            },
+            {
                 "label": "poké puzzle",
                 "description": "Move the blocks to form the original image! | 🧩 🐹",
                 "skills": [
