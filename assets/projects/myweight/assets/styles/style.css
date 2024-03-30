@@ -46,17 +46,14 @@ footer a {
 
 main {
   background-color: #fafafa;
-  height: 85dvh;
-  /* width: 60%; */
-  margin: auto;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  padding-top: 30px;
+  height: calc(85dvh - 30px);
   overflow-y: scroll;
 }
-
+main img {
+  margin: 0 auto;
+  display: block;
+}
 #graphWeight {
   border-bottom: 1px dashed #333;
   margin-bottom: 1%;
