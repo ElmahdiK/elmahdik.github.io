@@ -20,6 +20,15 @@
         },
         "projects": [
             {
+                "label": "la.blague",
+                "description": "Web application displaying jokes | 😂 🦈",
+                "skills": [
+                    "Astro",
+                    "React",
+                    "TypeScript"
+                ]
+            },
+            {
                 "label": "myweight",
                 "description": "Track my weight with billboard + dataTables | 🍔 🍟",
                 "skills": [
