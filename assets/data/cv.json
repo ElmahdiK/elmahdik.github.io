@@ -26,7 +26,8 @@
                     "Astro",
                     "React",
                     "TypeScript"
-                ]
+                ],
+                "url": "./astro_lablague/"
             },
             {
                 "label": "myweight",
