@@ -20,7 +20,7 @@
         },
         "projects": [
             {
-                "label": "la.blague",
+                "label": "lablague",
                 "description": "Web application displaying jokes | 😂 🦈",
                 "skills": [
                     "Astro",
