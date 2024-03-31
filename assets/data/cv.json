@@ -37,7 +37,8 @@
                     "d3.js",
                     "dataTables",
                     "javascript"
-                ]
+                ],
+                "url": "./myweight/"
             },
             {
                 "label": "poké puzzle",
