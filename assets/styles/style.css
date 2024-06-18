@@ -25,7 +25,8 @@
   border: 0px;
   border-collapse: collapse;
   vertical-align: top;
-  font-family: "InterR", sans-serif;
+  /* font-family: "InterR", sans-serif; */
+  font-family: monospace;
 }
 
 *:focus {
@@ -288,7 +289,7 @@ section article {
   font-size: 10px;
   margin: 2px;
   padding: 4px;
-  text-transform: uppercase;
+  text-transform: lowercase;
 }
 
 #ul_portfolio > li {
@@ -317,6 +318,9 @@ section article {
   display: block;
   padding-bottom: 100%;
 }
+.div_portfolio .square {
+  display: none;
+}
 
 .div_portfolio {
   background-color: rgba(255, 255, 255, 0.05);
@@ -336,16 +340,15 @@ section article {
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-
 .div_portfolio .p_title {
-  font-size: 14px;
+  font-size: 18px;
   padding: 8px 0px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   text-align: center;
 }
 
 .div_portfolio .p_des {
-  border-top: 1px dotted #ddd;
+  border-top: 1px dashed #ddd;
   font-size: 12px;
 }
 

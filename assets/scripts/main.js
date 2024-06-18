@@ -17,7 +17,7 @@ window.onload = (_) => {
       $(`#p_name`).innerHTML = `${d.about.name.first} ${d.about.name.last.toUpperCase()}`;
       $(`#p_job`).innerHTML = d.about.job;
       // aside
-      $(`#img_bio`).src = d.about.url.img;
+      // $(`#img_bio`).src = d.about.url.img;
       $(`#p_resume_title`).innerHTML = d.about.bio.title;
       $(`#p_resume`).innerHTML = d.about.bio.text;
       // links
@@ -45,7 +45,7 @@ const displayProject = ({ label, url, description, skills }, num) => `
         </div>
         <div class="div_des">
             <div>
-                <p class="p_title">< ${label} /></p>
+                <p class="p_title">${label}</p>
                 <p class="p_des">${description}</p>
             </div>
             <ul><li>html</li><li>css</li>${skills.map((s) => `<li>${s}</li>`).join("")}</ul>
