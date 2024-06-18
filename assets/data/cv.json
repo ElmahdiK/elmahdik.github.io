@@ -8,7 +8,7 @@
             "job": "Web Developer",
             "bio": {
                 "title": "<span id='hello-hand'>👋</span> Welcome!",
-                "text": "This website was created in order to share with you some of my personal web projects.<br>I hope you will like it.<br/><br/><ul><li>=> If you want to know if you have a better memory than a monkey try <a href='./assets/projects/kald/' target='_blank'>KALD</a>!</li><li>=> Or maybe you just want to play with <a href='./assets/projects/db2048/' target='_blank'>DB2048</a>?</li><li>=> Ok I see! you want to know if a star wa(r)s born on the same day as you, so try <a href='./assets/projects/vipborntoday/' target='_blank'>VIPBORNTODAY</a>!</li></ul><br/>Have a super great visit!"
+                "text": "This website was created in order to share with you some of my personal web projects.<br>I hope you will like it.<br/><br/><ul><li>=> If you want to know if you have a better memory than a monkey try <a href='./assets/projects/kald/' target='_blank'>KALD</a>!</li><li>=> Or maybe you just want to play with <a href='./assets/projects/db2048/' target='_blank'>DB2048</a>?</li><li>=> Ok I see! you want to know if a star wa(r)s born on the same day as you, so try <a href='./assets/projects/vipborntoday/' target='_blank'>VIPBORNTODAY</a>!</li></ul><br/>Have a great visit."
             },
             "url": {
                 "img": "./assets/images/ek.jpeg",
