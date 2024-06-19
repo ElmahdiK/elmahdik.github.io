@@ -107,14 +107,14 @@ header p {
 }
 
 #lbDarkMode {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.3);
   color: var(--colorBLACK);
   position: absolute;
   right: 20px;
   padding: 8px;
   cursor: pointer;
   text-align: center;
-  box-shadow: inset 0px 0px 7px var(--colorGRAY);
+  /* box-shadow: inset 0px 0px 7px var(--colorGRAY); */
   border-radius: 100%;
 }
 #lbDarkMode img {
