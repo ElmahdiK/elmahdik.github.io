@@ -20,6 +20,16 @@
         },
         "projects": [
             {
+                "label": "cine8090",
+                "description": "See movies trailer from 80-90's | 🎬 🥇",
+                "skills": [
+                    "angular",
+                    "typescript",
+                    "scss",
+                    "nodejs"
+                ]
+            },
+            {
                 "label": "lablague",
                 "description": "Web application displaying jokes | 😂 🦈",
                 "skills": [

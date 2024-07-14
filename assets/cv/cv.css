@@ -1,7 +1,7 @@
 :root {
   --colorWHITE: #fff;
   --colorBLACK: #000;
-  --colorBLUE: #003366;
+  --colorBLUE: #111;
   --sizePic: 100px;
   --sizeFont: 12px;
 }
@@ -59,7 +59,7 @@ main {
 .flexa {
   flex: 1;
   text-align: left;
-  background: #fafafa;
+  /* background: #fafafa; */
   justify-content: space-evenly;
 }
 
