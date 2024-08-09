@@ -1,0 +1,24 @@
+---
+interface Props {
+	label: string;
+	description: string;
+	skills: string [];
+	duration: number;
+}
+const { label, description, skills, duration } = Astro.props;
+
+import './style.scss';
+import './style-mobile.scss';
+---
+<li class="link-card" data-aos="fade-down" data-aos-delay={duration}>
+	<!-- <img src=`/portfolio/${label.split(' ').join('')}.webp` /> -->
+	<h2>{label}</h2>
+	<p>{description}</p>
+	<ul>
+		{skills.map(s=><li>{s}</li>)}
+	</ul>
+	<nav>
+		<a href={label} target="_blank">demo</a>
+		<a href="#">github</a>
+	</nav>
+</li>

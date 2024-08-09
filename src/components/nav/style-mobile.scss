@@ -1,0 +1,15 @@
+@media (width <= 1260px) {
+    #div--menu {
+        bottom: 100px;
+        width: 100%;
+    }
+    .nav--bar {
+        flex: 1;
+        bottom: 0px;
+    }
+    .nav--bar a {
+        padding: 10px;
+        font-size: 14px;
+        flex: 1;
+    }
+}

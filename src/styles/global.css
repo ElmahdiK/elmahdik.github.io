@@ -1,0 +1,75 @@
+:root {
+  --color-black: #282b3d;
+  --color-white: #fefefe;
+  --color-gray: #aaa;
+  --accent: 10, 58, 234;
+  --accent-light: 224, 204, 250;
+  --accent-dark: 49, 10, 101;
+  --accent-gradient: linear-gradient(
+    45deg,
+    rgb(var(--accent)),
+    rgb(var(--accent-light)) 30%,
+    white 60%
+  );
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  box-sizing: border-box;
+  border-collapse: collapse;
+}
+body {
+  background-color: var(--color-black);
+  /* height: 100vh; */
+  /* scroll-snap-type: y mandatory; */
+}
+html {
+  font-family: system-ui, sans-serif;
+  scroll-behavior: smooth;
+  background-size: 224px;
+}
+code {
+  /* font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace; */
+}
+main {
+  margin: auto;
+  min-height: 100vh;
+  /* width: 50%; */
+  /* max-width: calc(100%); */
+  /* font-size: 20px; */
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+main canvas {
+  position: absolute;
+}
+
+section {
+  /* background-color: #eee; */
+  position: relative;
+}
+#section_main {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (width <= 1260px) {
+  main#home,
+  main#contact {
+    width: 100%;
+  }
+}
+
+/* ---- darkMode ---- */
+html.dark {
+  --color-black: #fefefe !important;
+  --color-white: #282b3d !important;
+}

@@ -1,0 +1,21 @@
+---
+import Card from '../../components/card/index.astro';
+import projects from '../../data/projects.json';
+
+import './style.scss';
+---
+<main id="portfolio">
+	<!-- <div id="div--portfolio">
+		<span class="sp-portfolio">Portfolio</span>
+	</div> -->
+	<ul role="list" class="link-card-grid">
+		{projects.map((project, index) => 
+			<Card
+				label={project.label}
+				description={project.description}
+				skills={project.skills}
+				duration={index*50}
+			/>
+		)}
+	</ul>
+</main>

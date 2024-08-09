@@ -1,0 +1,32 @@
+#div--menu {
+  position: fixed;
+  bottom: 90px;
+  left: 0px;
+  right: 0px;
+  z-index: 200;
+  margin: 0 auto;
+  width: fit-content;
+}
+.nav--bar {
+  box-shadow: 0px 0px 1px var(--color-gray);
+  display: flex;
+  justify-content: center;
+}
+.nav--bar button:hover,
+.nav--bar a:hover {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+.nav--bar button,
+.nav--bar a {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 20px;
+  transition: 0.2s;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+}

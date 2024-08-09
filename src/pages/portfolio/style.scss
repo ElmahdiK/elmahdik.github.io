@@ -1,0 +1,23 @@
+#portfolio {
+  display: flex;
+  flex-direction: row;
+}
+
+#portfolio .sp-portfolio {
+  color: var(--color-white);
+  font-size: 28px;
+  width: calc(60%);
+  align-self: flex-start;
+  display: inline-block;
+  text-align: right;
+}
+
+#portfolio #div--portfolio,
+#portfolio .link-card-grid {
+  flex: 1;
+}
+#portfolio .link-card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: scroll;
+}

@@ -1,0 +1,22 @@
+---
+import Skills from '../../components/skills/index.astro';
+import Typewriter from '../../components/typewriter/index.astro';
+import about from '../../data/about.json';
+import './style.scss';
+import './style-mobile.scss';
+
+---
+<main id="about">
+	<div class="skills">
+		<Skills />
+	</div>
+	<div class="me">
+		<span class="sp-about">About</span>
+		<Typewriter text={about.bio_web} data-aos="fade-up" />
+		<br />
+		<nav>
+			<a href="">resume</a>
+			<!-- <a href="">See my work</a> -->
+		</nav>
+	</div>
+</main>

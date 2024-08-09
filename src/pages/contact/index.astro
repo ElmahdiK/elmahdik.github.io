@@ -1,0 +1,162 @@
+---
+import './style.scss';
+---
+<main id="contact">
+    <p class="p-title"><i class="fas fa-envelope"></i></p>
+    <!-- <img id="map" src="./public/map.jpg" data-aos="fade-up" /> -->
+     <!-- <Newsletter /> -->
+    <form method="POST" name="contact" id="form_contact">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea placeholder="Message" name="message" required></textarea>
+        <button id="btn-submit">send message</button>
+        <nav>
+          <a href="https://linkedin.com/in/elmahdikorfed" target="_blank">linkedin</a>
+          <a href="https://github.com/elmahdik" target="_blank">github</a>
+        </nav>
+    </form>
+</main>
+
+<script>
+  import { actions } from "astro:actions";
+  import confetti from 'canvas-confetti';
+
+  emailjs.init('Xt5kvG1KQ0QbFg03l');
+
+  const form = document.querySelector('#form_contact') as HTMLFormElement;
+   form.addEventListener('submit', async(e)=>{
+    e.preventDefault();
+    const formData = new FormData(form);
+    const {data, error} = await actions.sendEmail(formData);
+    if (data) {
+      // email js
+      const serviceID='default_service';
+      const templateID='template_ptculdh';
+
+      emailjs
+      .send(serviceID,templateID, data.success)
+      .then((res)=> {
+        form.reset();
+        confetti();
+        alert('Message envoyé. Merci !');
+      })
+      .catch((err) =>console.log(err))
+     }
+     if (error) console.error(error);
+   })
+   
+   particlesJS("contact", {
+    "particles": {
+      "number": {
+        "value": 80,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#cff0ff"
+      },
+      "shape": {
+        "type": "star",
+        "stroke": {
+          "width": 0,
+          "color": "#000000"
+        },
+        "polygon": {
+          "nb_sides": 5
+        },
+        "image": {
+          "src": "img/github.svg",
+          "width": 100,
+          "height": 100
+        }
+      },
+      "opacity": {
+        "value": 0.5,
+        "random": false,
+        "anim": {
+          "enable": false,
+          "speed": 1,
+          "opacity_min": 0.1,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 3,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 40,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": false,
+        "distance": 150,
+        "color": "#ffffff",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 6,
+        "direction": "none",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": false,
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "repulse"
+        },
+        "onclick": {
+          "enable": true,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 400,
+          "line_linked": {
+            "opacity": 1
+          }
+        },
+        "bubble": {
+          "distance": 400,
+          "size": 40,
+          "duration": 2,
+          "opacity": 8,
+          "speed": 3
+        },
+        "repulse": {
+          "distance": 200,
+          "duration": 0.4
+        },
+        "push": {
+          "particles_nb": 4
+        },
+        "remove": {
+          "particles_nb": 2
+        }
+      }
+    },
+    "retina_detect": true
+  })
+ </script>
+
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="../../../public/particles.min.js"></script>

@@ -1,0 +1,41 @@
+@use "sass:math";
+
+#home a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 92px;
+    text-align: center;
+}
+
+#home a span {
+    color: var(--color-white);
+}
+
+#home p {
+    font-size: 32px;
+    color: var(--color-gray);
+}
+
+.fadeIn span {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 0.2s ease-out forwards;
+    display: inline-block;
+    // letter-spacing: 1rem;
+}
+
+@for $i from 2 through 14 {
+    .fadeIn span:nth-of-type(#{$i}) {
+        $duration: math.div($i - 1, 10);
+        // Utiliser l'interpolation pour ajouter "s" à la variable
+        $duration-with-unit: #{$duration}s;
+        animation-delay: $duration-with-unit;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

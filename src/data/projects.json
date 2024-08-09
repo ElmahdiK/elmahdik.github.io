@@ -1,0 +1,110 @@
+[
+    {
+        "label": "cine8090",
+        "description": "Watch movies trailer from 80-90's | 🎬 🥇",
+        "skills": [
+            "angular",
+            "typescript",
+            "scss",
+            "nodejs"
+        ]
+    },
+    {
+        "label": "lablague",
+        "description": "Web application displaying jokes | 😂 🦈",
+        "skills": [
+            "Astro",
+            "React",
+            "TypeScript"
+        ],
+        "url": "./astro_lablague/"
+    },
+    {
+        "label": "poké puzzle",
+        "description": "Move the blocks to form the original image! | 🧩 🐹",
+        "skills": [
+            "javascript"
+        ]
+    },
+    {
+        "label": "db 2048",
+        "description": "Dragon Ball version of the game 2048. The goal is to merge all similar cards | 🐉",
+        "skills": [
+            "javascript"
+        ]
+    },
+    {
+        "label": "flags",
+        "description": "Listen national anthems of the world | 🇫🇷 🇲🇦 🇯🇵",
+        "skills": [
+            "javascript",
+            "react"
+        ]
+    },
+    {
+        "label": "vip born today",
+        "description": "Who are these VIPs celebrating their birthday today? | 💃 🕺 💅",
+        "skills": [
+            "javascript",
+            "sparql"
+        ]
+    },
+    {
+        "label": "cube3d",
+        "description": "Animated 3D cube using CSS3 perspective, rotations & animations features | 🎁",
+        "skills": []
+    },
+    {
+        "label": "zitacions",
+        "description": "Do you know these quotes? | 📚",
+        "skills": [
+            "javascript",
+            "json"
+        ]
+    },
+    {
+        "label": "animals sounds",
+        "description": "Animals sounds | 🦆 🐝 🐴",
+        "skills": [
+            "javascript",
+            "json"
+        ]
+    },
+    {
+        "label": "greeting cards",
+        "description": "Send a beautiful greeting cards now! | 🎄 🎅",
+        "skills": [
+            "javascript",
+            "php"
+        ],
+        "url": "https://yoann-moise.com/projects/greetings/index.php"
+    },
+    {
+        "label": "connect 4",
+        "description": "Play the famous Connect 4 game now! | 🔴 🟡",
+        "skills": [
+            "javascript"
+        ]
+    },
+    {
+        "label": "memory",
+        "description": "Practice your memory by finding the pairs! | 🧠",
+        "skills": [
+            "javascript"
+        ]
+    },
+    {
+        "label": "enigma",
+        "description": "Will you be able to solve these enigmas? | 🧐",
+        "skills": [
+            "javascript"
+        ]
+    },
+    {
+        "label": "kald",
+        "description": "Do you have a better memory than this monkey? Good luck! | 🙈 🙉",
+        "skills": [
+            "javascript"
+        ]
+    }
+]

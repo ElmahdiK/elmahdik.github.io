@@ -1,0 +1,22 @@
+#skills {
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.tagcloud {
+  /* background-color: var(--color-black); */
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 650;
+  border-radius: 100%;
+  /*  */
+}
+.tagcloud--item:hover {
+  color: var(--color-white);
+}
+
+.tagcloud--item {
+  color: var(--color-gray);
+  cursor: pointer;
+}

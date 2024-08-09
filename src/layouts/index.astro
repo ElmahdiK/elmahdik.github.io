@@ -1,0 +1,80 @@
+---
+interface Props {
+	title: string;
+}
+const { title } = Astro.props;
+import '../styles/global.css';
+import { ViewTransitions } from 'astro:transitions';
+
+import '@fortawesome/fontawesome-svg-core/styles.css'
+
+import 'aos/dist/aos.css'; 
+const anim = {
+  old: {
+    name: 'fadeIn',
+    duration: '0.2s',
+    easing: 'linear',
+    fillMode: 'forwards',
+  },
+  new: {
+    name: 'fadeOut',
+    duration: '0.3s',
+    easing: 'linear',
+    fillMode: 'backwards',
+  }
+};
+
+const myFade = {
+  forwards: anim,
+  backwards: anim,
+};
+---
+<!doctype html>
+<html lang="en" transition:animate="none">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<ViewTransitions />
+	</head>
+	<body>
+		<!-- <main transition:animate={myFade}> -->
+			<slot />
+		<!-- </main> -->
+	</body>
+</html>
+
+{/* Add a client side script for loading Font-Awesome */}
+<script>
+	// import the required functions and icons
+	import { library, config, dom} from '@fortawesome/fontawesome-svg-core'
+	import { faHouse, faInfo, faEnvelope, faUser, faBriefcase, faPaintRoller, faCode } from '@fortawesome/free-solid-svg-icons'
+
+	// since we want astro to handle the css we should disable automatic css injection on the client
+	// this is similar to other ssr frameworks like next.js or nuxt
+	config.autoAddCss = false
+
+	// create a subset of icons that you are going to use so
+	// astro is able to tree shake and optimize the javascript bundle for best performance
+	library.add(
+		faHouse,
+		faInfo,
+		faEnvelope,
+		faUser,
+		faBriefcase,
+		faCode,
+		faPaintRoller
+	);
+
+	// replace the unprocessed icons with the svg and watch for additional icons
+	dom.watch();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
+
+<script> 
+    import AOS from "aos"; 
+    AOS.init();
+</script>

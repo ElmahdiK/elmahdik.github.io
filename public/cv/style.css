@@ -1,0 +1,196 @@
+:root {
+  --colorWHITE: #fff;
+  --colorBLACK: #282b3d;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  border-collapse: collapse;
+  font-family: "Poppins", Arial, Helvetica, system-ui, sans-serif;
+  font-weight: 300;
+  vertical-align: top;
+  text-rendering: optimizeLegibility;
+  user-select: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  align-items: center;
+}
+main {
+  color: var(--colorBLACK);
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+ul {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  list-style: none;
+}
+
+/* --- div--header --- */
+#div--header {
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#div--infos {
+  padding-right: 10px;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+#span--name {
+  border-bottom: 1px dashed var(--colorBLACK);
+  font-size: 32px;
+  font-weight: bold;
+  display: block;
+}
+
+#span--job {
+  font-size: 18px;
+  margin: 10px 0px;
+  display: block;
+}
+
+#p--bio {
+  display: block;
+  text-transform: none;
+}
+
+img {
+  width: 130px;
+}
+
+/* --- div--main --- */
+#div--main {
+  display: flex;
+}
+
+#div--main div {
+  border-bottom: 1px dotted var(--colorBLACK);
+  border-left: 1px dotted var(--colorBLACK);
+  border-right: 1px dotted var(--colorBLACK);
+}
+#div--main div:nth-child(1) {
+  border-top: none;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+}
+
+#div--main article:nth-child(1) {
+  justify-content: space-between;
+  flex: 1.2;
+}
+
+#div--main article:nth-child(2) {
+  flex: 2.8;
+  padding-left: 10px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+section a {
+  color: inherit;
+  text-decoration: none;
+}
+/* --- section--experience --- */
+#section--experience div {
+  border-top: 1px dotted var(--colorBLACK);
+  margin-top: 6px;
+  margin-bottom: 12px;
+}
+#section--experience ul {
+  flex: 1;
+}
+
+.span--location {
+  font-size: 10px !important;
+  text-align: right;
+}
+
+.span--section--title {
+  background: linear-gradient(25deg, #000, var(--colorBLACK));
+  color: var(--colorWHITE);
+  font-size: 12px;
+  padding: 6px;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+#div--main div,
+#section--experience ul li:nth-child(1) {
+  display: flex;
+  flex-direction: row;
+}
+
+#section--experience ul li:nth-child(1) {
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+#section--experience ul li:not(:first-child) {
+  padding-left: 12px;
+}
+/* --- section--education --- */
+#section--education div {
+  justify-content: space-between;
+}
+
+/* --- section--hobbies --- */
+#section--hobbies div {
+  justify-content: center;
+}
+#section--hobbies div ul li {
+  font-size: 22px;
+}
+
+/* --- section--skills --- */
+#section--skills div {
+  flex-direction: column;
+}
+#section--skills ul {
+  padding-bottom: 0px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+#section--skills ul:last-child {
+  padding-bottom: 10px;
+}
+#section--skills li span {
+  border: 1px dotted var(--colorBLACK);
+  padding: 3px;
+  font-size: 10px;
+  display: inline-block;
+  text-transform: uppercase;
+}

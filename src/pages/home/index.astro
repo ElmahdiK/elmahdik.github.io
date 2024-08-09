@@ -1,0 +1,12 @@
+---
+import './style.scss';
+import './style-mobile.scss';
+
+const firstname="Elmahdi"
+const lastname="Korfed"
+const sentence="Welcome."
+---
+<main id="home" data-aos="zoom-out" data-aos-duration=2000>
+	<a href="/" class="fadeIn">{firstname.split('').map(e=><span>{e}</span>)} {lastname.split('').map(e=><span>{e}</span>)}</a>
+	<p class="fadeIn" data-aos="zoom-out" data-aos-delay=1500 data-aos-duration=1000>{sentence.split('').map(e=><span>{e}</span>)}</p>
+</main>

@@ -1,0 +1,56 @@
+main#about {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+main#about .skills,
+main#about .me {
+  display: flex;
+  justify-content: center;
+}
+main#about .skills {
+  flex: 1;
+}
+main#about .me {
+  flex: 1;
+  flex-direction: column;
+}
+main#about .me p {
+  // color: var(--color-white);
+  border-top: 1px solid var(--color-white);
+  font-size: 18px;
+  width: calc(60%);
+  letter-spacing: 0.2rem;
+  text-align: justify;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+}
+.sp-about {
+  color: var(--color-white);
+  font-size: 28px;
+  width: calc(60%);
+  align-self: flex-start;
+  display: inline-block;
+  text-align: right;
+}
+main#about .me nav {
+  gap: 4px;
+  width: calc(60%);
+  display: flex;
+  justify-content: flex-end;
+}
+main#about .me nav a:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+main#about .me nav a {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border: 1px solid var(--color-black);
+  padding: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
