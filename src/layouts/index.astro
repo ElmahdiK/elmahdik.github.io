@@ -32,12 +32,27 @@ const myFade = {
 <!doctype html>
 <html lang="en" transition:animate="none">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
+		 <!-- meta tags: HTML -->
+		 <meta charset="UTF-8">
+		 <title>{title}</title>
+		 <meta name="author" content="Elmahdi KORFED" />
+		 <meta name="title" content="Elmahdi KORFED">
+		 <meta name="description" content="Elmahdi KORFED, développeur web France" />
+		 <meta name="keywords" content="Elmahdi Korfed, Developer, Web, France" />
+		 <meta name="viewport" content="width=device-width" />
+		 <meta name="theme-color" content="#263238">
+	   
+		 <!-- meta tags: OPEN GRAPH -->
+		 <meta property="og:type" content="website" />
+		 <meta property="og:site_name" content="Elmahdi KORFED" />
+		 <meta property="og:title" content="Elmahdi KORFED" />
+		 <meta property="og:image" content="/assets/images/ek.jpeg" />
+		 <meta property="og:description" content="Elmahdi KORFED, développeur web France" />
+		 <meta property="og:url" content="https://elmahdik.github.io/" />
+		 <meta property="og:locale" content="en_US" />
+
 		<link rel="icon" type="image/svg+xml" href="/logo/icon_16.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
 		<ViewTransitions />
 	</head>
 	<body>
