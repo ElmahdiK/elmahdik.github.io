@@ -23,6 +23,7 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.7",
     "vite-plugin-node-polyfills": "^0.22.0"
   }
 }

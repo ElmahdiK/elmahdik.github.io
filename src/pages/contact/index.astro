@@ -19,32 +19,34 @@ import './style.scss';
 
 <script>
   import { actions } from "astro:actions";
-  import confetti from 'canvas-confetti';
+  // import confetti from 'canvas-confetti';
 
-  emailjs.init('Xt5kvG1KQ0QbFg03l');
+  // emailjs.init('Xt5kvG1KQ0QbFg03l');
 
   const form = document.querySelector('#form_contact') as HTMLFormElement;
    form.addEventListener('submit', async(e)=>{
     e.preventDefault();
     const formData = new FormData(form);
     const {data, error} = await actions.sendEmail(formData);
+    /*
     if (data) {
       // email js
       const serviceID='default_service';
       const templateID='template_ptculdh';
-
+      
       emailjs
       .send(serviceID,templateID, data.success)
-      .then((res)=> {
+      .then(()=> {
         form.reset();
         confetti();
         alert('Message envoyé. Merci !');
       })
-      .catch((err) =>console.log(err))
+      .catch((err : string) =>console.log(err))
      }
      if (error) console.error(error);
+     */
    })
-   
+   /*
    particlesJS("contact", {
     "particles": {
       "number": {
@@ -155,6 +157,7 @@ import './style.scss';
     },
     "retina_detect": true
   })
+    */
  </script>
 
 <script type="text/javascript"
