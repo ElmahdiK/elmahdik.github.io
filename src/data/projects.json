@@ -10,17 +10,35 @@
         ]
     },
     {
+        "label": "next-ghibli",
+        "description": "Imagined by the Ghibli studi | 🎬 🇯🇵 ㊗️",
+        "skills": [
+            "react",
+            "nextjs",
+            "typescript",
+            "tailwindcss"
+        ]
+    },
+    {
         "label": "lablague",
         "description": "Web application displaying jokes | 😂 🦈",
         "skills": [
-            "Astro",
-            "React",
-            "TypeScript"
-        ],
-        "url": "./astro_lablague/"
+            "astro",
+            "react",
+            "typeScript"
+        ]
     },
     {
-        "label": "poké puzzle",
+        "label": "webfolio",
+        "description": "Just a simple personal web portfolio coding with html, css & js | 🎒 👨🏻‍💻",
+        "skills": [
+            "html",
+            "css",
+            "javascript"
+        ]
+    },
+    {
+        "label": "pokepuzzle",
         "description": "Move the blocks to form the original image! | 🧩 🐹",
         "skills": [
             "javascript"

@@ -1,24 +1,28 @@
 ---
 interface Props {
+	url: string | undefined;
 	label: string;
 	description: string;
 	skills: string [];
 	duration: number;
 }
-const { label, description, skills, duration } = Astro.props;
+const { url, label, description, skills, duration } = Astro.props;
+const url_name=label.split(' ').join('');
+const URL_GITHUB_PAGES=`https://elmahdik.github.io/`;
+const URL_GITHUB=`https://github.com/ElmahdiK/`;
 
 import './style.scss';
 import './style-mobile.scss';
 ---
 <li class="link-card" data-aos="fade-down" data-aos-delay={duration}>
-	<!-- <img src=`/portfolio/${label.split(' ').join('')}.webp` /> -->
+	<img src=`/portfolio/${url_name}.webp` />
 	<h2>{label}</h2>
 	<p>{description}</p>
 	<ul>
 		{skills.map(s=><li>{s}</li>)}
 	</ul>
 	<nav>
-		<a href={label} target="_blank">demo</a>
-		<a href="#">github</a>
+		<a href={url ?? URL_GITHUB_PAGES+url_name} target="_blank">demo</a>
+		{!url && <a href={URL_GITHUB+url_name} target="_blank">github</a>}
 	</nav>
 </li>

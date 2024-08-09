@@ -11,6 +11,7 @@ import './style.scss';
 	<ul role="list" class="link-card-grid">
 		{projects.map((project, index) => 
 			<Card
+				url={project.url}
 				label={project.label}
 				description={project.description}
 				skills={project.skills}
