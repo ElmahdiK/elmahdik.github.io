@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="screenshot.webp" />
+  <img src="/public/screenshot.webp" />
 </p>
 
 ## Welcome!
