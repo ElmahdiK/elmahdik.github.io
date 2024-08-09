@@ -25,7 +25,8 @@ body {
   /* scroll-snap-type: y mandatory; */
 }
 html {
-  font-family: system-ui, sans-serif;
+  /* font-family: system-ui, sans-serif; */
+  font-family: "InterR", sans-serif;
   scroll-behavior: smooth;
   background-size: 224px;
 }
@@ -72,4 +73,10 @@ section {
 html.dark {
   --color-black: #fefefe !important;
   --color-white: #282b3d !important;
+}
+
+/* ---- darkMode ---- */
+@font-face {
+  font-family: "InterR";
+  src: url("../../public/fonts/Inter-Regular.ttf") format("truetype");
 }

@@ -26,8 +26,7 @@
     }
 }
 */
-.typewriter {
-}
+
 .typewriter span {
     color: gold;
     opacity: 0;
@@ -43,7 +42,7 @@
 
 @for $i from 2 through 374 {
     .typewriter span:nth-of-type(#{$i}) {
-        $duration: math.div($i - 1, 10);
+        $duration: math.div($i - 1, 100);
         // Utiliser l'interpolation pour ajouter "s" à la variable
         $duration-with-unit: #{$duration}s;
         animation-delay: $duration-with-unit;
