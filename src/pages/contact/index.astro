@@ -18,7 +18,7 @@ import './style.scss';
 </main>
 
 <script>
-  import { actions } from "astro:actions";
+  // import { actions } from "astro:actions";
   // import confetti from 'canvas-confetti';
 
   // emailjs.init('Xt5kvG1KQ0QbFg03l');
@@ -27,7 +27,7 @@ import './style.scss';
    form.addEventListener('submit', async(e)=>{
     e.preventDefault();
     const formData = new FormData(form);
-    const {data, error} = await actions.sendEmail(formData);
+    // const {data, error} = await actions.sendEmail(formData);
     /*
     if (data) {
       // email js
