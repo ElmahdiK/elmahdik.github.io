@@ -6,15 +6,15 @@ import { nodePolyfills } from "vite-plugin-node-polyfills";
 export default defineConfig({
     site: 'https://elmahdik.github.io',
     output: "hybrid", // or 'server'
-    experimental: {
-        actions: true,
-    },
+    // experimental: {
+    //     actions: true,
+    // },
     integrations: [
         react({
             experimentalReactChildren: true,
         }),
     ],
-    plugins: [
-        nodePolyfills(),
-    ],
+    // plugins: [
+    //     nodePolyfills(),
+    // ],
 });
