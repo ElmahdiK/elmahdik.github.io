@@ -21,337 +21,350 @@
             color: #555;
         }
 
-        .div-portfolio .col {
-            transition: 0.2s;
-            cursor: pointer;
-        }
-
-        .div-portfolio .col:hover {
-            box-shadow: 0px 2px 4px #222;
+        .div-portfolio img {
+            width: 30px;
+            height: 30px;
         }
     </style>
-    <main>
-        <!-- home -->
-        <section id="home" class="min-vh-100 bg-black bg-gradient d-flex flex-column justify-content-center">
-            <div class="d-flex flex-column text-center mb-5">
-                <p class="fs-3 text-light fw-light">Elmahdi KORFED</p>
-                <br />
-                <p class="fs-1 text-light fw-light">Développeur web fullstack</p>
-                <br />
-                <p class="fs-4 text-secondary fw-light">📍 Lille, France</p>
-                <a href="#about" class="text-light fs-4 mt-5"><i class="bi bi-mouse"></i></a>
-            </div>
-        </section>
 
-        <header class="position-sticky top-0 w-100 shadow border-bottom border-dark-subtle bg-secondary-subtle">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Elmahdi KORFED</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#about">À propos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#skill">Compétences</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#portfolio">Portfolio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#contact">Contact</a>
-                            </li>
+    <div class="">
+        <div class="">
+            <div class="col-md-auto  vh-100 top-0 p-0 border-end border-light-subtle">
+
+                <!-- HOME -->
+                <section id="home" class="d-flex flex-column justify-content-between h-100 p-3">
+                    <div
+                        class="d-flex flex-column text-center justify-content-center align-self-center align-items-center my-auto">
+                        <p class="fs-1 text-dark fw-bold">Elmahdi KORFED</p>
+                        <p class="fs-4 fw-lighter text-dark">
+                            < Développeur web fullstack />
+                        </p>
+                        <p class="fs-5 text-secondary fw-light">📍 Lille, France</p>
+                        <br /><br />
+                        <nav class="d-flex flex-row gap-2">
+                            <a href="https://elmahdik.netlify.app/cv/cv-KORFED.pdf"
+                                class="btn btn-dark text-uppercase p-3 shadow-sm fs-6">voir cv</a>
+                            <a href="#about" class="btn btn-primary text-uppercase p-3 shadow-sm fs-6">continuer</a>
+                        </nav>
+                        <ul class="gap-4 list-group list-group-horizontal list-unstyled my-5">
+                            <li><a href="https://www.linkedin.com/in/elmahdikorfed/" target="_blank"><i
+                                        class="bi bi-linkedin fs-2 text-dark"></i></a></li>
+                            <li><a href="https://github.com/ElmahdiK" target="_blank"><i
+                                        class="bi bi-github fs-2 text-dark"></i></a></li>
                         </ul>
                     </div>
-                </div>
-            </nav>
-        </header>
-        <!-- about -->
-        <section id="about" class="p-5 w-75 mx-auto min-vh-100 d-flex justify-content-center flex-column">
-            <h1 class="mt-5 text-center">Bienvenue !</h1>
-            <p class="py-5">Diplômé d'un bac+5 en informatique et passionné par le web depuis plus de 10 ans, j'ai eu
-                l'opportunité de travailler en tant que développeur web/mobile à la fois sur du back et du front pour
-                des entreprises privées, des laboratoires de recherche, pour des particuliers et pour l'European
-                Innovation Academy 2015.<br /><br />
-                Sur ce site vous retrouverez <a class="text-dark" href="#service">mes services</a>, quelques uns de <a
-                    class="text-dark" href="#portfolio">mes projets</a>, <a class="text-dark" href="#contact">un
-                    formulaire de contact</a> ainsi
-                que des liens de <a class="text-dark" href="#contact">réseaux sociaux</a> pour me
-                joindre.<br /><br />Bonne visite !
-            </p>
-            <nav class="container text-center">
-                <a href="https://elmahdik.netlify.app/cv/cv-KORFED.pdf"
-                    class="btn btn-dark text-uppercase rounded-0 shadow">télécharger mon cv</a>
-                <!-- <a href="#portfolio" class="btn btn-dark text-uppercase rounded-0 shadow">consulter mon portfolio</a> -->
-            </nav>
-        </section>
+                    <footer class="text-center">
+                        <p class="text-secondary">© 2025 - Elmahdi KORFED</p>
+                    </footer>
+                </section>
 
-        <!-- skill -->
-        <section id="skill" class="p-5 bg-secondary-subtle min-vh-100 text-center">
-            <h2 class="text-center my-5 border-secondary-subtle border-bottom pb-5 mx-auto">Mes compétences</h2>
-            <div class="container text-center w-75 div-portfolio">
-                <div class="row gap-2 row row-cols-5 d-flex justify-content-center">
-                    <div class="col bg-light bg-gradient">
-                        <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fhtml.png&w=100&h=100"
-                            class="w-100 p-4" />
-                        <h6>HTML</h6>
-                    </div>
-                    <div class="col bg-light bg-gradient">
-                        <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fcss.png&w=100&h=100"
-                            class="w-100 p-4" />
-                        <h6>CSS</h6>
-                    </div>
-                    <div class="col bg-light bg-gradient">
-                        <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fjavascript.png&w=100&h=100"
-                            class="w-100 p-4" />
-                        <h6>JavaScript</h6>
-                    </div>
-                    <div class="col bg-light bg-gradient ">
-                        <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Ftypescript.png&w=100&h=100"
-                            class="w-100 p-4" />
-                        <h6>TypeScript</h6>
-                    </div>
-                    <div class="col bg-light bg-gradient ">
-                        <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fsass.png&w=100&h=100"
-                            class="w-75 p-4" />
-                        <h6>Sass</h6>
-                    </div>
-                    <div class="col bg-light bg-gradient ">
-                        <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Ftailwindcss.png&w=100&h=100"
-                            class="w-75 p-4" />
-                        <h6>tailwindcss</h6>
-                    </div>
-                    <div class="col bg-light bg-gradient ">
-                        <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fbootstrap.png&w=100&h=100"
-                            class="w-75 p-4" />
-                        <h6>Bootstrap</h6>
-                    </div>
-                    <div class="col bg-light bg-gradient ">
-                        <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fastro.png&w=100&h=100"
-                            class="w-75 p-4" />
-                        <h6>Astro</h6>
-                    </div>
-                    <div class="col bg-light bg-gradient ">
-                        <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Freact.png&w=100&h=100"
-                            class="w-75 p-4" />
-                        <h6>React</h6>
-                    </div>
-                    <div class="col bg-light bg-gradient ">
-                        <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fnext.js.png&w=100&h=100"
-                            class="w-75 p-4" />
-                        <h6>Next.js</h6>
-                    </div>
-                    <div class="col bg-light bg-gradient ">
-                        <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fangular.png&w=100&h=100"
-                            class="w-75 p-4" />
-                        <h6>Angular</h6>
-                    </div>
-                    <div class="col bg-light bg-gradient ">
-                        <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fjquery.png&w=100&h=100"
-                            class="w-75 p-4" />
-                        <h6>jQuery</h6>
-                    </div>
-                    <div class="col bg-light bg-gradient ">
-                        <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fnode.js.png&w=100&h=100"
-                            class="w-75 p-4" />
-                        <h6>Node.js</h6>
-                    </div>
-
-                    <div class="col bg-light bg-gradient ">
-                        <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fexpress.png&w=100&h=100"
-                            class="w-75 p-4" />
-                        <h6>Express</h6>
-                    </div>
-                    <div class="col bg-light bg-gradient ">
-                        <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fphp.png&w=100&h=100"
-                            class="w-75 p-4" />
-                        <h6>php</h6>
-                    </div>
-                    <div class="col bg-light bg-gradient ">
-                        <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fpython.png&w=100&h=100"
-                            class="w-75 p-4" />
-                        <h6>Python</h6>
-                    </div>
-                    <div class="col bg-light bg-gradient ">
-                        <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fcoldfusion.png&w=100&h=100"
-                            class="w-75 p-4" />
-                        <h6>ColdFusion</h6>
-                    </div>
-                    <div class="col bg-light bg-gradient ">
-                        <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fmysql.png&w=100&h=100"
-                            class="w-75 p-4" />
-                        <h6>MySQL</h6>
-                    </div>
-                    <div class="col bg-light bg-gradient ">
-                        <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fmongodb.png&w=100&h=100"
-                            class="w-75 p-4" />
-                        <h6>MongoDB</h6>
-                    </div>
-                    <div class="col bg-light bg-gradient ">
-                        <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fpostman.png&w=100&h=100"
-                            class="w-75 p-4" />
-                        <h6>POSTMAN</h6>
-                    </div>
-                    <div class="col bg-light bg-gradient ">
-                        <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fgithub.png&w=100&h=100"
-                            class="w-75 p-4" />
-                        <h6>GitHub</h6>
-                    </div>
-                    <div class="col bg-light bg-gradient ">
-                        <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fvs+code.png&w=100&h=100"
-                            class="w-75 p-4" />
-                        <h6>VS Code</h6>
-                    </div>
-                    <div class="col bg-light bg-gradient ">
-                        <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Flinux.png&w=100&h=100"
-                            class="w-75 p-4" />
-                        <h6>Linux</h6>
-                    </div>
-                    <div class="col bg-light bg-gradient ">
-                        <img src="https://upload.wikimedia.org/wikipedia/fr/2/2e/Java_Logo.svg" class="w-75 p-4" />
-                        <h6>Java</h6>
-                    </div>
-                </div>
             </div>
-            <!-- <div class="container w-75 pt-5">
-                <div class="row gap-4">
-                    <div class="feature col">
-                        <div
-                            class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                            <i class="bi bi-palette px-2"></i>
-                        </div>
-                        <p class="fs-3 text-body-emphasis">Création de site web</p>
-                        <p>Création de votre site internet sur mesure adapté à votre activité.</p>
-                    </div>
-                    <div class="feature col">
-                        <div
-                            class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                            <i class="bi bi-database px-2"></i>
-                        </div>
-                        <p class="fs-3 text-body-emphasis">Gestion du backend</p>
-                        <p>Développement de la partie “non-visible” de votre application.</p>
-                    </div>
-                    <div class="feature col">
-                        <div
-                            class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                            <i class="bi bi-diagram-3 px-2"></i>
-                        </div>
-                        <p class="fs-3 text-body-emphasis">Réalisation d'API</p>
-                        <p>Mise en place du partage des données avec vos clients et autres utilisateurs externes.</p>
-                    </div>
-                </div>
-            </div> -->
-            <!-- <div class="container text-center my-4">
-                <a href="#portfolio" class="btn btn-dark text-uppercase rounded-0 shadow">Voir mes derniers projets</a>
-            </div> -->
-        </section>
 
-        <!-- portfolio -->
-        <section id="portfolio" class="p-5 bg-white min-vh-100">
-            <h2 class="text-center my-5 border-bottom pb-5 mx-auto w-75">Quelques uns de mes projets</h2>
+            <div class="col p-0 m-0">
+                <header
+                    class="position-sticky top-0 w-100 border-bottom border-light-subtle bg-secondary-subtle text-center">
+                    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#home">Accueil</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#about">À propos</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#contact">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </header>
 
-            <div class="container text-center w-75">
-                <div class="row gap-5 mb-4">
-                    <div class="col shadow-sm bg-white p-4 border">
-                        <a href="https://elmahdik.github.io/luxurycars" target="_blank"
-                            class="text-decoration-none text-dark">
-                            <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fportfolio%2Fluxurycars.webp&w=1200&h=600"
-                                class="img-fluid mb-4 border-bottom border-secondary-subtle" alt="...">
-                            <h4>luxurycars</h4>
-                            <!-- <p class="text-start">Retrouvez le code source sur github</p> -->
-                        </a>
-                    </div>
-                    <div class="col shadow-sm bg-white p-4 border">
-                        <a href="https://elmahdik.github.io/solidjs-retrogame" target="_blank"
-                            class="text-decoration-none text-dark">
-                            <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fportfolio%2Fsolidjs-retrogame.webp&w=1200&h=600"
-                                class="img-fluid mb-4 border-bottom border-secondary-subtle" alt="...">
-                            <h4>solidjs-retrogame</h4>
-                        </a>
-                    </div>
-                </div>
-                <div class="row gap-5 mb-4">
-                    <div class="col shadow-sm bg-white p-4 border">
-                        <a href="https://elmahdik.github.io/japanim89" target="_blank"
-                            class="text-decoration-none text-dark">
-                            <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fportfolio%2Fjapanim89.webp&w=1200&h=600"
-                                class="img-fluid mb-4 border-bottom border-secondary-subtle" alt="...">
-                            <h4>japanim89</h4>
-                        </a>
-                    </div>
+                <main class="container m-0 p-0 mx-auto">
 
-                    <div class="col shadow-sm bg-white p-4 border">
-                        <a href="https://elmahdik.github.io/next-ghibli" target="_blank"
-                            class="text-decoration-none text-dark">
-                            <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fportfolio%2Fnext-ghibli.webp&w=1200&h=600"
-                                class="img-fluid mb-4 border-bottom border-secondary-subtle" alt="...">
-                            <h4>next-ghibli</h4>
-                        </a>
-                    </div>
-                </div>
-                <div class="row gap-5 mb-4">
-                    <div class="col shadow-sm bg-white p-4 border">
-                        <a href="https://elmahdik.github.io/lablague" target="_blank"
-                            class="text-decoration-none text-dark">
-                            <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fportfolio%2Flablague.webp&w=1200&h=600"
-                                class="img-fluid mb-4 border-bottom border-secondary-subtle" alt="...">
-                            <h4>lablague</h4>
-                        </a>
-                    </div>
-                    <div class="col shadow-sm bg-white p-4 border">
-                        <a href="https://elmahdik.github.io/kald" target="_blank"
-                            class="text-decoration-none text-dark">
-                            <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fportfolio%2Fkald.webp&w=1200&h=600"
-                                class="img-fluid mb-4 border-bottom border-secondary-subtle" alt="...">
-                            <h4>kald</h4>
-                        </a>
-                    </div>
-                </div>
+                    <!-- ABOUT min-vh-100  -->
+                    <section id="about" class="d-flex justify-content-center flex-column bg-white mx-auto">
+                        <h1 class="mt-5 pt-5 text-center">Bienvenue !</h1>
+                        <p class="p-5">Diplômé d'un bac+5 en informatique et passionné par le web depuis plus de 10
+                            ans, j'ai eu
+                            l'opportunité de travailler en tant que développeur web/mobile à la fois sur du back et du
+                            front pour
+                            des entreprises privées, des laboratoires de recherche, pour des particuliers et pour
+                            l'European
+                            Innovation Academy 2015.<br /><br />
+                            Sur ce site vous retrouverez <a class="text-dark" href="#skill">mes compétences</a>,
+                            quelques uns de <a class="text-dark" href="#portfolio">mes projets</a> et <a
+                                class="text-dark" href="#contact">un
+                                formulaire de contact</a> pour me joindre.<br /><br />Bonne visite !
+                        </p>
+                        <div class="container text-center div-portfolio bg-body-tertiary p-5">
+                            <div class="row row-cols-auto gap-1">
+                                <div
+                                    class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                                    <img
+                                        src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fhtml.png&w=100&h=100" />
+                                    <p class="my-auto fs-6 mx-2">HTML</p>
+                                </div>
+                                <div
+                                    class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                                    <img
+                                        src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fcss.png&w=100&h=100" />
+                                    <p class="my-auto fs-6 mx-2">CSS</p>
+                                </div>
+                                <div
+                                    class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                                    <img
+                                        src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fjavascript.png&w=100&h=100" />
+                                    <p class="my-auto fs-6 mx-2">JavaScript</p>
+                                </div>
+                                <div
+                                    class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                                    <img
+                                        src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Ftypescript.png&w=100&h=100" />
+                                    <p class="my-auto fs-6 mx-2">TypeScript</p>
+                                </div>
+                                <div
+                                    class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                                    <img
+                                        src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fsass.png&w=100&h=100" />
+                                    <p class="my-auto fs-6 mx-2">Sass</p>
+                                </div>
+                                <div
+                                    class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                                    <img
+                                        src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Ftailwindcss.png&w=100&h=100" />
+                                    <p class="my-auto fs-6 mx-2">tailwindcss</p>
+                                </div>
+                                <div
+                                    class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                                    <img
+                                        src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fbootstrap.png&w=100&h=100" />
+                                    <p class="my-auto fs-6 mx-2">Bootstrap</p>
+                                </div>
+                                <div
+                                    class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                                    <img
+                                        src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fastro.png&w=100&h=100" />
+                                    <p class="my-auto fs-6 mx-2">Astro</p>
+                                </div>
+                                <div
+                                    class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                                    <img
+                                        src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Freact.png&w=100&h=100" />
+                                    <p class="my-auto fs-6 mx-2">React</p>
+                                </div>
+                                <div
+                                    class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                                    <img
+                                        src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fnext.js.png&w=100&h=100" />
+                                    <p class="my-auto fs-6 mx-2">Next.js</p>
+                                </div>
+                                <div
+                                    class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                                    <img
+                                        src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fangular.png&w=100&h=100" />
+                                    <p class="my-auto fs-6 mx-2">Angular</p>
+                                </div>
+                                <div
+                                    class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                                    <img
+                                        src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fjquery.png&w=100&h=100" />
+                                    <p class="my-auto fs-6 mx-2">jQuery</p>
+                                </div>
+                                <div
+                                    class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                                    <img
+                                        src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fnode.js.png&w=100&h=100" />
+                                    <p class="my-auto fs-6 mx-2">Node.js</p>
+                                </div>
+
+                                <div
+                                    class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                                    <img
+                                        src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fexpress.png&w=100&h=100" />
+                                    <p class="my-auto fs-6 mx-2">Express</p>
+                                </div>
+                                <div
+                                    class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                                    <img
+                                        src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fphp.png&w=100&h=100" />
+                                    <p class="my-auto fs-6 mx-2">php</p>
+                                </div>
+                                <div
+                                    class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                                    <img
+                                        src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fpython.png&w=100&h=100" />
+                                    <p class="my-auto fs-6 mx-2">Python</p>
+                                </div>
+                                <div
+                                    class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                                    <img
+                                        src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fcoldfusion.png&w=100&h=100" />
+                                    <p class="my-auto fs-6 mx-2">ColdFusion</p>
+                                </div>
+                                <div
+                                    class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                                    <img
+                                        src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fmysql.png&w=100&h=100" />
+                                    <p class="my-auto fs-6 mx-2">MySQL</p>
+                                </div>
+                                <div
+                                    class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                                    <img
+                                        src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fmongodb.png&w=100&h=100" />
+                                    <p class="my-auto fs-6 mx-2">MongoDB</p>
+                                </div>
+                                <div
+                                    class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                                    <img
+                                        src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fpostman.png&w=100&h=100" />
+                                    <p class="my-auto fs-6 mx-2">POSTMAN</p>
+                                </div>
+                                <div
+                                    class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                                    <img
+                                        src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fgithub.png&w=100&h=100" />
+                                    <p class="my-auto fs-6 mx-2">GitHub</p>
+                                </div>
+                                <div
+                                    class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                                    <img
+                                        src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fvs+code.png&w=100&h=100" />
+                                    <p class="my-auto fs-6 mx-2">VS Code</p>
+                                </div>
+                                <div
+                                    class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                                    <img
+                                        src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Flinux.png&w=100&h=100" />
+                                    <p class="my-auto fs-6 mx-2">Linux</p>
+                                </div>
+                                <div
+                                    class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                                    <img src="https://upload.wikimedia.org/wikipedia/fr/2/2e/Java_Logo.svg" />
+                                    <p class="my-auto fs-6 mx-2">Java</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- EXPERIENCE -->
+                    <!-- <section id="experience" class="bg-secondary-subtle w-50 mx-auto">
+                        <h2 class="text-center border-secondary border-bottom p-5 mx-auto">Mes expériences
+                        </h2>
+
+                        <div class="p-5 d-flex flex-column justify-content-center align-self-start align-items-center">
+                            <div class="card mb-3" style="max-width: 18rem;">
+                                <div class="card-header">💼 Développeur web @53js</div>
+                                <div class="card-body">
+                                    <p class="card-text">
+                                    <p>✔︎ Développement React - ajout de fonctionnalités avancées sur le player
+                                        vidéo du client
+                                    </p>
+                                    <p>✔︎ Réalisation d'un visualiseur audio en utilisant la Web Audio API
+                                        JavaScript</p>
+                                    <p>✔︎ Utilisation d'outils ClickUp, JIRA, GIT, AWS, Slack.</p>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section> -->
+
+                    <!-- PORTFOLIO -->
+                    <section id="portfolio" class="mx-auto p-2">
+                        <h2 class="mt-5 py-5 text-center">Quelques uns de mes projets</h2>
+
+                        <div class="container">
+                            <div class="row gap-4 mb-4">
+                                <div class="col shadow p-0">
+                                    <a href="https://elmahdik.github.io/luxurycars" target="_blank"
+                                        class="text-decoration-none">
+                                        <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fportfolio%2Fluxurycars.webp&w=1200&h=600"
+                                            class="img-fluid" alt="...">
+                                        <p class="fs-4 fw-lighter text-end text-dark p-3">luxurycars</p>
+                                    </a>
+                                </div>
+                                <div class="col shadow p-0">
+                                    <a href="https://elmahdik.github.io/solidjs-retrogame" target="_blank"
+                                        class="text-decoration-none text-dark">
+                                        <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fportfolio%2Fsolidjs-retrogame.webp&w=1200&h=600"
+                                            class="img-fluid" alt="...">
+                                        <p class="fs-4 fw-lighter text-end text-dark p-3">solidjs-retrogame</p>
+                                    </a>
+                                </div>
+                                <div class="col shadow p-0">
+                                    <a href="https://elmahdik.github.io/japanim89" target="_blank"
+                                        class="text-decoration-none text-dark">
+                                        <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fportfolio%2Fjapanim89.webp&w=1200&h=600"
+                                            class="img-fluid" alt="...">
+                                        <p class="fs-4 fw-lighter text-end text-dark p-3">japanim89</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row gap-4 mb-4">
+                                <div class="col shadow p-0">
+                                    <a href="https://elmahdik.github.io/next-ghibli" target="_blank"
+                                        class="text-decoration-none text-dark">
+                                        <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fportfolio%2Fnext-ghibli.webp&w=1200&h=600"
+                                            class="img-fluid" alt="...">
+                                        <p class="fs-4 fw-lighter text-end text-dark p-3">next-ghibli</p>
+                                    </a>
+                                </div>
+                                <div class="col shadow p-0">
+                                    <a href="https://elmahdik.github.io/lablague" target="_blank"
+                                        class="text-decoration-none text-dark">
+                                        <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fportfolio%2Flablague.webp&w=1200&h=600"
+                                            class="img-fluid" alt="...">
+                                        <p class="fs-4 fw-lighter text-end text-dark p-3">lablague</p>
+                                    </a>
+                                </div>
+                                <div class="col shadow p-0">
+                                    <a href="https://elmahdik.github.io/kald" target="_blank"
+                                        class="text-decoration-none text-dark">
+                                        <img src="https://elmahdik.netlify.app/.netlify/images?url=%2Fportfolio%2Fkald.webp&w=1200&h=600"
+                                            class="img-fluid" alt="...">
+                                        <p class="fs-4 fw-lighter text-end text-dark p-3">kald</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- CONTACT -->
+                    <section id="contact" class="bg-body-tertiary d-flex flex-column justify-content-between mx-auto">
+                        <form class="w-100 d-flex flex-column mx-auto p-5">
+                            <div class="pb-4">
+                                <label for="exampleFormControlInput1" class="form-label">Email</label>
+                                <input type="email" class="form-control text-secondary rounded-0 p-3 border"
+                                    id="exampleFormControlInput1" placeholder="name@example.com">
+                                <br />
+                                <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                                <textarea class="form-control text-secondary rounded-0 p-3 border"
+                                    id="exampleFormControlTextarea1" rows="3">Hello Elmahdi, </textarea>
+
+                            </div>
+                            <button type="submit"
+                                class="btn btn-dark text-uppercase rounded-0 shadow border-light border py-3">Envoyer</button>
+                        </form>
+                    </section>
+                    <a class="nav-link active fs-6 text-center p-5" aria-current="page" href="#home">Retourner en haut <i
+                        class="bi bi-arrow-up-circle text-secondary"></i></a>
+                </main>
             </div>
-            <!-- <div class="container text-center my-4">
-                <a href="#contact" class="btn btn-dark text-uppercase rounded-0 shadow">Me contacter</a>
-            </div> -->
-        </section>
+        </div>
+    </div>
 
-        <!-- contact -->
-        <section id="contact" class="bg-secondary-subtle pt-5 d-flex flex-column justify-content-between min-vh-100">
-            <h2 class="text-center my-5 border-secondary-subtle border-bottom pb-5 w-75 mx-auto">Contactez-moi !
-            </h2>
 
-            <form class="w-50 d-flex flex-column mx-auto">
-                <div class="pb-4">
-                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                    <input type="email" class="form-control text-secondary rounded-0 p-3 border"
-                        id="exampleFormControlInput1" placeholder="name@example.com">
 
-                    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                    <textarea class="form-control text-secondary rounded-0 p-3 border" id="exampleFormControlTextarea1"
-                        rows="3">Hello Elmahdi, </textarea>
-
-                </div>
-                <button type="submit"
-                    class="btn btn-dark text-uppercase rounded-0 shadow border-light border py-3">Envoyer</button>
-            </form>
-
-            <footer
-                class="text-center d-flex justify-content-between bg-black bg-gradient p-2 border-secondary border-top">
-                <p class="text-secondary align-self-center">© 2025 - Elmahdi KORFED</p>
-                <ul class=" gap-3 list-group list-group-horizontal list-unstyled">
-                    <li><a href="https://www.linkedin.com/in/elmahdikorfed/" target="_blank"><i
-                                class="bi bi-linkedin fs-4 text-secondary"></i></a></li>
-                    <li><a href="https://github.com/ElmahdiK" target="_blank"><i
-                                class="bi bi-github fs-4 text-secondary"></i></a></li>
-                    <li> <a class="nav-link active fs-4" aria-current="page" href="#home"><i
-                                class="bi bi-arrow-up-circle text-secondary"></i></a></li>
-                </ul>
-
-            </footer>
-        </section>
-    </main>
 </body>
 
 </html>
