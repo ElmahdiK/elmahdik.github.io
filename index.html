@@ -45,6 +45,15 @@
 
 <body>
     <style>
+        header {
+            background: rgba(255, 255, 255, 0.2);
+            /* border-radius: 16px; */
+            /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            /* border: 1px solid rgba(255, 255, 255, 0.3); */
+        }
+
         .form-control::placeholder {
             color: #555;
         }
@@ -86,8 +95,8 @@
 
     <div class="col p-0 m-0">
         <header
-            class="position-sticky top-0 w-100 border-bottom border-light-subtle bg-secondary-subtle text-center z-2">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            class="position-sticky top-0 w-100 border-bottom border-light-subtle text-center z-2">
+            <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
