@@ -13,37 +13,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function () {
-            // https://dashboard.emailjs.com/admin/account
-            emailjs.init({
-                publicKey: "Xt5kvG1KQ0QbFg03l",
-            });
-        })();
-    </script>
-    <script type="text/javascript">
-        window.onload = function () {
-            let contactForm = document.getElementById('contact-form');
-
-            contactForm.addEventListener('submit', function (event) {
-                event.preventDefault();
-                // these IDs from the previous steps
-                emailjs.sendForm('default_service', 'template_ptculdh', this)
-                    .then(() => {
-                        console.log('SUCCESS!');
-                        contactForm.reset();
-                        alert("Merci, votre message a bien été envoyé !")
-                    }, (error) => {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
-    </script>
 </head>
 
-<body>
+<body data-bs-theme="light">
     <style>
         header {
             background: rgba(255, 255, 255, 0.2);
@@ -67,24 +40,29 @@
     <div class="col-md-auto vh-100 top-0">
         <!-- HOME -->
         <section id="home" class="d-flex flex-column justify-content-between h-100">
+            <div class="form-check form-switch p-4 position-absolute bottom-0 start-50 translate-middle">
+                <label for="flexSwitchCheckChecked" role="button" class="fs-5"><i name="icon--darkMode" class="bi bi-moon-stars"></i></label>
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" hidden checked
+                    onclick="myFunction()" />
+            </div>
             <div
                 class="d-flex flex-column text-center justify-content-center align-self-center align-items-center my-auto">
-                <p class="fs-1 text-dark fw-bold">Elmahdi KORFED</p>
-                <p class="fs-4 fw-lighter text-dark">
+                <p class="fs-1 fw-bold">Elmahdi KORFED</p>
+                <p class="fs-4 fw-lighter">
                     < Développeur web fullstack />
                 </p>
                 <p class="fs-5 text-secondary fw-light">📍 Lille, France</p>
                 <br /><br />
                 <nav class="d-flex flex-row gap-2">
                     <a href="https://elmahdik.netlify.app/cv/cv-KORFED.pdf"
-                        class="btn btn-dark text-uppercase p-3 shadow-sm fs-6">voir cv</a>
-                    <a href="#about" class="btn btn-primary text-uppercase p-3 shadow-sm fs-6">continuer</a>
+                        class="btn btn-dark text-uppercase p-3 shadow-sm fs-6 border">voir cv</a>
+                    <a href="#about" class="btn btn-primary text-uppercase p-3 shadow-sm fs-6 border">continuer</a>
                 </nav>
                 <ul class="gap-4 list-group list-group-horizontal list-unstyled my-5">
-                    <li><a href="https://www.linkedin.com/in/elmahdikorfed/" target="_blank"><i
-                                class="bi bi-linkedin fs-2 text-dark"></i></a></li>
-                    <li><a href="https://github.com/ElmahdiK" target="_blank"><i
-                                class="bi bi-github fs-2 text-dark"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/elmahdikorfed/" target="_blank" class="text-decoration-none text-reset"><i
+                                class="bi bi-linkedin fs-2"></i></a></li>
+                    <li><a href="https://github.com/ElmahdiK" target="_blank" class="text-decoration-none text-reset"><i
+                                class="bi bi-github fs-2"></i></a></li>
                 </ul>
             </div>
             <footer class="text-center">
@@ -94,8 +72,7 @@
     </div>
 
     <div class="col p-0 m-0">
-        <header
-            class="position-sticky top-0 w-100 border-bottom border-light-subtle text-center z-2">
+        <header class="position-sticky top-0 w-100 border-bottom border-light-subtle text-center z-2">
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -120,6 +97,11 @@
                                 <a class="nav-link" href="#contact">Contact</a>
                             </li>
                         </ul>
+                        <div class="form-check form-switch d-flex justify-content-center">
+                            <label for="flexSwitchCheckChecked" role="button" class="fs-5"><i name="icon--darkMode" class="bi bi-moon-stars"></i></label>
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" hidden checked
+                                onclick="myFunction()" />
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -127,7 +109,7 @@
 
         <main class="container m-0 p-0 mx-auto">
             <!-- ABOUT min-vh-100  -->
-            <section id="about" class="d-flex justify-content-center flex-column bg-white mx-auto">
+            <section id="about" class="d-flex justify-content-center flex-column mx-auto bg-light-subtle">
                 <h1 class="mt-5 py-5 text-center">Bienvenue !</h1>
                 <p class="p-5">Diplômé d'un bac+5 en informatique et passionné par le web depuis plus de 10
                     ans, j'ai eu
@@ -136,130 +118,130 @@
                     des entreprises privées, des laboratoires de recherche, pour des particuliers et pour
                     l'European
                     Innovation Academy 2015.<br /><br />
-                    Sur ce site vous retrouverez <a class="text-dark" href="#portfolio">mon portfolio</a>, <a
-                        class="text-dark" href="#experience">mes expériences</a> et <a class="text-dark"
+                    Sur ce site vous retrouverez <a class="text-reset" href="#portfolio">mon portfolio</a>, <a
+                        class="text-reset" href="#experience">mes expériences</a> et <a class="text-reset"
                         href="#contact">un
                         formulaire de contact</a> pour me joindre.<br /><br />Bonne visite !
                 </p>
                 <div id="skill" class="container text-center div-portfolio bg-body-tertiary p-5">
                     <div class="row row-cols-auto gap-1 justify-content-center">
-                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
                             <img
                                 src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fhtml.png&w=100&h=100" />
                             <p class="my-auto fs-6 mx-2">HTML</p>
                         </div>
-                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
                             <img
                                 src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fcss.png&w=100&h=100" />
                             <p class="my-auto fs-6 mx-2">CSS</p>
                         </div>
-                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
                             <img
                                 src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fjavascript.png&w=100&h=100" />
                             <p class="my-auto fs-6 mx-2">JavaScript</p>
                         </div>
-                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
                             <img
                                 src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Ftypescript.png&w=100&h=100" />
                             <p class="my-auto fs-6 mx-2">TypeScript</p>
                         </div>
-                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
                             <img
                                 src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fsass.png&w=100&h=100" />
                             <p class="my-auto fs-6 mx-2">Sass</p>
                         </div>
-                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
                             <img
                                 src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Ftailwindcss.png&w=100&h=100" />
                             <p class="my-auto fs-6 mx-2">tailwindcss</p>
                         </div>
-                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
                             <img
                                 src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fbootstrap.png&w=100&h=100" />
                             <p class="my-auto fs-6 mx-2">Bootstrap</p>
                         </div>
-                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
                             <img
                                 src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fastro.png&w=100&h=100" />
                             <p class="my-auto fs-6 mx-2">Astro</p>
                         </div>
-                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
                             <img
                                 src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Freact.png&w=100&h=100" />
                             <p class="my-auto fs-6 mx-2">React</p>
                         </div>
-                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
                             <img
                                 src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fnext.js.png&w=100&h=100" />
                             <p class="my-auto fs-6 mx-2">Next.js</p>
                         </div>
-                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
                             <img
                                 src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fangular.png&w=100&h=100" />
                             <p class="my-auto fs-6 mx-2">Angular</p>
                         </div>
-                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
                             <img
                                 src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fjquery.png&w=100&h=100" />
                             <p class="my-auto fs-6 mx-2">jQuery</p>
                         </div>
-                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
                             <img
                                 src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fnode.js.png&w=100&h=100" />
                             <p class="my-auto fs-6 mx-2">Node.js</p>
                         </div>
 
-                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
                             <img
                                 src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fexpress.png&w=100&h=100" />
                             <p class="my-auto fs-6 mx-2">Express</p>
                         </div>
-                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
                             <img
                                 src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fphp.png&w=100&h=100" />
                             <p class="my-auto fs-6 mx-2">php</p>
                         </div>
-                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
                             <img
                                 src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fpython.png&w=100&h=100" />
                             <p class="my-auto fs-6 mx-2">Python</p>
                         </div>
-                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
                             <img
                                 src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fcoldfusion.png&w=100&h=100" />
                             <p class="my-auto fs-6 mx-2">ColdFusion</p>
                         </div>
-                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
                             <img
                                 src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fmysql.png&w=100&h=100" />
                             <p class="my-auto fs-6 mx-2">MySQL</p>
                         </div>
-                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
                             <img
                                 src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fmongodb.png&w=100&h=100" />
                             <p class="my-auto fs-6 mx-2">MongoDB</p>
                         </div>
-                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
                             <img
                                 src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fpostman.png&w=100&h=100" />
                             <p class="my-auto fs-6 mx-2">POSTMAN</p>
                         </div>
-                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
                             <img
                                 src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fgithub.png&w=100&h=100" />
                             <p class="my-auto fs-6 mx-2">GitHub</p>
                         </div>
-                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
                             <img
                                 src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fvs+code.png&w=100&h=100" />
                             <p class="my-auto fs-6 mx-2">VS Code</p>
                         </div>
-                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
                             <img
                                 src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Flinux.png&w=100&h=100" />
                             <p class="my-auto fs-6 mx-2">Linux</p>
                         </div>
-                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 bg-white">
+                        <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
                             <img src="https://upload.wikimedia.org/wikipedia/fr/2/2e/Java_Logo.svg" />
                             <p class="my-auto fs-6 mx-2">Java</p>
                         </div>
@@ -272,50 +254,50 @@
                 <h2 class="border-light-subtle border-bottom mt-5 py-5 text-center">Portfolio
                 </h2>
 
-                <div class="container  p-5">
+                <div class="container p-5">
                     <div class="row gap-4 mb-4">
-                        <div class="col shadow-sm p-2">
+                        <div class="col shadow-sm p-2 border">
                             <a href="https://elmahdik.github.io/luxurycars" target="_blank"
-                                class="text-decoration-none">
+                                class="text-decoration-none text-reset">
                                 <img src="./assets/img/portfolio/luxurycars.webp" class="img-fluid" alt="...">
-                                <p class="fs-4 fw-lighter text-center text-dark p-3">luxurycars</p>
+                                <p class="fs-4 fw-lighter text-center p-3">luxurycars</p>
                             </a>
                         </div>
-                        <div class="col shadow-sm p-2">
+                        <div class="col shadow-sm p-2 border">
                             <a href="https://elmahdik.github.io/outil-comptable" target="_blank"
-                                class="text-decoration-none text-dark">
+                                class="text-decoration-none text-reset">
                                 <img src="./assets/img/portfolio/outil-comptable.webp" class="img-fluid" alt="...">
-                                <p class="fs-4 fw-lighter text-center text-dark p-3">outil-comptable</p>
+                                <p class="fs-4 fw-lighter text-center p-3">outil-comptable</p>
                             </a>
                         </div>
-                        <div class="col shadow-sm p-2">
+                        <div class="col shadow-sm p-2 border">
                             <a href="https://elmahdik.github.io/solidjs-retrogame" target="_blank"
-                                class="text-decoration-none text-dark">
+                                class="text-decoration-none text-reset">
                                 <img src="./assets/img/portfolio/solidjs-retrogame.webp" class="img-fluid" alt="...">
-                                <p class="fs-4 fw-lighter text-center text-dark p-3">solidjs-retrogame</p>
+                                <p class="fs-4 fw-lighter text-center p-3">solidjs-retrogame</p>
                             </a>
                         </div>
                     </div>
                     <div class="row gap-4 mb-4">
-                        <div class="col shadow-sm p-2">
+                        <div class="col shadow-sm p-2 border">
                             <a href="https://elmahdik.github.io/japanim89" target="_blank"
-                                class="text-decoration-none text-dark">
+                                class="text-decoration-none text-reset">
                                 <img src="./assets/img/portfolio/japanim89.webp" class="img-fluid" alt="...">
-                                <p class="fs-4 fw-lighter text-center text-dark p-3">japanim89</p>
+                                <p class="fs-4 fw-lighter text-center p-3">japanim89</p>
                             </a>
                         </div>
-                        <div class="col shadow-sm p-2">
+                        <div class="col shadow-sm p-2 border">
                             <a href="https://elmahdik.github.io/next-ghibli" target="_blank"
-                                class="text-decoration-none text-dark">
+                                class="text-decoration-none text-reset">
                                 <img src="./assets/img/portfolio/next-ghibli.webp" class="img-fluid" alt="...">
-                                <p class="fs-4 fw-lighter text-center text-dark p-3">next-ghibli</p>
+                                <p class="fs-4 fw-lighter text-center p-3">next-ghibli</p>
                             </a>
                         </div>
-                        <div class="col shadow-sm p-2">
+                        <div class="col shadow-sm p-2 border">
                             <a href="https://elmahdik.github.io/kald" target="_blank"
-                                class="text-decoration-none text-dark">
+                                class="text-decoration-none text-reset">
                                 <img src="./assets/img/portfolio/kald.webp" class="img-fluid" alt="...">
-                                <p class="fs-4 fw-lighter text-center text-dark p-3">kald</p>
+                                <p class="fs-4 fw-lighter text-center p-3">kald</p>
                             </a>
                         </div>
                     </div>
@@ -475,9 +457,43 @@
                 </form>
             </section>
             <a class="nav-link active fs-6 text-center p-5" aria-current="page" href="#home">Retourner en haut
-                <i class="bi bi-arrow-up-circle text-secondary"></i></a>
+                <i class="bi bi-arrow-up-circle mx-1"></i></a>
         </main>
     </div>
+
+    <script>
+
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+                publicKey: "Xt5kvG1KQ0QbFg03l",
+            });
+        })();
+
+        window.onload = function () {
+            let contactForm = document.getElementById('contact-form');
+
+            contactForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('default_service', 'template_ptculdh', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                        contactForm.reset();
+                        alert("Merci, votre message a bien été envoyé !")
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+
+        function myFunction() {
+            var element = document.body;
+            element.dataset.bsTheme =
+                element.dataset.bsTheme == "light" ? "dark" : "light";
+                document.querySelectorAll("[name=icon--darkMode]").forEach(btn => btn.className = element.dataset.bsTheme == "light" ? "bi bi-moon-stars" : "bi bi-brightness-high")
+        }
+    </script>
 </body>
 
 </html>
