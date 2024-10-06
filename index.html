@@ -7,41 +7,23 @@
     <title>Elmahdi KORFED</title>
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    <script src="./assets/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript" src="./assets/js/email.min.js"></script>
 </head>
 
 <body data-bs-theme="light">
-    <style>
-        header {
-            background: rgba(255, 255, 255, 0.2);
-            /* border-radius: 16px; */
-            /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-            /* border: 1px solid rgba(255, 255, 255, 0.3); */
-        }
-
-        .form-control::placeholder {
-            color: #555;
-        }
-
-        .div-portfolio img {
-            width: 30px;
-            height: 30px;
-        }
-    </style>
-
     <div class="col-md-auto vh-100 top-0">
         <!-- HOME -->
         <section id="home" class="d-flex flex-column justify-content-between h-100">
             <div class="form-check form-switch p-4 position-absolute bottom-0 start-50 translate-middle">
-                <label for="flexSwitchCheckChecked" role="button" class="fs-5"><i name="icon--darkMode" class="bi bi-moon-stars"></i></label>
+                <label for="flexSwitchCheckChecked" role="button" class="fs-5"><i name="icon--darkMode"
+                        class="bi bi-moon-stars"></i></label>
                 <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" hidden checked
                     onclick="myFunction()" />
             </div>
@@ -54,13 +36,13 @@
                 <p class="fs-5 text-secondary fw-light">📍 Lille, France</p>
                 <br /><br />
                 <nav class="d-flex flex-row gap-2">
-                    <a href="https://elmahdik.netlify.app/cv/cv-KORFED.pdf"
+                    <a href="./assets/cv/CV_KORFED_Elmahdi.pdf"
                         class="btn btn-dark text-uppercase p-3 shadow-sm fs-6 border">voir cv</a>
                     <a href="#about" class="btn btn-primary text-uppercase p-3 shadow-sm fs-6 border">continuer</a>
                 </nav>
                 <ul class="gap-4 list-group list-group-horizontal list-unstyled my-5">
-                    <li><a href="https://www.linkedin.com/in/elmahdikorfed/" target="_blank" class="text-decoration-none text-reset"><i
-                                class="bi bi-linkedin fs-2"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/elmahdikorfed/" target="_blank"
+                            class="text-decoration-none text-reset"><i class="bi bi-linkedin fs-2"></i></a></li>
                     <li><a href="https://github.com/ElmahdiK" target="_blank" class="text-decoration-none text-reset"><i
                                 class="bi bi-github fs-2"></i></a></li>
                 </ul>
@@ -72,7 +54,7 @@
     </div>
 
     <div class="col p-0 m-0 bg-light-subtle">
-        <header class="position-sticky top-0 w-100 border-bottom border-light-subtle text-center z-2">
+        <header class="position-sticky top-0 w-100 border-1 border-bottom text-center z-2">
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -98,9 +80,10 @@
                             </li>
                         </ul>
                         <div class="form-check form-switch d-flex justify-content-center">
-                            <label for="flexSwitchCheckChecked" role="button" class="fs-5"><i name="icon--darkMode" class="bi bi-moon-stars"></i></label>
-                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" hidden checked
-                                onclick="myFunction()" />
+                            <label for="flexSwitchCheckChecked" role="button" class="fs-5"><i name="icon--darkMode"
+                                    class="bi bi-moon-stars"></i></label>
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                                hidden checked onclick="myFunction()" />
                         </div>
                     </div>
                 </div>
@@ -126,123 +109,100 @@
                 <div id="skill" class="container text-center div-portfolio p-5">
                     <div class="row row-cols-auto gap-1 justify-content-center">
                         <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
-                            <img
-                                src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fhtml.png&w=100&h=100" />
+                            <img src="./assets/img/skills/HTML.png" />
                             <p class="my-auto fs-6 mx-2">HTML</p>
                         </div>
                         <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
-                            <img
-                                src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fcss.png&w=100&h=100" />
+                            <img src="./assets/img/skills/CSS.png" />
                             <p class="my-auto fs-6 mx-2">CSS</p>
                         </div>
                         <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
-                            <img
-                                src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fjavascript.png&w=100&h=100" />
+                            <img src="./assets/img/skills/javascript.png" />
                             <p class="my-auto fs-6 mx-2">JavaScript</p>
                         </div>
                         <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
-                            <img
-                                src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Ftypescript.png&w=100&h=100" />
+                            <img src="./assets/img/skills/typescript.png" />
                             <p class="my-auto fs-6 mx-2">TypeScript</p>
                         </div>
                         <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
-                            <img
-                                src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fsass.png&w=100&h=100" />
+                            <img src="./assets/img/skills/sass.png" />
                             <p class="my-auto fs-6 mx-2">Sass</p>
                         </div>
                         <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
-                            <img
-                                src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Ftailwindcss.png&w=100&h=100" />
+                            <img src="./assets/img/skills/tailwindcss.png" />
                             <p class="my-auto fs-6 mx-2">tailwindcss</p>
                         </div>
                         <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
-                            <img
-                                src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fbootstrap.png&w=100&h=100" />
+                            <img src="./assets/img/skills/bootstrap.png" />
                             <p class="my-auto fs-6 mx-2">Bootstrap</p>
                         </div>
                         <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
-                            <img
-                                src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fastro.png&w=100&h=100" />
+                            <img src="./assets/img/skills/astro.png" />
                             <p class="my-auto fs-6 mx-2">Astro</p>
                         </div>
                         <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
-                            <img
-                                src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Freact.png&w=100&h=100" />
+                            <img src="./assets/img/skills/react.png" />
                             <p class="my-auto fs-6 mx-2">React</p>
                         </div>
                         <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
-                            <img
-                                src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fnext.js.png&w=100&h=100" />
+                            <img src="./assets/img/skills/next.js.png" />
                             <p class="my-auto fs-6 mx-2">Next.js</p>
                         </div>
                         <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
-                            <img
-                                src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fangular.png&w=100&h=100" />
+                            <img src="./assets/img/skills/angular.png" />
                             <p class="my-auto fs-6 mx-2">Angular</p>
                         </div>
                         <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
-                            <img
-                                src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fjquery.png&w=100&h=100" />
+                            <img src="./assets/img/skills/jquery.png" />
                             <p class="my-auto fs-6 mx-2">jQuery</p>
                         </div>
                         <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
-                            <img
-                                src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fnode.js.png&w=100&h=100" />
+                            <img src="./assets/img/skills/node.js.png" />
                             <p class="my-auto fs-6 mx-2">Node.js</p>
                         </div>
 
                         <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
-                            <img
-                                src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fexpress.png&w=100&h=100" />
+                            <img src="./assets/img/skills/express.png" />
                             <p class="my-auto fs-6 mx-2">Express</p>
                         </div>
                         <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
-                            <img
-                                src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fphp.png&w=100&h=100" />
+                            <img src="./assets/img/skills/php.png" />
                             <p class="my-auto fs-6 mx-2">php</p>
                         </div>
                         <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
-                            <img
-                                src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fpython.png&w=100&h=100" />
+                            <img src="./assets/img/skills/python.png" />
                             <p class="my-auto fs-6 mx-2">Python</p>
                         </div>
                         <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
-                            <img
-                                src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fcoldfusion.png&w=100&h=100" />
+                            <img src="./assets/img/skills/coldfusion.png" />
                             <p class="my-auto fs-6 mx-2">ColdFusion</p>
                         </div>
                         <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
-                            <img
-                                src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fmysql.png&w=100&h=100" />
+                            <img src="./assets/img/skills/mysql.png" />
                             <p class="my-auto fs-6 mx-2">MySQL</p>
                         </div>
                         <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
-                            <img
-                                src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fmongodb.png&w=100&h=100" />
+                            <img src="./assets/img/skills/mongodb.png" />
                             <p class="my-auto fs-6 mx-2">MongoDB</p>
                         </div>
                         <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
-                            <img
-                                src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fpostman.png&w=100&h=100" />
+                            <img src="./assets/img/skills/postman.png" />
                             <p class="my-auto fs-6 mx-2">POSTMAN</p>
                         </div>
                         <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
-                            <img
-                                src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fgithub.png&w=100&h=100" />
+                            <img src="./assets/img/skills/github.png" />
                             <p class="my-auto fs-6 mx-2">GitHub</p>
                         </div>
                         <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
-                            <img
-                                src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Fvs+code.png&w=100&h=100" />
+                            <img src="./assets/img/skills/vs_code.png" />
                             <p class="my-auto fs-6 mx-2">VS Code</p>
                         </div>
                         <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
-                            <img
-                                src="https://elmahdik.netlify.app/.netlify/images?url=%2Fskills%2Flinux.png&w=100&h=100" />
+                            <img src="./assets/img/skills/linux.png" />
                             <p class="my-auto fs-6 mx-2">Linux</p>
                         </div>
                         <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
-                            <img src="https://upload.wikimedia.org/wikipedia/fr/2/2e/Java_Logo.svg" />
+                            <img src="./assets/img/skills/Java.svg" />
                             <p class="my-auto fs-6 mx-2">Java</p>
                         </div>
                     </div>
@@ -491,7 +451,7 @@
             var element = document.body;
             element.dataset.bsTheme =
                 element.dataset.bsTheme == "light" ? "dark" : "light";
-                document.querySelectorAll("[name=icon--darkMode]").forEach(btn => btn.className = element.dataset.bsTheme == "light" ? "bi bi-moon-stars" : "bi bi-brightness-high")
+            document.querySelectorAll("[name=icon--darkMode]").forEach(btn => btn.className = element.dataset.bsTheme == "light" ? "bi bi-moon-stars" : "bi bi-brightness-high")
         }
     </script>
 </body>
