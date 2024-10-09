@@ -19,8 +19,8 @@
         <!-- HOME -->
         <section id="home" class="d-flex flex-column justify-content-between h-100">
             <div class="form-check form-switch p-4 position-absolute bottom-0 start-50 translate-middle">
-                <label for="flexSwitchCheckChecked" role="button" class="fs-5"><i name="icon--darkMode"
-                        class="bi bi-moon-stars"></i></label>
+                <label for="flexSwitchCheckChecked" role="button"><i name="icon--darkMode"
+                        class="bi bi-moon-stars fs-5"></i></label>
                 <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" hidden checked
                     onclick="myFunction()" />
             </div>
@@ -38,11 +38,14 @@
                         target="_blank">cv</a>
                     <a href="#about" class="btn btn-primary text-uppercase p-3 shadow-sm fs-6">À propos</a>
                 </nav>
+                <br /><br />
                 <ul class="gap-4 list-group list-group-horizontal list-unstyled my-5">
                     <li><a href="https://www.linkedin.com/in/elmahdikorfed/" target="_blank"
                             class="text-decoration-none text-reset"><i class="bi bi-linkedin fs-2"></i></a></li>
                     <li><a href="https://github.com/ElmahdiK" target="_blank" class="text-decoration-none text-reset"><i
                                 class="bi bi-github fs-2"></i></a></li>
+                    <li><a href="https://www.instagram.com/elmahdik91/" target="_blank"
+                            class="text-decoration-none text-reset"><i class="bi bi-instagram fs-2"></i></a></li>
                 </ul>
             </div>
             <footer class="text-center">
@@ -61,29 +64,34 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                        <ul class="navbar-nav">
+                        <ul class="navbar-nav gap-2">
                             <li class="nav-item">
-                                <a class="nav-link" href="#home">Accueil</a>
+                                <a class="nav-link" href="#home" title="Accueil"><i class="bi bi-house-door fs-5"></i>
+                                    Accueil</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#about">À propos</a>
+                                <a class="nav-link" href="#about" title="À propos"><i class="bi bi-person fs-5"></i> À
+                                    propos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#experience">Expériences</a>
+                                <a class="nav-link" href="#experience" title="Expériences"><i
+                                        class="bi bi-suitcase-lg fs-5"></i> Expériences</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#portfolio">Portfolio</a>
+                                <a class="nav-link" href="#portfolio" title="Portfolio"><i
+                                        class="bi bi-palette fs-5"></i> Portfolio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#contact">Contact</a>
+                                <a class="nav-link" href="#contact" title="Contact"><i class="bi bi-envelope fs-5"></i>
+                                    Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <label class="nav-link" role="button" title="Theme" for="flexSwitchCheckChecked"><i
+                                        name="icon--darkMode" class="bi bi-moon-stars fs-5"></i></label>
+                                <input class="form-check-input" type="checkbox" role="switch"
+                                    id="flexSwitchCheckChecked" hidden checked onclick="myFunction()" />
                             </li>
                         </ul>
-                        <div class="form-check form-switch d-flex justify-content-center">
-                            <label for="flexSwitchCheckChecked" role="button" class="fs-5"><i name="icon--darkMode"
-                                    class="bi bi-moon-stars"></i></label>
-                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
-                                hidden checked onclick="myFunction()" />
-                        </div>
                     </div>
                 </div>
             </nav>
@@ -92,7 +100,7 @@
         <main class="container m-0 p-0 mx-auto">
             <!-- ABOUT min-vh-100 -->
             <section id="about" class="d-flex justify-content-center flex-column mx-auto">
-                <h1 class="mt-5 py-5 text-center">Bienvenue !</h1>
+                <h2 class="mt-5 py-5 text-center"><i class="bi bi-person"></i> Bienvenue !</h2>
                 <p class="p-5">Diplômé d'un bac+5 en informatique et passionné par le web depuis plus de 10
                     ans, j'ai eu
                     l'opportunité de travailler en tant que développeur web/mobile à la fois sur du back et du
@@ -210,7 +218,8 @@
 
             <!-- EXPERIENCE -->
             <section id="experience" class="mx-auto mt-5 p-2">
-                <h2 class="border-light-subtle border-bottom mt-5 py-5 text-center">Expériences
+                <h2 class="border-light-subtle border-bottom mt-5 py-5 text-center"><i class="bi bi-suitcase-lg"></i>
+                    Expériences
                 </h2>
                 <div class="container mt-5">
 
@@ -409,7 +418,8 @@
 
             <!-- PORTFOLIO -->
             <section id="portfolio" class="mx-auto p-2">
-                <h2 class="border-light-subtle border-bottom mt-5 py-5 text-center">Portfolio
+                <h2 class="border-light-subtle border-bottom mt-5 py-5 text-center"><i class="bi bi-palette"></i>
+                    Portfolio
                 </h2>
                 <div class="container p-5">
                     <!-- ROW 1 -->
@@ -590,7 +600,8 @@
 
             <!-- CONTACT -->
             <section id="contact" class="d-flex flex-column justify-content-between mx-auto">
-                <h2 class="border-light-subtle border-bottom mt-5 py-5 text-center">Contact
+                <h2 class="border-light-subtle border-bottom mt-5 py-5 text-center"><i class="bi bi-envelope"></i>
+                    Contact
                 </h2>
                 <form id="contact-form" class="w-100 d-flex flex-column mx-auto p-5">
                     <div class="pb-4">
@@ -644,7 +655,7 @@
             var element = document.body;
             element.dataset.bsTheme =
                 element.dataset.bsTheme == "light" ? "dark" : "light";
-            document.querySelectorAll("[name=icon--darkMode]").forEach(btn => btn.className = element.dataset.bsTheme == "light" ? "bi bi-moon-stars" : "bi bi-brightness-high")
+            document.querySelectorAll("[name=icon--darkMode]").forEach(btn => btn.className = element.dataset.bsTheme == "light" ? "bi bi-moon-stars fs-5" : "bi bi-brightness-high fs-5")
         }
     </script>
 </body>
