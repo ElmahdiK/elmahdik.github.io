@@ -24,6 +24,7 @@
                 <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" hidden checked
                     onclick="myFunction()" />
             </div>
+
             <div
                 class="d-flex flex-column text-center justify-content-center align-self-center align-items-center my-auto">
                 <p class="fs-1 fw-bold">Elmahdi KORFED</p>
@@ -33,9 +34,9 @@
                 <!-- <p class="fs-5 text-secondary fw-light">📍 Lille, France</p> -->
                 <br /><br />
                 <nav class="d-flex flex-row gap-2">
-                    <a href="./assets/cv/CV_KORFED_Elmahdi.pdf"
-                        class="btn btn-dark text-uppercase p-3 shadow-sm fs-6" target="_blank">cv</a>
-                    <a href="#about" class="btn btn-primary text-uppercase p-3 shadow-sm fs-6">portfolio</a>
+                    <a href="./assets/cv/CV_KORFED_Elmahdi.pdf" class="btn btn-dark text-uppercase p-3 shadow-sm fs-6"
+                        target="_blank">cv</a>
+                    <a href="#about" class="btn btn-primary text-uppercase p-3 shadow-sm fs-6">À propos</a>
                 </nav>
                 <ul class="gap-4 list-group list-group-horizontal list-unstyled my-5">
                     <li><a href="https://www.linkedin.com/in/elmahdikorfed/" target="_blank"
@@ -51,6 +52,7 @@
     </div>
 
     <div class="col p-0 m-0 bg-light-subtle">
+        <!-- HEADER menu -->
         <header class="position-sticky top-0 w-100 border-1 border-bottom text-center z-2">
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
@@ -67,10 +69,10 @@
                                 <a class="nav-link" href="#about">À propos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#portfolio">Portfolio</a>
+                                <a class="nav-link" href="#experience">Expériences</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#experience">Expériences</a>
+                                <a class="nav-link" href="#portfolio">Portfolio</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#contact">Contact</a>
@@ -88,7 +90,7 @@
         </header>
 
         <main class="container m-0 p-0 mx-auto">
-            <!-- ABOUT min-vh-100  -->
+            <!-- ABOUT min-vh-100 -->
             <section id="about" class="d-flex justify-content-center flex-column mx-auto">
                 <h1 class="mt-5 py-5 text-center">Bienvenue !</h1>
                 <p class="p-5">Diplômé d'un bac+5 en informatique et passionné par le web depuis plus de 10
@@ -98,10 +100,10 @@
                     des entreprises privées, des laboratoires de recherche, pour des particuliers et pour
                     l'European
                     Innovation Academy 2015.<br /><br />
-                    Sur ce site vous retrouverez <a class="text-reset" href="#portfolio">mon portfolio</a>, <a
-                        class="text-reset" href="#experience">mes expériences</a> et <a class="text-reset"
+                    Sur ce site vous retrouverez <a class="text-reset" href="#experience">mes expériences</a>, <a
+                        class="text-reset" href="#portfolio">mon portfolio</a> et <a class="text-reset"
                         href="#contact">un
-                        formulaire de contact</a> pour me joindre.<br /><br />Bonne visite !
+                        formulaire pour me joindre</a>.<br /><br />Bonne visite !
                 </p>
                 <div id="skill" class="container text-center div-portfolio p-5">
                     <div class="row row-cols-auto gap-1 justify-content-center">
@@ -201,6 +203,205 @@
                         <div class="col d-flex justify-content-center align-items-center shadow-sm p-2 border">
                             <img src="./assets/img/skills/linux.png" />
                             <p class="my-auto fs-6 mx-2">Linux</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EXPERIENCE -->
+            <section id="experience" class="mx-auto mt-5 p-2">
+                <h2 class="border-light-subtle border-bottom mt-5 py-5 text-center">Expériences
+                </h2>
+                <div class="container mt-5">
+
+                    <div class="row p-3 shadow mb-5">
+                        <div class="col-md align-self-center p-5">
+                            <h2 class="text-center mb-3">Formation POEC Java</h2>
+                            <p class="text-center">
+                                <small>🏢 IB Cegos</small><br />
+                                <small>📍 Sophia Antipolis, France</small>
+                            </p>
+                            <hr>
+                            <p>✔︎ Formation de 57j (399h) - du 16/09/2024 au 05/12/2024 : Angular, TypeScript,
+                                Bootstrap,
+                                HTML/CSS, JavaScript, SQL, Java, Web Services, Spring, GitLab, Jenkins, Maven
+                            </p>
+                            <br />
+                            <p>✔︎ Réalisation de projet de stage : Développement d'une application web Java /
+                                Angular</p>
+                            <hr>
+                            <p class="text-center">
+                                <small>⏳ 09/2024 - 12/2024</small><br />
+                                <small>📝 STAGE</small>
+                            </p>
+                        </div>
+                        <div class="col-md align-self-center p-5">
+                            <img src="./assets/img/pro/ib_java.webp" class="w-100 border" />
+                        </div>
+                    </div>
+
+                    <div class="row p-3 shadow mb-5">
+                        <div class="col-md align-self-center p-5">
+                            <img src="./assets/img/pro/53js.webp" class="w-100 border" />
+                        </div>
+                        <div class="col-md align-self-center p-5">
+                            <h2 class="text-center mb-3">Développeur web</h2>
+                            <div class="card-body text-start">
+                                <p class="card-text text-center">
+                                    <small>🏢 53js</small><br />
+                                    <small>📍 Nice, France</small>
+                                </p>
+                                <hr>
+                                <p>✔︎ Développement React - ajout de fonctionnalités avancées sur le player
+                                    vidéo du client
+                                </p>
+                                <br />
+                                <p>✔︎ Réalisation d'un visualiseur audio en utilisant la Web Audio API
+                                    JavaScript</p>
+                                <br />
+                                <p>✔︎ Utilisation d'outils ClickUp, JIRA, GIT, AWS, Slack</p>
+                                <hr>
+                                <p class="card-text text-center">
+                                    <small>⏳ 03/2023 - 09/2023</small><br />
+                                    <small>📝 CDI</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row p-3 shadow mb-5">
+                        <div class="col-md align-self-center p-5">
+                            <h2 class="text-center mb-3">Formation POEC DevOps</h2>
+                            <p class="text-center">
+                                <small>🏢 IB Cegos</small><br />
+                                <small>📍 Sophia Antipolis, France</small>
+                            </p>
+                            <hr>
+                            <p>✔︎ Formation de 57j (399h) - du 14/11/2022 au 07/02/2023 : Réseaux, Linux, Agile, Travail
+                                d'équipe, Git, Python, Docker, Kubernetes, Automatisation de tests, AWS ci/cd</p>
+                            <br />
+                            <p>✔︎ Réalisation de projet de stage : Mise en place de l'automatisation du processus de
+                                développement logiciel</p>
+                            <br />
+                            <p>✔︎ Certification <a
+                                    href="./assets/pdf/certification/20230111_devOpsFoundationCertificate.pdf"
+                                    target="_blank">DevOps foundation</a></p>
+                            <hr>
+                            <p class="text-center">
+                                <small>⏳ 11/2022 - 02/2023</small><br />
+                                <small>📝 STAGE</small>
+                            </p>
+                        </div>
+                        <div class="col-md align-self-center p-5">
+                            <img src="./assets/img/pro/ib_devops.webp" class="w-100 border" />
+                        </div>
+                    </div>
+
+                    <div class="row p-3 shadow mb-5">
+                        <div class="col-md align-self-center p-5">
+                            <img src="./assets/img/pro/inria_cnrs.webp" class="w-100 border" />
+                        </div>
+                        <div class="col-md align-self-center p-5">
+                            <h2 class="text-center mb-3">Ingénieur d'études et développement
+                            </h2>
+                            <div class="card-body text-start">
+                                <p class="card-text text-center">
+                                    <small>🏢 INRIA/CNRS</small><br />
+                                    <small>📍 Sophia Antipolis, France</small>
+                                </p>
+                                <hr>
+                                <p>✔︎ Développement de l'application web WASABI en Polymer contenant +2M de
+                                    chansons nécessitant la récupération de données musicales et MongoDB</p>
+                                <br />
+                                <p>✔︎ Réalisation d'une API RESTFul avec Node.js - Express</p>
+                                <br />
+                                <p>✔︎ Développement web d'un Pedalboard en utilisant la Web Audio API et les
+                                    composants web</p>
+                                <hr>
+                                <p class="card-text text-center">
+                                    <small>⏳ 02/2017 - 11/2019</small><br />
+                                    <small>📝 CDD</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row p-3 shadow mb-5">
+                        <div class="col-md align-self-center p-5">
+                            <h2 class="text-center mb-3">Développeur web</h2>
+                            <div class="card-body text-start">
+                                <p class="card-text text-center">
+                                    <small>🏢 Net Solution Partner</small><br />
+                                    <small>📍 Sophia Antipolis, France</small>
+                                </p>
+                                <hr>
+                                <p>✔︎ Analyse des besoins, conception, développement PHP, tests,
+                                    présentation clientèle et mise
+                                    en production concernant l'optimisation du moteur de recherche des
+                                    "Pages Jaunes Monaco"
+                                </p><br />
+                                <p>✔︎ Développement d’une application Android avec géolocalisation de
+                                    produits</p><br />
+                                <p>✔︎ Import, traitement et visualisation de données depuis un fichier
+                                    client Excel</p>
+                                <hr>
+                                <p class="card-text text-center">
+                                    <small>⏳ 11/2015 - 09/2016</small><br />
+                                    <small>📝 ALTERNANCE Master</small>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md align-self-center p-5">
+                            <img src="./assets/img/pro/nsp_3.webp" class="w-100 border" />
+                        </div>
+                    </div>
+
+                    <div class="row p-3 shadow mb-5">
+                        <div class="col-md align-self-center p-5">
+                            <img src="./assets/img/pro/nsp_2.webp" class="w-100 border" />
+                        </div>
+                        <div class="col-md align-self-center p-5">
+                            <h2 class="text-center mb-3">Développeur web</h2>
+                            <div class="card-body text-start">
+                                <p class="card-text text-center">
+                                    <small>🏢 Net Solution Partner</small><br />
+                                    <small>📍 Sophia Antipolis, France</small>
+                                </p>
+                                <hr>
+                                <p>✔︎ Refonte du module de reporting et affichage cartographique des données
+                                    au niveau mondial
+                                    en utilisant HighMaps, HighCharts API, Bootstrap et jQuery</p>
+                                <hr>
+                                <p class="card-text text-center">
+                                    <small>⏳ 05/2014 - 08/2014</small><br />
+                                    <small>📝 STAGE Licence</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row p-3 shadow mb-5">
+                        <div class="col-md align-self-center p-5">
+                            <h2 class="text-center mb-3">Développeur web</h2>
+                            <div class="card-body text-start">
+                                <p class="card-text text-center">
+                                    <small>🏢 Net Solution Partner</small><br />
+                                    <small>📍 Sophia Antipolis, France</small>
+                                </p>
+                                <hr>
+                                <p>✔︎ Apprentissage des technologies web: ajax, jQuery et ColdFusion</p>
+                                <br />
+                                <p>✔︎ Développement du module de gestion de templates d’emails pour
+                                    l'application Mailissimo</p>
+                                <hr>
+                                <p class="card-text text-center">
+                                    <small>⏳ 11/2012 - 07/2013</small><br />
+                                    <small>📝 STAGE DUT</small>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md align-self-center p-5">
+                            <img src="./assets/img/pro/nsp_1.webp" class="w-100 border" />
                         </div>
                     </div>
                 </div>
@@ -381,135 +582,6 @@
                                 </nav>
                                 <p class="card-text text-center"><small class="text-body-secondary">react -
                                         javascript</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- EXPERIENCE -->
-            <section id="experience" class="mx-auto mt-5 p-2">
-                <h2 class="border-light-subtle border-bottom mt-5 py-5 text-center">Expériences
-                </h2>
-                <div class="container text-center">
-                    <div class="row p-5">
-                        <div class="col d-flex flex-column justify-content-center align-self-start align-items-center">
-                            <div class="card mb-3">
-                                <div class="card-header">
-                                    <p>💼 Formation POEC Java @IB Cegos</p>
-                                </div>
-                                <div class="card-body text-start">
-                                    <p class="card-text text-center">
-                                        <small>📍 Sophia Antipolis, France</small><br />
-                                        <small>⏳ 09/2024 - 12/2024</small><br />
-                                        <small>📝 STAGE</small>
-                                    </p>
-                                    <hr>
-                                    <p>✔︎ Formation de 57j (399h) - du 16/09/2024 au 05/12/2024 : Angular, TypeScript,
-                                        Bootstrap,
-                                        HTML/CSS, JavaScript, SQL, Java, Web Services, Spring, GitLab, Jenkins, Maven
-
-
-                                    </p>
-                                    <p>✔︎ Réalisation de projet de stage : Développement d'une application web Java /
-                                        Angular</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col d-flex flex-column justify-content-center align-self-start align-items-center">
-                            <div class="card mb-3">
-                                <div class="card-header">
-                                    <p>💼 Développeur web @53js</p>
-                                </div>
-                                <div class="card-body text-start">
-                                    <p class="card-text text-center">
-                                        <small>📍 Nice, France</small><br />
-                                        <small>⏳ 03/2023 - 09/2023</small><br />
-                                        <small>📝 CDI</small>
-                                    </p>
-                                    <hr>
-                                    <p>✔︎ Développement React - ajout de fonctionnalités avancées sur le player
-                                        vidéo du client
-                                    </p>
-                                    <p>✔︎ Réalisation d'un visualiseur audio en utilisant la Web Audio API
-                                        JavaScript</p>
-                                    <p>✔︎ Utilisation d'outils ClickUp, JIRA, GIT, AWS, Slack</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col d-flex flex-column justify-content-center align-self-start align-items-center">
-                            <div class="card mb-3">
-                                <div class="card-header">💼 Ingénieur d'études et développement @INRIA/CNRS
-                                </div>
-                                <div class="card-body text-start">
-                                    <p class="card-text text-center">
-                                        <small>📍 Sophia Antipolis, France</small><br />
-                                        <small>⏳ 02/2017 - 11/2019</small><br />
-                                        <small>📝 CDD</small>
-                                    </p>
-                                    <hr>
-                                    <p>✔︎ Développement de l'application web WASABI en Polymer contenant +2M de
-                                        chansons nécessitant la récupération de données musicales et MongoDB</p>
-                                    <p>✔︎ Réalisation d'une API RESTFul avec Node.js - Express</p>
-                                    <p>✔︎ Développement web d'un Pedalboard en utilisant la Web Audio API et les
-                                        composants web</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row p-5">
-                        <div class="col d-flex flex-column justify-content-center align-self-start align-items-center">
-                            <div class="card mb-3">
-                                <div class="card-header">💼 Développeur web @Net Solution Partner</div>
-                                <div class="card-body text-start">
-                                    <p class="card-text text-center">
-                                        <small>📍 Sophia Antipolis, France</small><br />
-                                        <small>⏳ 11/2015 - 09/2016</small><br />
-                                        <small>📝 ALTERNANCE Master</small>
-                                    </p>
-                                    <hr>
-                                    <p>✔︎ Analyse des besoins, conception, développement PHP, tests,
-                                        présentation clientèle et mise
-                                        en production concernant l'optimisation du moteur de recherche des
-                                        "Pages Jaunes Monaco"
-                                    </p>
-                                    <p>✔︎ Développement d’une application Android avec géolocalisation de
-                                        produits</p>
-                                    <p>✔︎ Import, traitement et visualisation de données depuis un fichier
-                                        client Excel</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col d-flex flex-column justify-content-center align-self-start align-items-center">
-                            <div class="card mb-3">
-                                <div class="card-header">💼 Développeur web @Net Solution Partner</div>
-                                <div class="card-body text-start">
-                                    <p class="card-text text-center">
-                                        <small>📍 Sophia Antipolis, France</small><br />
-                                        <small>⏳ 05/2014 - 08/2014</small><br />
-                                        <small>📝 STAGE Licence</small>
-                                    </p>
-                                    <hr>
-                                    <p>✔︎ Refonte du module de reporting et affichage cartographique des données
-                                        au niveau mondial
-                                        en utilisant HighMaps, HighCharts API, Bootstrap et jQuery</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col d-flex flex-column justify-content-center align-self-start align-items-center">
-                            <div class="card mb-3">
-                                <div class="card-header">💼 Développeur web @Net Solution Partner</div>
-                                <div class="card-body text-start">
-                                    <p class="card-text text-center">
-                                        <small>📍 Sophia Antipolis, France</small><br />
-                                        <small>⏳ 11/2012 - 07/2013</small><br />
-                                        <small>📝 STAGE DUT</small>
-                                    </p>
-                                    <hr>
-                                    <p>✔︎ Apprentissage des technologies web: ajax, jQuery et ColdFusion</p>
-                                    <p>✔︎ Développement du module de gestion de templates d’emails pour
-                                        l'application Mailissimo</p>
-                                </div>
                             </div>
                         </div>
                     </div>
