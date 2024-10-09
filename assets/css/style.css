@@ -3,7 +3,7 @@ body {
 }
 
 header {
-  background: rgba(255, 255, 255, 0.2);
+  /* background: rgba(255, 255, 255, 0.2); */
   backdrop-filter: blur(7px);
 }
 
@@ -11,7 +11,7 @@ header {
   color: #555;
 }
 
-.div-portfolio img {
+#skills img {
   width: 30px;
   height: 30px;
 }
