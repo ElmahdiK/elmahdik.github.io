@@ -14,7 +14,6 @@ window.onload = () => {
         event.preventDefault();
         emailjs.sendForm('default_service', 'template_ptculdh', this)
             .then(() => {
-                console.log('SUCCESS!');
                 contactForm.reset();
                 new bootstrap.Modal(document.querySelector(`#contactModal`), {}).show();
             }, (error) => {
