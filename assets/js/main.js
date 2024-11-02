@@ -16,7 +16,7 @@ window.onload = () => {
             .then(() => {
                 console.log('SUCCESS!');
                 contactForm.reset();
-                alert("Thank you, your message has been sent !")
+                new bootstrap.Modal(document.querySelector(`#contactModal`), {}).show();
             }, (error) => {
                 console.log('FAILED...', error);
             });
