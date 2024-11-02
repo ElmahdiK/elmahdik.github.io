@@ -18,13 +18,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
-    <script src="../assets/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="../assets/js/email.min.js"></script>
+    <!-- <script type="text/javascript" src="../assets/js/particles.min.js"></script> -->
+    <script type="text/javascript" src="../assets/js/main.js"></script>
 </head>
 
 <body data-bs-theme="dark">
     <div class="col-md-auto vh-100 top-0">
         <!-- HOME -->
+        <!-- <div id="particles-js" class="position-absolute top-0 bottom-0 right-0 left-0 z-n1"></div> -->
         <section id="home" class="d-flex flex-column justify-content-between h-100">
             <nav class="d-flex justify-content-end gap-2 p-2">
                 <a href="../" class="btn btn-dark border border-1" title="english">🏴󠁧󠁢󠁥󠁮󠁧󠁿</a>
@@ -33,7 +36,9 @@
 
             <div
                 class="d-flex flex-column text-center justify-content-center align-self-center align-items-center my-auto">
-
+                <img src="../assets/img/ek.webp" height="200" class="shadow-sm" />
+                <br />
+                <br />
                 <p class="fs-1 fw-bold">Elmahdi</p>
                 <p class="fs-5 fw-lighter">Développeur Full Stack</p>
                 <nav class="d-flex flex-row gap-2 my-3">
@@ -41,7 +46,7 @@
                         target="_blank">cv</a>
                     <a href="#about" class="btn btn-dark btn-sm text-uppercase p-3 border">À propos</a>
                 </nav>
-                <ul class="gap-3 list-group list-group-horizontal list-unstyled my-4">
+                <ul class="gap-3 list-group list-group-horizontal list-unstyled my-4 px-3 py-1">
                     <li><a href="https://www.linkedin.com/in/elmahdikorfed/" target="_blank"
                             class="text-decoration-none text-reset"><i class="bi bi-linkedin fs-2"></i></a></li>
                     <li><a href="https://github.com/ElmahdiK" target="_blank" class="text-decoration-none text-reset"><i
@@ -337,8 +342,7 @@
                                             processus de
                                             développement logiciel</p>
                                         <br />
-                                        <p>✔︎ <a
-                                                href="../assets/pdf/certification/20230111_devOpsFoundationCertificate.pdf"
+                                        <p>✔︎ <a href="../assets/pdf/certification/20230111_devOpsFoundationCertificate.pdf"
                                                 target="_blank">Obtention de la DevOps Foundation® Certification</a></p>
                                         <hr>
                                         <p class="text-center">
@@ -727,41 +731,6 @@
                 <i class="bi bi-arrow-up-circle mx-1"></i></a>
         </main>
     </div>
-
-    <script>
-        (function () {
-            emailjs.init({
-                publicKey: "Xt5kvG1KQ0QbFg03l",
-            });
-        })();
-
-        window.onload = function () {
-            const bsTheme = localStorage.getItem("bsTheme");
-            const bsThemeCurrent = document.body.dataset.bsTheme;
-            if (bsTheme && (bsThemeCurrent != bsTheme)) myFunction();
-
-            let contactForm = document.getElementById('contact-form');
-            contactForm.addEventListener('submit', function (event) {
-                event.preventDefault();
-                emailjs.sendForm('default_service', 'template_ptculdh', this)
-                    .then(() => {
-                        console.log('SUCCESS!');
-                        contactForm.reset();
-                        alert("Thank you, your message has been sent !")
-                    }, (error) => {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
-
-        function myFunction() {
-            var element = document.body;
-            element.dataset.bsTheme =
-                element.dataset.bsTheme == "light" ? "dark" : "light";
-            document.querySelector("[name=icon--darkMode]").className = element.dataset.bsTheme == "light" ? "bi bi-moon-stars fs-5" : "bi bi-brightness-high fs-5";
-            localStorage.setItem("bsTheme", element.dataset.bsTheme);
-        }
-    </script>
 </body>
 
 </html>

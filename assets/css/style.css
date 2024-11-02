@@ -19,9 +19,36 @@ header {
 .main-content {
   width: 50%;
 }
+/*
+[data-bs-theme="light"] #home #a-about,
+[data-bs-theme="dark"] #home #a-about {
+  animation: color-dark-animation 10s infinite linear;
+}
 
-@media (max-width: 767.98px) { /* Utilise le breakpoint mobile */
+@keyframes color-dark-animation {
+  0% {
+    color: #00459d;
+  }
+  20% {
+    color: #fedc58;
+  }
+  40% {
+    color: #217797;
+  }
+  60% {
+    color: #ca2b1f;
+  }
+  80% {
+    color: #f19ec6;
+  }
+  100% {
+    color: #140f14;
+  }
+}
+*/
+@media (max-width: 767.98px) {
+  /* Utilise le breakpoint mobile */
   .main-content {
-      width: 100%;
+    width: 100%;
   }
 }
