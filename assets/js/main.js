@@ -20,11 +20,8 @@ window.onload = () => {
                 console.log('FAILED...', error);
             });
     });
-
-    // particlesJS.load('particles-js', '../assets/js/particles.json', function () {
-    //     console.log('callback - particles-js config loaded');
-    // });
 }
+
 const myFunction = () => {
     let element = document.body;
     element.dataset.bsTheme =
