@@ -19,6 +19,48 @@ header {
   width: 50%;
 }
 
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateX(0px) translateY(0px);
+  }
+}
+
+.reveal-text {
+  display: flex;
+}
+
+.reveal-text span {
+  animation: reveal 0.5s ease-out forwards;
+  opacity: 0;
+  transform: translateX(0px) translateY(200px);
+}
+
+.reveal-text span:nth-child(n) {
+  animation-delay: calc(0.1s * var(--i));
+}
+
+.reveal-text span:empty {
+  min-width: 0.5em;
+}
+
+.element {
+  opacity: 0;
+  animation: appearElement 0.5s ease-out forwards;
+  animation-delay: calc(0.15s * var(--i));
+}
+
+@keyframes appearElement {
+  from {
+    opacity: 0;
+    transform: translateX(0px) translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px) translateY(0px);
+  }
+}
+
 @keyframes appear {
   from {
     opacity: 0;
