@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="./assets/img/screenshot.png" >
+    <img src="./assets/img/screenshot.webp" >
 </p>
 
 # bootstrap-portfolio
