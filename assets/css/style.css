@@ -2,12 +2,19 @@ body {
   font-family: monospace !important;
 }
 
+.main-content {
+  width: 50%;
+}
+
 header {
   backdrop-filter: blur(7px);
 }
 
-.form-control::placeholder {
-  color: #555;
+#home img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 #skills img {
@@ -15,8 +22,8 @@ header {
   height: 30px;
 }
 
-.main-content {
-  width: 50%;
+.form-control::placeholder {
+  color: #555;
 }
 
 @keyframes reveal {
@@ -80,6 +87,21 @@ header {
   animation: appear linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
+}
+
+/* --- theme --- */
+[data-bs-theme="dark"] .nav-item {
+  text-shadow: 0px 0px 5px #000;
+}
+[data-bs-theme="dark"] .reveal-text {
+  text-shadow: 0px 10px 15px #000;
+}
+
+[data-bs-theme="light"] .nav-item {
+  text-shadow: 0px 0px 5px #fff;
+}
+[data-bs-theme="light"] .reveal-text {
+  text-shadow: 0px 10px 15px #ccc;
 }
 
 /* --- mobile --- */
