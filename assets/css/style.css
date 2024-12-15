@@ -23,6 +23,7 @@ header {
   to {
     opacity: 1;
     transform: translateX(0px) translateY(0px);
+    filter: blur(0px);
   }
 }
 
@@ -34,6 +35,7 @@ header {
   animation: reveal 0.5s ease-out forwards;
   opacity: 0;
   transform: translateX(0px) translateY(200px);
+  filter: blur(4px);
 }
 
 .reveal-text span:nth-child(n) {
@@ -47,17 +49,19 @@ header {
 .element {
   opacity: 0;
   animation: appearElement 0.5s ease-out forwards;
-  animation-delay: calc(0.15s * var(--i));
+  animation-delay: calc(0.1s * var(--i));
 }
 
 @keyframes appearElement {
   from {
     opacity: 0;
     transform: translateX(0px) translateY(100px);
+    filter: blur(4px);
   }
   to {
     opacity: 1;
     transform: translateX(0px) translateY(0px);
+    filter: blur(0px);
   }
 }
 
