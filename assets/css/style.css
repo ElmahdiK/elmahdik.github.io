@@ -10,6 +10,17 @@ header {
   backdrop-filter: blur(7px);
 }
 
+#particles-js {
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  right: 0%;
+  left: 0%;
+
+  animation: reveal 10s ease-out forwards;
+  opacity: 0;
+  animation-delay: calc(0.1s * 20);
+}
 #home img {
   width: 200px;
   height: 200px;
