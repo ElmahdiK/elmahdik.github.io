@@ -4,16 +4,17 @@
     });
 })();
 
-let pathParticlesConfif = `./assets/js/particlesjs-config.json`;
+// let pathParticlesConfif = `./assets/js/particlesjs-config.json`;
 
 window.onload = () => {
     const bsTheme = localStorage.getItem("bsTheme");
     const bsThemeCurrent = document.documentElement.dataset.bsTheme;
+    if (bsTheme && (bsThemeCurrent != bsTheme)) myFunction();
 
-    if (document.documentElement.lang === "fr") pathParticlesConfif = '.' + pathParticlesConfif;
-    particlesJS.load('particles-js', pathParticlesConfif, () => {
-        if (bsTheme && (bsThemeCurrent != bsTheme)) myFunction();
-    });
+    /*
+        if (document.documentElement.lang === "fr") pathParticlesConfif = '.' + pathParticlesConfif;
+        particlesJS.load('particles-js', pathParticlesConfif);
+    */
 
     let contactForm = document.getElementById('contact-form');
     contactForm.addEventListener('submit', function (event) {
@@ -36,7 +37,9 @@ const myFunction = () => {
     localStorage.setItem("bsTheme", element.dataset.bsTheme);
 
     document.querySelector("[name=theme-color]").content = element.dataset.bsTheme == "light" ? "#ffffff" : "#212529";
-
+    
+    /*
     pJSDom[0].pJS.particles.color.value = (element.dataset.bsTheme == "light") ? '#c62828' : '#fff';
     pJSDom[0].pJS.fn.particlesRefresh();
+    */
 }

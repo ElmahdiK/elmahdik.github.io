@@ -119,8 +119,8 @@ header {
 #a-scroll {
   opacity: 0;
   animation: linear infinite alternate scrollDown;
-  animation-duration: 1s;
-  animation-delay: 3s;
+  animation-duration: 2s;
+  animation-delay: 4s;
 }
 
 /* --- theme --- */
