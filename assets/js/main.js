@@ -8,7 +8,7 @@ let pathParticlesConfif = `./assets/js/particlesjs-config.json`;
 
 window.onload = () => {
     const bsTheme = localStorage.getItem("bsTheme");
-    const bsThemeCurrent = document.body.dataset.bsTheme;
+    const bsThemeCurrent = document.documentElement.dataset.bsTheme;
 
     if (document.documentElement.lang === "fr") pathParticlesConfif = '.' + pathParticlesConfif;
     particlesJS.load('particles-js', pathParticlesConfif, () => {
@@ -29,7 +29,7 @@ window.onload = () => {
 }
 
 const myFunction = () => {
-    let element = document.body;
+    let element = document.documentElement;
     element.dataset.bsTheme =
         element.dataset.bsTheme == "light" ? "dark" : "light";
     document.querySelector("[name=icon--darkMode]").className = element.dataset.bsTheme == "light" ? "bi bi-moon-stars fs-5" : "bi bi-brightness-high fs-5";
