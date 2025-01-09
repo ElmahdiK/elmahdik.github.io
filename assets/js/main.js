@@ -37,9 +37,9 @@ const myFunction = () => {
     localStorage.setItem("bsTheme", element.dataset.bsTheme);
 
     document.querySelector("[name=theme-color]").content = element.dataset.bsTheme == "light" ? "#ffffff" : "#212529";
-    
+
     /*
-    pJSDom[0].pJS.particles.color.value = (element.dataset.bsTheme == "light") ? '#c62828' : '#fff';
-    pJSDom[0].pJS.fn.particlesRefresh();
+        pJSDom[0].pJS.particles.color.value = (element.dataset.bsTheme == "light") ? '#c62828' : '#fff';
+        pJSDom[0].pJS.fn.particlesRefresh();
     */
 }
