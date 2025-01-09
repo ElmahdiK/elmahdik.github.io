@@ -35,7 +35,7 @@ const myFunction = () => {
     document.querySelector("[name=icon--darkMode]").className = element.dataset.bsTheme == "light" ? "bi bi-moon-stars fs-5" : "bi bi-brightness-high fs-5";
     localStorage.setItem("bsTheme", element.dataset.bsTheme);
 
-    document.querySelector("[name=theme-color]").className = element.dataset.bsTheme == "light" ? "bg-light" : "bg-dark";
+    document.querySelector("[name=theme-color]").content = element.dataset.bsTheme == "light" ? "#ffffff" : "#212529";
 
     pJSDom[0].pJS.particles.color.value = (element.dataset.bsTheme == "light") ? '#c62828' : '#fff';
     pJSDom[0].pJS.fn.particlesRefresh();
