@@ -7,6 +7,9 @@
 // let pathParticlesConfif = `./assets/js/particlesjs-config.json`;
 
 window.onload = () => {
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
     const bsTheme = localStorage.getItem("bsTheme");
     const bsThemeCurrent = document.documentElement.dataset.bsTheme;
     if (bsTheme && (bsThemeCurrent != bsTheme)) myFunction();
