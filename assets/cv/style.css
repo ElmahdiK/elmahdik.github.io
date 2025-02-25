@@ -55,12 +55,30 @@ ul {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
-
+#ul-contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+#ul-contact li a{
+  color: #444;
+  padding: 4px 10px;
+  text-decoration: none;
+}
+#div--photo {
+  flex:1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #div--infos {
   padding-right: 10px;
   justify-content: space-between;
   flex-direction: row;
+  flex:3;
+  text-align: center;
 }
 
 #span--job a {    
@@ -84,10 +102,14 @@ ul {
 #p--bio {
   display: block;
   text-transform: none;
+  text-align: center;
+  font-style: oblique;
+  font-size: 18px;
 }
 
 img {
-  width: 120px;
+  width: 100px;
+  /* border-radius: 100%; */
 }
 
 /* --- div--main --- */
