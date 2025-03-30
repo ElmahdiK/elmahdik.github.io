@@ -1,0 +1,48 @@
+body {
+  margin: 0 auto;
+  width: 40%;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+header,
+footer {
+  padding: 10px 0px;
+  text-align: center;
+}
+
+article {
+  border-top: 1px dashed #ccc;
+}
+article:last-child {
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 30px;
+  text-align: center;
+}
+article h2,
+#projects p {
+  text-align: center;
+}
+footer {
+  font-style: oblique;
+}
+
+@media (width <= 1024px) {
+  body {
+    width: 60%;
+  }
+}
+
+@media (width <= 768px) {
+  body {
+    width: 80%;
+    font-size: 14px;
+  }
+}
+
+@media (width <= 480px) {
+  body {
+    width: fit-content;
+    padding: 10px;
+  }
+}
