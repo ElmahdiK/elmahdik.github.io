@@ -4,7 +4,12 @@ body {
   line-height: 1.6;
   text-align: justify;
 }
-
+header {
+  display: flex;
+}
+header img {
+  margin-right: 20px;
+}
 header,
 footer {
   padding: 10px 0px;
