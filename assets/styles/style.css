@@ -1,35 +1,29 @@
 body {
-  margin: 0 auto;
   width: 40%;
   line-height: 1.6;
+  margin: 0 auto;
   text-align: justify;
 }
+
 header {
   display: flex;
-}
-header img {
-  margin-right: 20px;
-}
-header,
-footer {
-  padding: 10px 0px;
+  flex-direction: column;
   text-align: center;
 }
 
 article {
-  border-top: 1px dashed #ccc;
+  border-top: 1px dashed #000;
 }
-article:last-child {
-  border-bottom: 1px dashed #ccc;
-  padding-bottom: 30px;
+article#about a {
+  margin: 0 auto;
+  padding: 10px;
+  display: table;
   text-align: center;
 }
+article:last-child,
 article h2,
 #projects p {
   text-align: center;
-}
-footer {
-  font-style: oblique;
 }
 
 @media (width <= 1024px) {
@@ -37,14 +31,12 @@ footer {
     width: 60%;
   }
 }
-
 @media (width <= 768px) {
   body {
     width: 80%;
     font-size: 14px;
   }
 }
-
 @media (width <= 480px) {
   body {
     width: fit-content;
