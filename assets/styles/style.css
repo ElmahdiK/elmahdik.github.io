@@ -5,7 +5,20 @@ body {
   text-align: justify;
 }
 
+#nav-lang {
+  display: flex;
+  justify-content: end;
+}
+#nav-lang ul {
+  list-style: none;
+  display: flex;
+}
+#nav-lang ul li a {
+  padding: 4px;
+}
+
 header {
+  border-top: 1px dashed #000;
   display: flex;
   flex-direction: column;
   text-align: center;
